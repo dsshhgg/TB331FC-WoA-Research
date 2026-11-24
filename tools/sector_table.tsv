@@ -1,0 +1,129 @@
+lun	label	start_sector	start_byte_hex	sectors	size_kb	file	src
+0	ssd	6	0x6000	2	8.0		rawprogram0.xml
+0	persist	8	0x8000	8192	32768.0		rawprogram0.xml
+0	misc	8200	0x2008000	256	1024.0		rawprogram0.xml
+0	keystore	8456	0x2108000	128	512.0		rawprogram0.xml
+0	oemowninfo	8584	0x2188000	256	1024.0		rawprogram0.xml
+0	lenovolock	8840	0x2288000	128	512.0		rawprogram0.xml
+0	lenovocust	8968	0x2308000	76800	307200.0		rawprogram0.xml
+0	lenovoraw	85768	0x14f08000	4096	16384.0		rawprogram0.xml
+0	super	89992		99		super_1.img	rawprogram0.xml
+0	super	90248		346		super_2.img	rawprogram0.xml
+0	super	90760		145120		super_3.img	rawprogram0.xml
+0	super	235912		1341217		super_4.img	rawprogram0.xml
+0	super	1577352		107		super_5.img	rawprogram0.xml
+0	super	1577608		112330		super_6.img	rawprogram0.xml
+0	super	1689992		166327		super_7.img	rawprogram0.xml
+0	super	1856392		14388		super_8.img	rawprogram0.xml
+0	frp	89864	0x15f08000	128	512.0		rawprogram0.xml
+0	vbmeta_system_a	3235720	0x315f88000	16	64.0	vbmeta_system.img	rawprogram0.xml
+0	metadata	3235752		2		metadata_1.img	rawprogram0.xml
+0	metadata	3236264		8		metadata_2.img	rawprogram0.xml
+0	metadata	3236775		2573		metadata_3.img	rawprogram0.xml
+0	metadata	3239848		4		metadata_4.img	rawprogram0.xml
+0	metadata	3241384		7		metadata_5.img	rawprogram0.xml
+0	userdata	3252136		2		userdata_1.img	rawprogram0.xml
+0	userdata	3252648		8		userdata_2.img	rawprogram0.xml
+0	userdata	3253159		16908		userdata_3.img	rawprogram0.xml
+0	userdata	3271707		1		userdata_4.img	rawprogram0.xml
+0	userdata	3273359		1		userdata_5.img	rawprogram0.xml
+0	userdata	3276712		4		userdata_6.img	rawprogram0.xml
+0	userdata	3278248		7		userdata_7.img	rawprogram0.xml
+0	userdata	3278760		12		userdata_8.img	rawprogram0.xml
+0	userdata	3279272		22		userdata_9.img	rawprogram0.xml
+0	userdata	3279784		1234		userdata_10.img	rawprogram0.xml
+0	vbmeta_system_b	3235736	0x315f98000	16	64.0	vbmeta_system.img	rawprogram0.xml
+0	PrimaryGPT	0	0x0	6	24.0	gpt_main0.bin	rawprogram0.xml
+0	BackupGPT	NUM_DISK_SECTORS-5.	(4096*NUM_DISK_SECTORS)-20480.	5	20.0	gpt_backup0.bin	rawprogram0.xml
+1	xbl_a	6	0x6000	896	3584.0	xbl.elf	rawprogram1.xml
+1	xbl_config_a	902	0x386000	32	128.0	xbl_config.elf	rawprogram1.xml
+1	last_parti	934	0x3a6000	0	0		rawprogram1.xml
+1	PrimaryGPT	0	0x0	6	24.0	gpt_main1.bin	rawprogram1.xml
+1	BackupGPT	NUM_DISK_SECTORS-5.	(4096*NUM_DISK_SECTORS)-20480.	5	20.0	gpt_backup1.bin	rawprogram1.xml
+2	xbl_b	6	0x6000	896	3584.0	xbl.elf	rawprogram2.xml
+2	xbl_config_b	902	0x386000	32	128.0	xbl_config.elf	rawprogram2.xml
+2	last_parti	934	0x3a6000	0	0		rawprogram2.xml
+2	PrimaryGPT	0	0x0	6	24.0	gpt_main2.bin	rawprogram2.xml
+2	BackupGPT	NUM_DISK_SECTORS-5.	(4096*NUM_DISK_SECTORS)-20480.	5	20.0	gpt_backup2.bin	rawprogram2.xml
+3	ALIGN_TO_128K_1	6	0x6000	26	104.0		rawprogram3.xml
+3	cdt	32	0x20000	32	128.0		rawprogram3.xml
+3	ddr	64	0x40000	256	1024.0		rawprogram3.xml
+3	last_parti	320	0x140000	0	0		rawprogram3.xml
+3	PrimaryGPT	0	0x0	6	24.0	gpt_main3.bin	rawprogram3.xml
+3	BackupGPT	NUM_DISK_SECTORS-5.	(4096*NUM_DISK_SECTORS)-20480.	5	20.0	gpt_backup3.bin	rawprogram3.xml
+4	rpm_a	6	0x6000	128	512.0	rpm.mbn	rawprogram4.xml
+4	tz_a	134	0x86000	1024	4096.0	tz.mbn	rawprogram4.xml
+4	hyp_a	1158	0x486000	128	512.0	hyp.mbn	rawprogram4.xml
+4	modem_a	1286	0x506000	46080	184320.0	NON-HLOS.bin	rawprogram4.xml
+4	bluetooth_a	47366	0xb906000	256	1024.0	BTFM.bin	rawprogram4.xml
+4	mdtpsecapp_a	47622	0xba06000	1024	4096.0		rawprogram4.xml
+4	mdtp_a	48646	0xbe06000	8192	32768.0		rawprogram4.xml
+4	abl_a	56838	0xde06000	256	1024.0	abl.elf	rawprogram4.xml
+4	dsp_a	57094	0xdf06000	8192	32768.0	dspso.bin	rawprogram4.xml
+4	keymaster_a	65286	0xff06000	128	512.0	keymint.mbn	rawprogram4.xml
+4	boot_a	65414	0xff86000	24576	98304.0	boot.img	rawprogram4.xml
+4	cmnlib_a	89990	0x15f86000	128	512.0		rawprogram4.xml
+4	cmnlib64_a	90118	0x16006000	128	512.0		rawprogram4.xml
+4	devcfg_a	90246	0x16086000	32	128.0	devcfg.mbn	rawprogram4.xml
+4	qupfw_a	90278	0x160a6000	16	64.0	qupv3fw.elf	rawprogram4.xml
+4	vbmeta_a	90294	0x160b6000	16	64.0	vbmeta.img	rawprogram4.xml
+4	dtbo_a	90310	0x160c6000	6144	24576.0	dtbo.img	rawprogram4.xml
+4	imagefv_a	96454	0x178c6000	512	2048.0	imagefv.elf	rawprogram4.xml
+4	uefisecapp_a	96966	0x17ac6000	512	2048.0	uefi_sec.mbn	rawprogram4.xml
+4	featenabler_a	97478	0x17cc6000	32	128.0	featenabler.mbn	rawprogram4.xml
+4	multiimgoem_a	97510	0x17ce6000	8	32.0	multi_image.mbn	rawprogram4.xml
+4	init_boot_a	97518	0x17cee000	2048	8192.0	init_boot.img	rawprogram4.xml
+4	recovery_a	99566	0x184ee000	25600	102400.0	recovery.img	rawprogram4.xml
+4	vendor_boot_a	125166	0x1e8ee000	24576	98304.0	vendor_boot.img	rawprogram4.xml
+4	rpm_b	149742	0x248ee000	128	512.0	rpm.mbn	rawprogram4.xml
+4	tz_b	149870	0x2496e000	1024	4096.0	tz.mbn	rawprogram4.xml
+4	hyp_b	150894	0x24d6e000	128	512.0	hyp.mbn	rawprogram4.xml
+4	modem_b	151022	0x24dee000	46080	184320.0	NON-HLOS.bin	rawprogram4.xml
+4	bluetooth_b	197102	0x301ee000	256	1024.0	BTFM.bin	rawprogram4.xml
+4	mdtpsecapp_b	197358	0x302ee000	1024	4096.0		rawprogram4.xml
+4	mdtp_b	198382	0x306ee000	8192	32768.0		rawprogram4.xml
+4	abl_b	206574	0x326ee000	256	1024.0	abl.elf	rawprogram4.xml
+4	dsp_b	206830	0x327ee000	8192	32768.0	dspso.bin	rawprogram4.xml
+4	keymaster_b	215022	0x347ee000	128	512.0	keymint.mbn	rawprogram4.xml
+4	boot_b	215150	0x3486e000	24576	98304.0	boot.img	rawprogram4.xml
+4	cmnlib_b	239726	0x3a86e000	128	512.0		rawprogram4.xml
+4	cmnlib64_b	239854	0x3a8ee000	128	512.0		rawprogram4.xml
+4	devcfg_b	239982	0x3a96e000	32	128.0	devcfg.mbn	rawprogram4.xml
+4	qupfw_b	240014	0x3a98e000	16	64.0	qupv3fw.elf	rawprogram4.xml
+4	vbmeta_b	240030	0x3a99e000	16	64.0	vbmeta.img	rawprogram4.xml
+4	dtbo_b	240046	0x3a9ae000	6144	24576.0	dtbo.img	rawprogram4.xml
+4	featenabler_b	246190	0x3c1ae000	32	128.0	featenabler.mbn	rawprogram4.xml
+4	imagefv_b	246222	0x3c1ce000	512	2048.0	imagefv.elf	rawprogram4.xml
+4	uefisecapp_b	246734	0x3c3ce000	512	2048.0	uefi_sec.mbn	rawprogram4.xml
+4	multiimgoem_b	247246	0x3c5ce000	8	32.0	multi_image.mbn	rawprogram4.xml
+4	recovery_b	247254	0x3c5d6000	25600	102400.0		rawprogram4.xml
+4	vendor_boot_b	272854	0x429d6000	24576	98304.0		rawprogram4.xml
+4	init_boot_b	297430	0x489d6000	2048	8192.0		rawprogram4.xml
+4	devinfo	299478	0x491d6000	1	4.0		rawprogram4.xml
+4	dip	299479	0x491d7000	256	1024.0		rawprogram4.xml
+4	apdp	299735	0x492d7000	64	256.0	apdp.mbn	rawprogram4.xml
+4	spunvm	299799	0x49317000	2048	8192.0		rawprogram4.xml
+4	splash	301847	0x49b17000	8356	33424.0		rawprogram4.xml
+4	limits	310203	0x4bbbb000	1	4.0		rawprogram4.xml
+4	toolsfv	310204	0x4bbbc000	256	1024.0		rawprogram4.xml
+4	logfs	310460	0x4bcbc000	2048	8192.0	logfs_ufs_8mb.bin	rawprogram4.xml
+4	cateloader	312508	0x4c4bc000	512	2048.0		rawprogram4.xml
+4	rawdump	313020	0x4c6bc000	32768	131072.0		rawprogram4.xml
+4	logdump	345788	0x546bc000	16384	65536.0		rawprogram4.xml
+4	storsec	362172	0x586bc000	32	128.0	storsec.mbn	rawprogram4.xml
+4	multiimgqti	362204	0x586dc000	8	32.0		rawprogram4.xml
+4	uefivarstore	362212	0x586e4000	128	512.0		rawprogram4.xml
+4	secdata	362340	0x58764000	7	28.0		rawprogram4.xml
+4	catefv	362347	0x5876b000	128	512.0		rawprogram4.xml
+4	catecontentfv	362475	0x587eb000	256	1024.0		rawprogram4.xml
+4	last_parti	362731	0x588eb000	0	0		rawprogram4.xml
+4	PrimaryGPT	0	0x0	6	24.0	gpt_main4.bin	rawprogram4.xml
+4	BackupGPT	NUM_DISK_SECTORS-5.	(4096*NUM_DISK_SECTORS)-20480.	5	20.0	gpt_backup4.bin	rawprogram4.xml
+5	ALIGN_TO_128K_2	6	0x6000	26	104.0		rawprogram5.xml
+5	modemst1	32	0x20000	512	2048.0		rawprogram5.xml
+5	modemst2	544	0x220000	512	2048.0		rawprogram5.xml
+5	fsg	1056	0x420000	512	2048.0		rawprogram5.xml
+5	fsc	1568	0x620000	32	128.0		rawprogram5.xml
+5	last_parti	1600	0x640000	0	0		rawprogram5.xml
+5	PrimaryGPT	0	0x0	6	24.0	gpt_main5.bin	rawprogram5.xml
+5	BackupGPT	NUM_DISK_SECTORS-5.	(4096*NUM_DISK_SECTORS)-20480.	5	20.0	gpt_backup5.bin	rawprogram5.xml

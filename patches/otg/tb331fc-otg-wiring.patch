@@ -1,0 +1,18 @@
+--- a/Platforms/Lenovo/tb331fcPkg/Include/DXE.inc
++++ b/Platforms/Lenovo/tb331fcPkg/Include/DXE.inc
+@@ -66,6 +66,7 @@
+   INF Binaries/tapas/QcomPkg/Drivers/ChargerExDxe/ChargerExDxe.inf
+   INF Binaries/tapas/QcomPkg/Drivers/QcomChargerDxe/QcomChargerDxeLA.inf
+   INF Binaries/tapas/QcomPkg/Drivers/UsbPwrCtrlDxe/UsbPwrCtrlDxe.inf
++  INF tb331fcPkg/Drivers/Tb331fcOtgDxe/Tb331fcOtgDxe.inf
+   INF Binaries/tapas/QcomPkg/Drivers/AdcDxe/AdcDxe.inf
+   INF Binaries/tapas/QcomPkg/Drivers/TsensDxe/TsensDxe.inf
+   INF Binaries/tapas/QcomPkg/Drivers/DDRInfoDxe/DDRInfoDxe.inf
+--- a/Platforms/Lenovo/tb331fcPkg/tb331fc.dsc
++++ b/Platforms/Lenovo/tb331fcPkg/tb331fc.dsc
+@@ -90,3 +90,4 @@
+   # ACPI Tables
+   #
+   tb331fcPkg/AcpiTables/AcpiTables.inf
++
+  tb331fcPkg/Drivers/Tb331fcOtgDxe/Tb331fcOtgDxe.inf
