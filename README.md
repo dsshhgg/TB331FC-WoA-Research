@@ -1,5 +1,15 @@
 # TB331FC (联想小新 Pad 2024 / khaje) — Windows on ARM 移植研究快照
 
+## 先读这三份（本轮整合产出）
+
+| 文档 | 内容 | 什么时候看 |
+|---|---|---|
+| **[docs/PANORAMA.md](docs/PANORAMA.md)** | **全景机制文档**：硬件 → 分区全表 → 启动链（PBL→XBL→ABL→Linux）→ 各镜像职责 → 三条目标线现状与阻塞 → 已证伪清单 → 待验证清单。**每条结论都标出处（报告 + 地址/偏移）** | 想一次搞清这台机器怎么起来的、现在卡在哪 |
+| [docs/CORRECTIONS.md](docs/CORRECTIONS.md) | **43 条旧结论的更正**：「旧说法 → 现证据 → 正确结论」。含 SEC 栈踩 XBL、FD 基址覆盖致命、cmnlib 全零、900E=9008、ABL 用 recovery_a、devinfo 解锁位、misc+2048 槽元数据、fastboot erase misc 被 critical 拦 等 | 动手前先查这里，避免重复已证伪的路 |
+| [docs/OPEN-QUESTIONS.md](docs/OPEN-QUESTIONS.md) | **43 条未解问题 + 每条的具体验证命令/实验设计**（只读 → 单变量 → 写分区 → 需外部条件 → 报告缺口），附「先做什么」顺序表 | 想推进但不知道下一步做什么 |
+
+> 三份文档的结论都**只读整合自本仓库与本地研究报告**，未刷机、未连设备（2026-11-25）。
+
 ## 这台机器是什么
 
 | 项 | 值 |
@@ -26,6 +36,9 @@
 
 | 路径 | 内容 |
 |---|---|
+| `docs/PANORAMA.md` | ★ **全景机制文档**（本文顶部「先读这三份」） |
+| `docs/CORRECTIONS.md` | ★ **43 条旧结论更正** |
+| `docs/OPEN-QUESTIONS.md` | ★ **43 条未解问题 + 验证方法** |
 | `docs/abl-dtb-root-cause.md` | **最有价值的单项发现**：ABL 要求「内核之后最多一棵 FDT」，否则返回 status 14 且永不跳转 |
 | `docs/tried-and-failed.md` | 所有试过并失败的 UEFI 配置（9 条），以及每条的现象 |
 | `docs/bootchain.md` | PBL→XBL→ABL→Linux 的真实结构；UEFI 固件在 `xbl` 里而不是 `abl` 里 |
