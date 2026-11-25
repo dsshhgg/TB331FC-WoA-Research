@@ -1,0 +1,42 @@
+# Direction-A hybrid rc: stock ZUI16 /init.recovery.qcom.rc + recovery-debug additions
+#
+# Everything in the first block is the STOCK file, byte for byte.  The blocks under
+# "DIRECTION-A ADDITIONS" are the only changes, and each has one purpose:
+#   printk 8      -> make init's own log lines (level 6) reach ttyMSM0, which is what
+#                    ramoops/PSTORE_CONSOLE records; without this a hung recovery's
+#                    kernel console contains almost nothing useful.
+#   selinux 0     -> permissive, same as OrangeFox's own rc does; removes an entire
+#                    class of silent denials while we are only trying to boot.
+#   dira_wd       -> watchdog: writes a timeline to /dev/kmsg and, if TWRP never gets
+#                    adb up, triggers the stock (already proven) functionfs gadget and
+#                    dumps /tmp/recovery.log into the console so it survives reboot.
+
+on init
+    export PATH /sbin:/system/bin:/system/xbin
+    write /sys/class/backlight/panel0-backlight/brightness 200
+    setprop sys.usb.configfs 1
+
+on property:ro.boot.usbcontroller=*
+    setprop sys.usb.controller ${ro.boot.usbcontroller}
+    wait /sys/bus/platform/devices/${ro.boot.usb.dwc3_msm:-a600000.ssusb}/mode
+    write /sys/bus/platform/devices/${ro.boot.usb.dwc3_msm:-a600000.ssusb}/mode peripheral
+    wait /sys/class/udc/${ro.boot.usbcontroller} 1
+
+on fs
+    wait /dev/block/platform/soc/${ro.boot.bootdevice}
+    symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
+
+# ---------------------------- DIRECTION-A ADDITIONS ----------------------------
+on early-init
+    write /proc/sys/kernel/printk 8
+    write /sys/fs/selinux/enforce 0
+
+on boot
+    write /dev/kmsg <0>DIRA: on boot reached, starting watchdog
+    start dira_wd
+
+service dira_wd /system/bin/sh /sbin/dira_wd.sh
+    user root
+    group root
+    oneshot
+    seclabel u:r:recovery:s0

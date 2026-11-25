@@ -1,0 +1,4775 @@
+# strings-key.txt  (generated from a17dump/boot_a.img kernel blob)
+# format: <file offset hex>  <string>   (file offset 0 == VMA 0xffffffc008000000)
+
+====================================================================================================
+## A. 构建身份 / build identity
+====================================================================================================
+01c35202  Linux version 5.15.167-android13-5.15.167_r00-dirty (runner@runnervmliwqe) (clang version 17.0.4 (https://github.com/llvm/llvm-project 309d55140c46384b6de7a7573206cbeba3f7077f), LLD 17.0.4) #1 SMP PREEMPT Sun Aug 9 16:49:46 UTC 2026
+01c352ec  %s version %s (runner@runnervmliwqe) (clang version 17.0.4 (https://github.com/llvm/llvm-project 309d55140c46384b6de7a7573206cbeba3f7077f), LLD 17.0.4) %s
+026fdaab  #1 SMP PREEMPT Sun Aug 9 16:49:46 UTC 2026
+
+====================================================================================================
+## B. vermagic 与模块版本
+====================================================================================================
+01b702ee  5.15.167-android13-5.15.167_r00-dirty
+01bef1da  vermagic
+01c56fe0  5.15.167-android13-5.15.167_r00-dirty SMP preempt mod_unload modversions aarch64
+026fda6a  5.15.167-android13-5.15.167_r00-dirty
+
+====================================================================================================
+## C. KernelSU
+====================================================================================================
+0175f160  ksu_vfsmnt
+019f9168  ksud.app
+019f9185  ksud.sys
+01b3f08e  6KernelSU: Stop searching
+01b3f0aa  6KernelSU: save allow list, name: %s uid :%d, allow: %d
+01b3f0e4  6KernelSU: KEY_VOLUMEDOWN val: %d
+01b3f108  6KernelSU: ksu_init_rc_hook is disabled
+01b3f132  6KernelSU: read_proxy: orig read finished, start append rc
+01b3f16f  6KernelSU: read_proxy: append static %zu
+01b3f19a  6KernelSU: adding POLICYDB_CONFIG_ANDROID_NETLINK_GETNEIGH
+01b3f1d7  6KernelSU: attribute %s does not exist
+01b3f210  3KernelSU: check_safemode: copy_to_user failed
+01b3f241  6KernelSU: do_nuke_ext4_sysfs: %s
+01b469b4  6KernelSU: %s: unmounting: %s flags: 0x%x
+01b46a73  3KernelSU: %s: open /data/system/packages.list failed: %ld
+01b46ab0  3KernelSU: save_allow_list write version failed.
+01b46ae3  4KernelSU: feature: no set_handler for feature %u
+01b46b17  6KernelSU: read_iter_proxy: append error, totally appended %ld
+01b46b58  6KernelSU: custom rc is disabled
+01b46bda  6KernelSU: allow root for: %d
+01b46bfa  4KernelSU: install fd add task_work failed
+01b4e1ad  3KernelSU: file_wrapper: initialize anon_inode_mnt failed, got NULL
+01b4e20b  6KernelSU: ksu_input_hook is disabled
+01b4e241  4KernelSU: target type %s does not exist
+01b55b10  3KernelSU: feature: get_handler for %u failed: %d
+01b55b84  6KernelSU: read_iter_proxy: orig read finished, start append rc
+01b55bce  6KernelSU: Cached su SID: %u
+01b55bed  3KernelSU: add_type: alloc type_datum failed.
+01b55c2b  3KernelSU: set_feature: failed for feature %u: %d
+01b58500  CONFIG_KSU_SUSFS_SUS_KSTAT
+01b5e126  track_throne
+01b5e134  6KernelSU: ksu_show_allow_list
+01b5e155  4KernelSU: Failed to setgroups, invalid gid: %d
+01b5e187  4KernelSU: Failed to cache init SID: %d
+01b5e1c2  3KernelSU: sepol: %d failed.
+01b5e1e1  3KernelSU: add_filename_trans: hashtab_insert failed: %d
+01b5e23a  3KernelSU: get_feature: failed for feature %u: %d
+01b61229  CONFIG_KSU_SUSFS_OPEN_REDIRECT
+01b66624  6KernelSU: packages.list detected: %d
+01b6664c  6KernelSU: Found new base.apk at path: %s, is_manager: %d
+01b66688  3KernelSU: ksu_set_app_profile alloc failed
+01b666b6  3KernelSU: load_allow_list open file failed: %ld
+01b666e9  3KernelSU: invalid allowlist version: %d
+01b66714  6KernelSU: boot not completed, skip prune
+01b66740  6KernelSU: prune uid: %d, package: %s
+01b66768  3KernelSU: feature: set_handler for %u failed: %d
+01b667a9  6KernelSU: read init.rc, comm: %s, rc_count: %zu, module_rc: %zu
+01b667ec  6KernelSU: read_proxy: module append error, totally appended %zd
+01b6682f  3KernelSU: alloc policy len %ld
+01b66851  3KernelSU: get_wrapper_fd: copy_from_user failed
+01b66884  3KernelSU: manage_mark: copy_to_user failed
+01b6e45a  3KernelSU: Failed to register kernel_umount feature handler
+01b6e4a5  3KernelSU: Failed to open directory: %s, err: %ld
+01b6e4d9  3KernelSU: update_uid: uid parse err
+01b6e50a  3KernelSU: setup ksu cred failed.
+01b6e52e  4KernelSU: Failed to cache ksu_file SID: %d
+01b6e5bd  drivers/kernelsu/supercall/dispatch.c
+01b6e5f3  3KernelSU: set_feature: copy_from_user failed
+01b76378  3KernelSU: save_allow_list create file failed: %ld
+01b763ad  3KernelSU: feature: invalid feature_id %u
+01b763d9  6KernelSU: read_proxy: static append done
+01b76405  6KernelSU: read_proxy: append module %zu
+01b76430  6KernelSU: read_iter_proxy: module append error, appended %zd
+01b764a7  3KernelSU: uid_granted_root: copy_to_user failed
+01b764da  6KernelSU: [%d] install ksu fd: %d
+01b7e499  4KernelSU: failed to get task_struct for PID 1
+01b7e4ca  4KernelSU: failed get path for init mount namespace: %ld
+01b7e558  3KernelSU: module rc: read failed: %zd
+01b7e591  3KernelSU: get_allow_list: copy_to_user count failed
+01b7e5c8  3KernelSU: get_sulog_fd: unsupported flags 0x%x
+01b7e5fa  6KernelSU: adb_root: set to %d
+01b7e61b  4KernelSU: selinux_hide: fake status need late initialization
+01b85a66  /data/adb/ksud
+01b85a76  6KernelSU: ksu_core_exit
+01b85a91  3KernelSU: failed to make root private, err: %d
+01b85ac3  6KernelSU: sha256 error
+01b85add  3KernelSU: save_allow_list write magic failed.
+01b85b0e  6KernelSU: feature: feature management initialized
+01b85b43  6KernelSU: target type %s does not exist
+01b8dc98  6KernelSU: hook_manager: escape to root for init executing ksud: %d
+01b8dcde  6KernelSU: set root profile, key: %s, uid: %d, gid: %d, context: %s
+01b8dd24  6KernelSU: stat init.rc
+01b8dd3d  6KernelSU: read_iter_proxy: static append done
+01b8dd6e  6KernelSU: Cached init SID: %u
+01b8dd8f  3KernelSU: add_type: alloc key failed.
+01b8ddb8  6KernelSU: sulog: fd released
+01b8ddf7  3KernelSU: get_app_profile: copy_from_user failed
+01b90681  CONFIG_KSU_SUSFS_SUS_MAP
+01b9558d  6KernelSU: sulog: set to %d
+01b955ab  3KernelSU: Failed to register su_compat feature handler
+01b955f7  4KernelSU: pid: %d ,unknown mount namespace mode: %d
+01b9562e  6KernelSU: observer exit done
+01b9564e  3KernelSU: invalid groups_count in app_profile: %s
+01b956b9  3KernelSU: sepol: unknown cmd: %d
+01b956dd  3KernelSU: alloc xperms failed
+01b956fe  3KernelSU: manage_mark: copy_from_user failed
+01b9572e  3KernelSU: Failed to register adb_root feature handler
+01b95767  6KernelSU: selinux_hide: set to %d
+01b9578c  6KernelSU: selinux_hide: init selinux hide
+01b9d389  6KernelSU: ksu_handle_execveat_sucompat: su found
+01b9d3bd  6KernelSU: su_compat: set to %d
+01b9d3df  3KernelSU: invalid app_profile key
+01b9d43a  3KernelSU: sepol: %s cannot be ALL.
+01b9d460  3KernelSU: sepolicy: dup old pol
+01b9d483  4KernelSU: Type %s already exists
+01b9d4a7  3KernelSU: add_type: insert symtab failed.
+01b9d4d4  6KernelSU: type %s is an attribute
+01b9d505  6KernelSU: ksu fd released
+01ba0200  CONFIG_KSU_SUSFS_HIDE_KSU_SUSFS_SYMBOLS
+01ba51a6  3KernelSU: check_argv failed
+01ba51c5  4KernelSU: module rc: %s is not a regular file
+01ba5228  3KernelSU: failed to create backup sepolicy: %ld
+01ba5268  3KernelSU: add_filename_trans: alloc filename_trans_key failed
+01ba52a9  3KernelSU: uid_should_umount: copy_to_user failed
+01bad95a  3KernelSU: adb root failed: %d
+01bada9e  6KernelSU: Unsupported profile version: %d
+01badb2c  3KernelSU: nuke path err: %d
+01badb4b  6KernelSU: Cached ksu_file SID: %u
+01badb70  3KernelSU: failed getting sid from secctx_name: %s, err: %d
+01badbae  6KernelSU: security_secctx_to_secid %s -> sid: %d, error: %d
+01badc36  3KernelSU: sepolicy: policydb_write: %d
+01badc60  3KernelSU: add_type: alloc val_to_name failed
+01badcbb  3KernelSU: cmd_add_try_umount: invalid operation %u
+01badcf1  6KernelSU: escape to root for adb
+01bb0970  CONFIG_KSU_SUSFS_SUS_MOUNT
+01bb5ad3  /data/adb/ksu/.allowlist
+01bb5aec  drivers/kernelsu/policy/feature.c
+01bb5b3b  3KernelSU: transive domain failed.
+01bb5b9c  6KernelSU: sulog: fd installed %d for pid %d
+01bb5bdc  3KernelSU: get_version: copy_to_user failed
+01bb5c0a  3KernelSU: ksu_install_fd: failed to get unused fd
+01bb5c3f  3KernelSU: copy new env failed: %ld
+01bbd121  6KernelSU: install fd for manager: %d
+01bbd149  4KernelSU: call ksys_unshare failed: %ld
+01bbd174  6KernelSU: observer init done
+01bbd194  4KernelSU: save_allow_list add task_work failed
+01bbd1c6  6KernelSU: load_allow_list read err: %zd
+01bbd1f1  3KernelSU: feature: no handler provided for feature %u
+01bbd22a  3KernelSU: feature: feature %u not registered
+01bbd27a  3KernelSU: module rc: alloc %zu failed
+01bbd2bc  6KernelSU: Cached zygote SID: %u
+01bbd31f  3KernelSU: add_type: alloc type_attr_map_array failed
+01bbd372  3KernelSU: get_manager_appid: copy_to_user failed
+01bbd3a6  3KernelSU: get_feature: copy_from_user failed
+01bbd3d6  3KernelSU: Failed to register selinux_hide feature handler
+01bbd413  6KernelSU: selinux_hide: ksu_selinux_hide_enabled: %d, ksu_selinux_hide_running: %d
+01bc5168  6KernelSU: umount %s failed: %d
+01bc51ec  6KernelSU: volumedown_pressed_count: %d
+01bc5216  6KernelSU: read_proxy: module append done
+01bc5251  6KernelSU: type %s does not exist
+01bc5275  6KernelSU: perm %s does not exist in class %s
+01bcd25f  6KernelSU: Searching manager...
+01bcd2c6  6KernelSU: exec zygote, /data prepared, second_stage: %d
+01bcd300  drivers/kernelsu/runtime/ksud_integration.c
+01bcd32d  4KernelSU: Failed to cache zygote SID: %d
+01bcd370  3KernelSU: secctx_name is NULL
+01bd0638  u:r:ksu:s0
+01bd5150  3KernelSU: Failed to register sulog feature handler
+01bd51d7  4KernelSU: call setns failed: %ld
+01bd522e  3KernelSU: allowlist read version: %d failed
+01bd525d  6KernelSU: read_iter_proxy: module append done
+01bd528d  ksu_file
+01bd52c3  6KernelSU: source type %s does not exist
+01bd52ee  6KernelSU: KernelSU IOCTL Commands:
+01bd5326  3KernelSU: manage_mark: invalid operation %u
+01bdcb2a  6KernelSU: %s: skip: %s magic: 0x%lx expected: 0x%lx
+01bdcb61  3KernelSU: save_allow_list find init task err
+01bdcb91  4KernelSU: feature: no handler registered for %u
+01bdcbc4  6KernelSU: read_iter_proxy: append static %zu
+01bdcc65  6KernelSU: old config: %u
+01bdcc81  6KernelSU: adding POLICYDB_CONFIG_ANDROID_NETLINK_ROUTE
+01bdccbb  3KernelSU: add_filename_trans: kstrdup name failed
+01bdccf0  4KernelSU: ksu ioctl: unsupported command 0x%x
+01bdcd2e  3KernelSU: ksu_install_fd: failed to create anon inode file
+01bdcd6c  6KernelSU: ksu fd installed: %d for pid %d
+01be4d97  3KernelSU: Failed to allocate memory for %s
+01be4dc4  drivers/kernelsu/policy/allowlist.c
+01be4df3  4KernelSU: Failed to setgroups, ENOMEM for: %d
+01be4e47  3KernelSU: feature: register handler is NULL
+01be4e90  3KernelSU: sepolicy: policydb_read: %d
+01be4eb9  6KernelSU: type %s is not an attribute 
+01be4ef3  3KernelSU: get_app_profile: copy_to_user failed
+01be4f25  4KernelSU: write ld_preload when adb_root_handle_execve failed: %ld
+01becef8  3KernelSU: open %s error.
+01becf19  6KernelSU: manager pkg: %s
+01becf36  3KernelSU: save_allow_list alloc cb err
+01becf60  6KernelSU: load_allow_uid, name: %s, uid: %d, allow: %d
+01becfbc  3KernelSU: failed to dup selinux_policy: %ld
+01becfeb  6KernelSU: class %s does not exist
+01bed010  4KernelSU: default type %s does not exist
+01bed056  3KernelSU: get_feature: copy_to_user failed
+01bf47d1  4KernelSU: restore pwd failed: %d, path: %s
+01bf481f  3KernelSU: Invalid context
+01bf483c  3KernelSU: too many app profile
+01bf485e  6KernelSU: migrated domain of profile: %s
+01bf488a  4KernelSU: failed to alloc fake task_struct
+01bf48f0  3KernelSU: new_get_allow_list: copy_to_user count failed
+01bf492b  3KernelSU: nuke ext4 mnt path too long
+01bf4954  4KernelSU: Access envp when adb_root_handle_execve failed: %ld
+01bfc1e6  4KernelSU: failed to find pid_struct for PID 1
+01bfc217  4KernelSU: failed to get an unused fd: %d
+01bfc243  6KernelSU: error: cannot find eocd
+01bfc295  3KernelSU: feature: invalid parameters
+01bfc2be  6KernelSU: feature: feature management cleaned up
+01bfc2f2  6KernelSU: module rc: open %s failed: %ld
+01bfc31e  4KernelSU: module rc: skip empty module rc
+01bfc34b  6KernelSU: module rc: loaded %zu bytes from %s
+01bfc37c  4KernelSU: source type %s does not exist
+01bfc3a7  6KernelSU: boot_complete triggered
+01bfc3cc  6KernelSU: wipe_umount_list: removing entry: %s
+01bfc3fe  3KernelSU: install ksu fd reply err
+01bfed21  CONFIG_KSU_SUSFS_SPOOF_UNAME
+01bfed3f  CONFIG_KSU_SUSFS_SPOOF_CMDLINE_OR_BOOTCONFIG
+01c03b22  6KernelSU: kernel_umount: set to %d
+01c03b5a  6KernelSU: sha256: %s, expected: %s
+01c03bd0  4KernelSU: Failed to cache kernel su domain SID: %d
+01c03c06  3KernelSU: failed to alloc backup sidtab
+01c03c35  3KernelSU: sepol: unknown subcmd: %d
+01c03c5c  6KernelSU: new config: %u
+01c03c78  4KernelSU: class %s does not exist
+01c03c9d  3KernelSU: add_filename_trans: alloc filename_trans_datum failed
+01c03ce0  6KernelSU: default type %s does not exist
+01c03d1e  3KernelSU: new_get_allow_list: copy_to_user uids failed
+01c03d58  3KernelSU: initialize_fake_status: failed to allocate page
+01c0512c  drivers/kernelsu/infra/file_wrapper.c
+01c0c129  6KernelSU: allowlist version: %d
+01c0c14c  4KernelSU: initialize_fake_status: skip not enforcing
+01c13e21  3KernelSU: Failed to allocate apk_path_hash for %s
+01c13e56  6KernelSU: Search manager finished
+01c13e7b  3KernelSU: Failed to get package name from apk path: %s
+01c13eb5  6KernelSU: uid :%d, allow: %d
+01c13efe  4KernelSU: feature: no get_handler for feature %u
+01c13f49  3KernelSU: ksu_dup_sepolicy err: %d
+01c13f9b  3KernelSU: access libadbroot.so failed: %ld, skip adb root
+01c168d4  CONFIG_KSU_SUSFS_SUS_PATH
+01c168ef  CONFIG_KSU_SUSFS_ENABLE_LOG
+01c1b857  6KernelSU: handle umount for uid: %d, pid: %d
+01c1b887  4KernelSU: failed open file for init mount namespace: %ld
+01c1b90a  6KernelSU: set app profile, key: %s, uid: %d, umount modules: %d
+01c1b94d  3KernelSU: invalid selinux_domain in app_profile: %s
+01c1b9b3  6KernelSU: Could not set bit in permissive map
+01c1b9e4  6KernelSU: No class is specified, cannot add perm [%s] 
+01c1ba1e  3KernelSU: set_app_profile: copy_from_user failed
+01c1ba52  6KernelSU: cmd_add_try_umount: entry removed: %s
+01c1ba85  3KernelSU: alloc tmp env failed
+01c1baa7  6KernelSU: selinux_hide is not enabled - drop backup_sepolicy
+01c2346c  6KernelSU: read_proxy: append error, totally appended %ld
+01c2351b  3KernelSU: add_type: alloc type_val_to_struct failed
+01c2355f  3KernelSU: nuke ext4 copy mnt failed: %ld
+01c2358b  3KernelSU: get_sulog_fd: copy_from_user failed
+01c2ad77  4KernelSU: get absolute pwd failed: %ld
+01c2ada1  6KernelSU: watching %s
+01c2adc2  4KernelSU: feature: handler for %u already registered, overwriting
+01c2ae4a  6KernelSU: post-fs-data triggered
+01c2ae99  4KernelSU: write ld_library_path when adb_root_handle_execve failed: %ld
+01c32b3e  ksu_handle_umount
+01c32b51  3KernelSU: ksu_fdwrapper: getfile failed: %ld
+01c32be0  6KernelSU: on_post_fs_data already done
+01c32c0a  6KernelSU: /system/bin/init second_stage executed
+01c32c3e  6KernelSU: read_iter_proxy: append module %zu
+01c32c6e  3KernelSU: get_allow_list: copy_to_user uids failed
+01c32cb1  4KernelSU: initialize_fake_status: status_page not exist
+01e0db68  kernelsu.allow_shell
+01e0db7d  kernelsu.norc
+01e0e670      exec u:r:ksu:s0 root -- /data/adb/ksud post-fs-data
+01e0e6b9      exec u:r:ksu:s0 root -- /data/adb/ksud services
+01e0e777      exec u:r:ksu:s0 root -- /data/adb/ksud boot-completed
+023a5398  advmon_allowlist_duration
+023b67e5  ksu_feature_handler
+023b681c  ksu_feature_get_t
+023b682e  ksu_feature_set_t
+023b6840  ksu_feature_id
+023b684f  KSU_FEATURE_SU_COMPAT
+023b6865  KSU_FEATURE_KERNEL_UMOUNT
+023b687f  KSU_FEATURE_SULOG
+023b6891  KSU_FEATURE_ADB_ROOT
+023b68a6  KSU_FEATURE_SELINUX_HIDE
+023b68bf  KSU_FEATURE_MAX
+023b68e6  ksu_event_queue
+023b698f  ksu_sulog_pending_event
+023b69a7  ksu_file_wrapper
+023b69b8  ksu_event_queue_node
+023b69cd  ksu_event_record_hdr
+023b69e8  ksu_event_queue_dropped_info
+023b6bab  ksu_sulog_event_type
+023b6bc0  KSU_SULOG_EVENT_ROOT_EXECVE
+023b6bdc  KSU_SULOG_EVENT_SUCOMPAT
+023b6bf5  KSU_SULOG_EVENT_IOCTL_GRANT_ROOT
+023b6c16  ksu_sulog_event
+023b6c3c  ksu_sulog_identity
+023b6c4f  ksu_ioctl_cmd_map
+023b6c6c  ksu_ioctl_handler_t
+023b6c80  ksu_perm_check_t
+023b6c91  ksu_new_get_allow_list_cmd
+023b6cb1  ksu_get_info_cmd
+023b6ccf  ksu_get_info_legacy_cmd
+023b6ce7  ksu_report_event_cmd
+023b6cfc  ksu_set_sepolicy_cmd
+023b6d11  ksu_check_safemode_cmd
+023b6d35  ksu_uid_granted_root_cmd
+023b6d56  ksu_uid_should_umount_cmd
+023b6d7e  ksu_get_manager_appid_cmd
+023b6d9e  ksu_set_app_profile_cmd
+023b6db6  ksu_get_feature_cmd
+023b6dca  ksu_set_feature_cmd
+023b6dde  ksu_get_wrapper_fd_cmd
+023b6df5  ksu_manage_mark_cmd
+023b6e2b  ksu_add_try_umount_cmd
+023b6e42  ksu_get_sulog_fd_cmd
+023b6e57  ksu_install_fd_tw
+024156e1  __initstub__kmod_kernelsu__295_158_kernelsu_init6
+024375b8  apply_kernelsu_rules
+024a2c8a  kernelsu_exit
+024a2c98  kernelsu_init
+024a54c4  ksu_adb_root_exit
+024a54e4  ksu_adb_root_handle_execve
+024a54ff  ksu_adb_root_init
+024a5511  ksu_allow
+024a551b  ksu_allowlist_exit
+024a552e  ksu_allowlist_init
+024a5541  ksu_allowxperm
+024a5550  ksu_attribute
+024a555e  ksu_auditallow
+024a556d  ksu_auditallowxperm
+024a5581  ksu_create_file_wrapper
+024a5599  ksu_deny
+024a55a2  ksu_destroy_sepolicy
+024a55b7  ksu_dontaudit
+024a55c5  ksu_dontauditxperm
+024a55e0  ksu_dup_sepolicy
+024a55f1  ksu_enforce
+024a55fd  ksu_event_queue_close
+024a5613  ksu_event_queue_destroy
+024a562b  ksu_event_queue_drop
+024a5640  ksu_event_queue_has_data
+024a5659  ksu_event_queue_init
+024a566e  ksu_event_queue_poll
+024a5683  ksu_event_queue_push
+024a5698  ksu_event_queue_read
+024a56ad  ksu_exists
+024a56b8  ksu_feature_exit
+024a56c9  ksu_feature_init
+024a56da  ksu_file_wrapper_init
+024a56f0  ksu_genfscon
+024a5712  ksu_get_allow_list
+024a5725  ksu_get_app_profile
+024a5739  ksu_get_feature
+024a5749  ksu_get_root_profile
+024a576b  ksu_handle_execveat
+024a5793  ksu_handle_execveat_init
+024a57ac  ksu_handle_execveat_ksud
+024a57d7  ksu_handle_execveat_sucompat
+024a5811  ksu_handle_faccessat
+024a5826  ksu_handle_inode_event
+024a583d  ksu_handle_input_handle_event
+024a585b  ksu_handle_setresuid
+024a5870  ksu_handle_stat
+024a588a  ksu_handle_sys_read
+024a58ac  ksu_handle_sys_reboot
+024a58f3  ksu_handle_vfs_fstat
+024a5908  ksu_install_fd
+024a5917  ksu_install_fd_tw_func
+024a592e  ksu_install_file_wrapper
+024a5947  ksu_install_sulog_fd
+024a595c  ksu_is_safe_mode
+024a596d  ksu_kernel_umount_exit
+024a5984  ksu_kernel_umount_init
+024a599b  ksu_ksud_exit
+024a59a9  ksu_ksud_init
+024a59b7  ksu_load_allow_list
+024a59cb  ksu_observer_exit
+024a59dd  ksu_observer_init
+024a59ef  ksu_permissive
+024a59fe  ksu_persistent_allow_list
+024a5a25  ksu_prune_allowlist
+024a5a39  ksu_put_app_profile
+024a5a4d  ksu_put_root_profile
+024a5a62  ksu_register_feature_handler
+024a5a7f  ksu_seccomp_allow_cache
+024a5a97  ksu_seccomp_clear_cache
+024a5aaf  ksu_selinux_hide_drop_backup_if_unused
+024a5ad6  ksu_selinux_hide_exit
+024a5aec  ksu_selinux_hide_handle_post_fs_data
+024a5b11  ksu_selinux_hide_handle_second_stage
+024a5b36  ksu_selinux_hide_init
+024a5b4c  ksu_set_app_profile
+024a5b60  ksu_set_feature
+024a5b70  ksu_setuid_hook_exit
+024a5b85  ksu_setuid_hook_init
+024a5ba5  ksu_show_allow_list
+024a5bb9  ksu_sucompat_exit
+024a5bcb  ksu_sucompat_init
+024a5bdd  ksu_sulog_capture
+024a5bef  ksu_sulog_capture_sucompat
+024a5c0a  ksu_sulog_emit_grant_root
+024a5c24  ksu_sulog_emit_pending
+024a5c3b  ksu_sulog_events_exit
+024a5c51  ksu_sulog_events_init
+024a5c67  ksu_sulog_exit
+024a5c76  ksu_sulog_fd_exit
+024a5c88  ksu_sulog_fd_init
+024a5c9a  ksu_sulog_get_queue
+024a5cae  ksu_sulog_init
+024a5cbd  ksu_sulog_is_enabled
+024a5cd2  ksu_sulog_poll
+024a5ce1  ksu_sulog_read
+024a5cf0  ksu_sulog_release
+024a5d02  ksu_supercall_cleanup_state
+024a5d1e  ksu_supercall_dump_commands
+024a5d3a  ksu_supercall_handle_ioctl
+024a5d55  ksu_supercall_reboot_handler
+024a5d72  ksu_supercalls_exit
+024a5d86  ksu_supercalls_init
+024a5d9a  ksu_throne_tracker_exit
+024a5db2  ksu_throne_tracker_init
+024a5dca  ksu_type
+024a5dd3  ksu_type_change
+024a5de3  ksu_type_member
+024a5df3  ksu_type_transition
+024a5e07  ksu_typeattribute
+024a5e19  ksu_uid_should_umount
+024a5e2f  ksu_unregister_feature_handler
+024a5e4e  ksu_wrapper_compat_ioctl
+024a5e67  ksu_wrapper_copy_file_range
+024a5e83  ksu_wrapper_d_dname
+024a5e97  ksu_wrapper_d_release
+024a5eb7  ksu_wrapper_fadvise
+024a5ecb  ksu_wrapper_fallocate
+024a5ee1  ksu_wrapper_fasync
+024a5ef4  ksu_wrapper_flock
+024a5f06  ksu_wrapper_flush
+024a5f18  ksu_wrapper_fsync
+024a5f2a  ksu_wrapper_get_unmapped_area
+024a5f48  ksu_wrapper_iopoll
+024a5f5b  ksu_wrapper_iterate
+024a5f6f  ksu_wrapper_iterate_shared
+024a5f8a  ksu_wrapper_llseek
+024a5f9d  ksu_wrapper_lock
+024a5fae  ksu_wrapper_mmap
+024a5fbf  ksu_wrapper_open
+024a5fd0  ksu_wrapper_poll
+024a5fe1  ksu_wrapper_read
+024a5ff7  ksu_wrapper_read_iter
+024a600d  ksu_wrapper_release
+024a6021  ksu_wrapper_remap_file_range
+024a603e  ksu_wrapper_sendpage
+024a6053  ksu_wrapper_setlease
+024a6068  ksu_wrapper_show_fdinfo
+024a6084  ksu_wrapper_splice_read
+024a609c  ksu_wrapper_splice_write
+024a60b5  ksu_wrapper_unlocked_ioctl
+024a60d0  ksu_wrapper_write
+024a60e2  ksu_wrapper_write_iter
+# (453 unique)
+
+====================================================================================================
+## D. SUSFS
+====================================================================================================
+01b39055  susfs_sus_kstat_spoof_generic_fillattr
+01b390bc  6susfs:[%u][%d][%s] CMD_SUSFS_SET_UNAME -> ret: %d
+01b390f1  6susfs:[%u][%d][%s] CMD_SUSFS_ENABLE_LOG -> ret: %d
+01b39127  6susfs:[%u][%d][%s] CMD_SUSFS_SET_CMDLINE_OR_BOOTCONFIG -> ret: %d
+01b41db9  susfs_add_sus_path_loop
+01b41e00  6susfs:[%u][%d][%s] CMD_SUSFS_SHOW_VARIANT -> ret: %d
+01b496bc  6susfs:[%u][%d][%s] CMD_SUSFS_ADD_SUS_MAP -> ret: %d
+01b496f2  susfs_init
+01b496fd  susfs_sdcard_cleanup_fn
+01b58500  CONFIG_KSU_SUSFS_SUS_KSTAT
+01b5856a  susfs_run_sus_path_loop
+01b61229  CONFIG_KSU_SUSFS_OPEN_REDIRECT
+01b69537  susfs_handle_sdcard_inode_event
+01b715e3  6susfs:[%u][%d][%s] CMD_SUSFS_HIDE_SUS_MNTS_FOR_NON_SU_PROCS -> ret: %d
+01b71662  6susfs:[%u][%d][%s] CMD_SUSFS_ADD_OPEN_REDIRECT -> ret: %d
+01b80d1a  susfs_update_sus_kstat
+01b80d32  3susfs:[%u][%d][%s]failed to create thread susfs_sdcard_monitor
+01b88784  susfs_add_sus_kstat
+01b9060a  susfs_add_sus_path
+01b90681  CONFIG_KSU_SUSFS_SUS_MAP
+01b985de  susfs_sus_kstat_spoof_show_map_vma
+01b98601  susfs_set_avc_log_spoofing
+01b9861d  6susfs:[%u][%d][%s] CMD_SUSFS_ENABLE_AVC_LOG_SPOOFING -> ret: %d
+01ba0200  CONFIG_KSU_SUSFS_HIDE_KSU_SUSFS_SYMBOLS
+01bb08b3  6susfs:[%u][%d][%s] CMD_SUSFS_ADD_SUS_KSTAT -> ret: %d
+01bb0970  CONFIG_KSU_SUSFS_SUS_MOUNT
+01bc03d0  6susfs:[%u][%d][%s] Initializing susfs_extra_works
+01bc8186  susfs_set_uname
+01bc819a  susfs_show_variant
+01bd03bf  susfs_set_hide_sus_mnts_for_non_su_procs
+01bd05dd  susfs_open_redirect_spoof_vfs_statfs
+01bd0603  6susfs:[%u][%d][%s] enabling susfs_avc_log_spoofing
+01bd7e1c  6susfs:[%u][%d][%s] disabling susfs_avc_log_spoofing
+01bdfd76  6susfs:[%u][%d][%s] CMD_SUSFS_UPDATE_SUS_KSTAT -> ret: %d
+01be766b  6susfs:[%u][%d][%s] CMD_SUSFS_ADD_SUS_PATH -> ret: %d
+01be771a  susfs_mark_inode_sus_kstat
+01befdf9  susfs_sdcard_monitor
+01bf71d2  6susfs:[%u][%d][%s] CMD_SUSFS_ADD_SUS_PATH_LOOP -> ret: %d
+01bf720e  susfs_set_cmdline_or_bootconfig
+01bf722e  susfs_get_enabled_features
+01bfeca4  6susfs:[%u][%d][%s] CMD_SUSFS_ADD_SUS_KSTAT_STATICALLY -> ret: %d
+01bfece7  susfs_open_redirect_spoof_do_sys_openat
+01bfed0f  susfs_add_sus_map
+01bfed21  CONFIG_KSU_SUSFS_SPOOF_UNAME
+01bfed3f  CONFIG_KSU_SUSFS_SPOOF_CMDLINE_OR_BOOTCONFIG
+01bfed6d  susfs_sdcard_monitor_fn
+01c06aa4  susfs_add_open_redirect
+01c0f055  6susfs:[%u][%d][%s] CMD_SUSFS_SHOW_ENABLED_FEATURES -> ret: %d
+01c16835  6susfs:[%u][%d][%s] susfs_is_hide_sus_mnts_for_non_su_procs_enabled: %d
+01c1687e  susfs_enable_log
+01c168d4  CONFIG_KSU_SUSFS_SUS_PATH
+01c168ef  CONFIG_KSU_SUSFS_ENABLE_LOG
+01c1690d  6susfs:[%u][%d][%s] CMD_SUSFS_SHOW_VERSION -> ret: %d
+01c16944  susfs_start_sdcard_monitor_fn
+01c1e7d8  susfs_open_redirect_spoof_show_map_vma_srcu
+01c25f53  susfs_is_inode_sus_path
+01c25f6b  susfs_open_redirect_spoof_vfs_readlink
+01c25f92  susfs_open_redirect_spoof_do_proc_readlink
+01c2d776  susfs_show_version
+0233c221  susfs_variant
+0233c240  susfs_version
+023f8f4b  susfs_srcu_open_redirect_srcu_data
+023f8f6e  susfs_srcu_sus_path_loop_srcu_data
+02502bca  susfs_alloc_non_unshare_ksu_vfsmnt
+02502bfe  susfs_get_current_sid
+02502c14  susfs_get_data_path
+02502c4c  susfs_get_non_sus_mnt_id_from_mnt
+02502c75  susfs_get_non_sus_vfsmnt_from_vfsmnt
+02502ca6  susfs_get_sid_from_name
+02502ce9  susfs_is_current_init_domain
+02502d06  susfs_is_current_ksu_domain
+02502d22  susfs_is_current_zygote_domain
+02502d5e  susfs_is_sid_equal
+02502df2  susfs_open_redirect_spoof_seq_show
+02502ea6  susfs_run_extra_works
+02502f07  susfs_set_batch_sid
+02502f74  susfs_show_mountinfo
+02502faf  susfs_show_vfsmnt
+02502fc1  susfs_show_vfsstat
+02502fd4  susfs_spoof_cmdline_or_bootconfig
+02502ff6  susfs_spoof_uname
+# (81 unique)
+
+====================================================================================================
+## E. SELinux / ksu domain
+====================================================================================================
+01b39e37  selinux_set_mnt_opts
+01b402b6  security/selinux/ss/ebitmap.h
+01b4a50d  selinux
+01b518d4  security/selinux/ss/sidtab.c
+01b79ee2  selinux_netlink_send
+01b79f3e  4SELinux: failed to initialize selinuxfs
+01b7e61b  4KernelSU: selinux_hide: fake status need late initialization
+01b7e65a  selinux_hide
+01b897d2  netlink_selinux_socket
+01b8ed31  security/selinux/selinuxfs.c
+01b95767  6KernelSU: selinux_hide: set to %d
+01b9578c  6KernelSU: selinux_hide: init selinux hide
+01b9989b  security/selinux/ss/hashtab.h
+01b9d460  3KernelSU: sepolicy: dup old pol
+01b9e4a5  security/selinux/netlink.c
+01ba5228  3KernelSU: failed to create backup sepolicy: %ld
+01badc36  3KernelSU: sepolicy: policydb_write: %d
+01bb19dd  selinux_audit_rule_match: unrecognized SID %d
+01bbd3d6  3KernelSU: Failed to register selinux_hide feature handler
+01bbd413  6KernelSU: selinux_hide: ksu_selinux_hide_enabled: %d, ksu_selinux_hide_running: %d
+01bc11dc  security/selinux/ss/hashtab.c
+01bc6483  security/selinux/hooks.c
+01bc649c  security/selinux/ss/services.c
+01bd0638  u:r:ksu:s0
+01bd145c  selinuxfs
+01bd865c  security.selinux
+01be4e90  3KernelSU: sepolicy: policydb_read: %d
+01be8d3f  selinux_audit_rule_match: missing rule
+01becfbc  3KernelSU: failed to dup selinux_policy: %ld
+01bee1c1  security/selinux/netnode.c
+01bf58ef  security/selinux/avc.c
+01c0d28d  security/selinux/ss/policydb.c
+01c13f49  3KernelSU: ksu_dup_sepolicy err: %d
+01c17abc  security/selinux/ss/avtab.c
+01c1b94d  3KernelSU: invalid selinux_domain in app_profile: %s
+01c1baa7  6KernelSU: selinux_hide is not enabled - drop backup_sepolicy
+01c26dec  landlock,lockdown,yama,loadpin,safesetid,integrity,selinux,smack,tomoyo,apparmor,bpf
+01e0e670      exec u:r:ksu:s0 root -- /data/adb/ksud post-fs-data
+01e0e6b9      exec u:r:ksu:s0 root -- /data/adb/ksud services
+01e0e777      exec u:r:ksu:s0 root -- /data/adb/ksud boot-completed
+01f311ee  selinux_audited
+01f311fe  android_rvh_selinux_is_initialized
+01f34bee  android_rvh_selinux_avc_insert
+01f34c0d  android_rvh_selinux_avc_node_delete
+01f34c31  android_rvh_selinux_avc_node_replace
+01f34c56  android_rvh_selinux_avc_lookup
+01f87ae6  __SCK__tp_func_android_rvh_selinux_is_initialized
+01f891d7  __tracepoint_android_rvh_selinux_avc_node_delete
+01f89208  __SCK__tp_func_android_rvh_selinux_avc_node_delete
+01f97e78  GKI_struct_selinux_state
+01f99662  __tracepoint_android_rvh_selinux_avc_lookup
+01f9f07a  __traceiter_android_rvh_selinux_avc_lookup
+01fa5eb2  __tracepoint_android_rvh_selinux_is_initialized
+01faa1c0  __traceiter_android_rvh_selinux_avc_node_delete
+01facc2c  __tracepoint_android_rvh_selinux_avc_node_replace
+01fb7112  __tracepoint_android_rvh_selinux_avc_insert
+01fbe2a3  __traceiter_android_rvh_selinux_is_initialized
+01fbf97b  __traceiter_android_rvh_selinux_avc_insert
+01fbf9a6  __SCK__tp_func_android_rvh_selinux_avc_insert
+01fc271d  __traceiter_android_rvh_selinux_avc_node_replace
+01fc274e  __SCK__tp_func_android_rvh_selinux_avc_lookup
+01fc79aa  __SCK__tp_func_android_rvh_selinux_avc_node_replace
+02354a50  btf_trace_selinux_audited
+02354a6a  selinux_audit_data
+02354a9b  selinux_state
+02354b22  selinux_avc
+02354b6f  selinux_policy
+02354c4b  trace_event_raw_selinux_audited
+02354ced  trace_event_data_offsets_selinux_audited
+023552f1  selinux_map
+023552fd  selinux_mapping
+023576a5  selinux_mnt_opts
+0235796f  selinux_fs_info
+023579ed  selinux_load_state
+02357a0d  selinux_policy_convert_data
+02357a74  selinux_nlgroups
+02357f30  selinux_kernel_status
+0235807b  selinux_audit_rule
+023b6af4  selinux_domain
+023b6cfc  ksu_set_sepolicy_cmd
+0240a6e7  __bpf_trace_selinux_audited
+0241957f  __initstub__kmod_selinux__428_121_selnl_init6
+024195ad  __initstub__kmod_selinux__720_2393_init_sel_fs6
+024195dd  __initstub__kmod_selinux__725_279_sel_netif_init6
+0241960f  __initstub__kmod_selinux__728_238_sel_netport_init6
+02419643  __initstub__kmod_selinux__728_304_sel_netnode_init6
+02419677  __initstub__kmod_selinux__762_3829_aurule_init6
+024196a7  __initstub__kmod_selinux__821_7631_selinux_nf_ip_init6
+0242eaa4  __traceiter_selinux_audited
+024651b5  do_set_sepolicy
+0248c218  handle_sepolicy
+024a55a2  ksu_destroy_sepolicy
+024a55e0  ksu_dup_sepolicy
+024a5aaf  ksu_selinux_hide_drop_backup_if_unused
+024a5ad6  ksu_selinux_hide_exit
+024a5aec  ksu_selinux_hide_handle_post_fs_data
+024a5b11  ksu_selinux_hide_handle_second_stage
+024a5b36  ksu_selinux_hide_init
+024cd964  perf_trace_selinux_audited
+024eea00  selinux_add_mnt_opt
+024eea14  selinux_add_opt
+024eea2a  selinux_audit_rule_free
+024eea42  selinux_audit_rule_init
+024eea5a  selinux_audit_rule_known
+024eea73  selinux_audit_rule_match
+024eea8c  selinux_avc_init
+024eea9d  selinux_binder_set_context_mgr
+024eeabc  selinux_binder_transaction
+024eead7  selinux_binder_transfer_binder
+024eeaf6  selinux_binder_transfer_file
+024eeb13  selinux_bpf
+024eeb1f  selinux_bpf_map
+024eeb2f  selinux_bpf_map_alloc
+024eeb45  selinux_bpf_map_free
+024eeb5a  selinux_bpf_prog
+024eeb6b  selinux_bpf_prog_alloc
+024eeb82  selinux_bpf_prog_free
+024eeb98  selinux_bprm_committed_creds
+024eebb5  selinux_bprm_committing_creds
+024eebd3  selinux_bprm_creds_for_exec
+024eebef  selinux_capable
+024eebff  selinux_capget
+024eec0e  selinux_capset
+024eec1d  selinux_complete_init
+024eec33  selinux_cred_getsecid
+024eec49  selinux_cred_prepare
+024eec5e  selinux_cred_transfer
+024eec74  selinux_d_instantiate
+024eec8a  selinux_dentry_create_files_as
+024eeca9  selinux_dentry_init_security
+024eecd5  selinux_determine_inode_label
+024eecf3  selinux_file_alloc_security
+024eed0f  selinux_file_fcntl
+024eed22  selinux_file_ioctl
+024eed35  selinux_file_ioctl_compat
+024eed4f  selinux_file_lock
+024eed61  selinux_file_mprotect
+024eed77  selinux_file_open
+024eed89  selinux_file_permission
+024eeda1  selinux_file_receive
+024eedb6  selinux_file_send_sigiotask
+024eedd2  selinux_file_set_fowner
+024eedea  selinux_free_mnt_opts
+024eee00  selinux_fs_context_dup
+024eee17  selinux_fs_context_parse_param
+024eee36  selinux_genfs_get_sid
+024eee4c  selinux_getprocattr
+024eee60  selinux_hide_feature_get
+024eee79  selinux_hide_feature_set
+024eee92  selinux_inet_conn_established
+024eeeb0  selinux_inet_conn_request
+024eeeca  selinux_inet_csk_clone
+024eeee1  selinux_init
+024eeeee  selinux_inode_alloc_security
+024eef0b  selinux_inode_copy_up
+024eef21  selinux_inode_copy_up_xattr
+024eef3d  selinux_inode_create
+024eef52  selinux_inode_follow_link
+024eef6c  selinux_inode_free_security
+024eef88  selinux_inode_getattr
+024eef9e  selinux_inode_getsecctx
+024eefb6  selinux_inode_getsecid
+024eefcd  selinux_inode_getsecurity
+024eefe7  selinux_inode_getxattr
+024eeffe  selinux_inode_init_security
+024ef01a  selinux_inode_init_security_anon
+024ef03b  selinux_inode_invalidate_secctx
+024ef05b  selinux_inode_link
+024ef06e  selinux_inode_listsecurity
+024ef089  selinux_inode_listxattr
+024ef0a1  selinux_inode_mkdir
+024ef0b5  selinux_inode_mknod
+024ef0c9  selinux_inode_notifysecctx
+024ef0e4  selinux_inode_permission
+024ef0fd  selinux_inode_post_setxattr
+024ef119  selinux_inode_readlink
+024ef130  selinux_inode_removexattr
+024ef154  selinux_inode_rename
+024ef169  selinux_inode_rmdir
+024ef17d  selinux_inode_setattr
+024ef193  selinux_inode_setsecctx
+024ef1ab  selinux_inode_setsecurity
+024ef1c5  selinux_inode_setxattr
+024ef1dc  selinux_inode_symlink
+024ef1f2  selinux_inode_unlink
+024ef207  selinux_ip_forward
+024ef221  selinux_ip_postroute
+024ef236  selinux_ipc_getsecid
+024ef24b  selinux_ipc_permission
+024ef262  selinux_ipv4_forward
+024ef277  selinux_ipv4_output
+024ef28b  selinux_ipv4_postroute
+024ef2a2  selinux_ipv6_forward
+024ef2b7  selinux_ipv6_output
+024ef2cb  selinux_ipv6_postroute
+024ef2e2  selinux_ismaclabel
+024ef2f5  selinux_kernel_act_as
+024ef30b  selinux_kernel_create_files_as
+024ef32a  selinux_kernel_load_data
+024ef343  selinux_kernel_module_request
+024ef361  selinux_kernel_read_file
+024ef37a  selinux_kernel_status_page
+024ef395  selinux_kernfs_init_security
+024ef3b2  selinux_key_alloc
+024ef3c4  selinux_key_free
+024ef3d5  selinux_key_getsecurity
+024ef3ed  selinux_key_permission
+024ef404  selinux_lockdown
+024ef415  selinux_lsm_notifier_avc_callback
+024ef437  selinux_mmap_addr
+024ef449  selinux_mmap_file
+024ef45b  selinux_mount
+024ef469  selinux_move_mount
+024ef47c  selinux_msg_msg_alloc_security
+024ef49b  selinux_msg_queue_alloc_security
+024ef4bc  selinux_msg_queue_associate
+024ef4d8  selinux_msg_queue_msgctl
+024ef4f1  selinux_msg_queue_msgrcv
+024ef50a  selinux_msg_queue_msgsnd
+024ef523  selinux_netcache_avc_callback
+024ef556  selinux_nf_ip_init
+024ef569  selinux_nf_register
+024ef57d  selinux_nf_unregister
+024ef593  selinux_nlmsg_init
+024ef5a6  selinux_nlmsg_lookup
+024ef5c2  selinux_parse_skb
+024ef5d4  selinux_path_notify
+024ef5e8  selinux_perf_event_alloc
+024ef601  selinux_perf_event_free
+024ef619  selinux_perf_event_open
+024ef631  selinux_perf_event_read
+024ef649  selinux_perf_event_write
+024ef662  selinux_policy_cancel
+024ef678  selinux_policy_commit
+024ef68e  selinux_policy_genfs_sid
+024ef6a7  selinux_ptrace_access_check
+024ef6c3  selinux_ptrace_traceme
+024ef6da  selinux_quota_on
+024ef6eb  selinux_quotactl
+024ef6fc  selinux_release_secctx
+024ef713  selinux_req_classify_flow
+024ef72d  selinux_sb_alloc_security
+024ef747  selinux_sb_clone_mnt_opts
+024ef761  selinux_sb_eat_lsm_opts
+024ef779  selinux_sb_kern_mount
+024ef78f  selinux_sb_mnt_opts_compat
+024ef7aa  selinux_sb_remount
+024ef7bd  selinux_sb_show_options
+024ef7d5  selinux_sb_statfs
+024ef7e7  selinux_sctp_assoc_request
+024ef802  selinux_sctp_bind_connect
+024ef81c  selinux_sctp_sk_clone
+024ef832  selinux_secctx_to_secid
+024ef84a  selinux_secid_to_secctx
+024ef862  selinux_secmark_refcount_dec
+024ef87f  selinux_secmark_refcount_inc
+024ef89c  selinux_secmark_relabel_packet
+024ef8bb  selinux_sem_alloc_security
+024ef8d6  selinux_sem_associate
+024ef8ec  selinux_sem_semctl
+024ef8ff  selinux_sem_semop
+024ef926  selinux_shm_alloc_security
+024ef941  selinux_shm_associate
+024ef957  selinux_shm_shmat
+024ef969  selinux_shm_shmctl
+024ef97c  selinux_sk_alloc_security
+024ef996  selinux_sk_clone_security
+024ef9b0  selinux_sk_free_security
+024ef9c9  selinux_sk_getsecid
+024ef9dd  selinux_sock_graft
+024ef9f0  selinux_socket_accept
+024efa06  selinux_socket_bind
+024efa1a  selinux_socket_connect
+024efa31  selinux_socket_connect_helper
+024efa4f  selinux_socket_create
+024efa65  selinux_socket_getpeername
+024efa80  selinux_socket_getpeersec_dgram
+024efaa0  selinux_socket_getpeersec_stream
+024efac1  selinux_socket_getsockname
+024efadc  selinux_socket_getsockopt
+024efaf6  selinux_socket_listen
+024efb0c  selinux_socket_post_create
+024efb27  selinux_socket_recvmsg
+024efb3e  selinux_socket_sendmsg
+024efb55  selinux_socket_setsockopt
+024efb6f  selinux_socket_shutdown
+024efb87  selinux_socket_sock_rcv_skb
+024efba3  selinux_socket_socketpair
+024efbbd  selinux_socket_unix_may_send
+024efbda  selinux_socket_unix_stream_connect
+024efbfd  selinux_status_update_policyload
+024efc1e  selinux_status_update_setenforce
+024efc3f  selinux_syslog
+024efc4e  selinux_task_alloc
+024efc61  selinux_task_getioprio
+024efc78  selinux_task_getpgid
+024efc8d  selinux_task_getscheduler
+024efca7  selinux_task_getsecid_obj
+024efcc1  selinux_task_getsecid_subj
+024efcdc  selinux_task_getsid
+024efcf0  selinux_task_kill
+024efd02  selinux_task_movememory
+024efd1a  selinux_task_prlimit
+024efd2f  selinux_task_setioprio
+024efd46  selinux_task_setnice
+024efd5b  selinux_task_setpgid
+024efd70  selinux_task_setrlimit
+024efd87  selinux_task_setscheduler
+024efda1  selinux_task_to_inode
+024efdb7  selinux_transaction_write
+024efdd1  selinux_tun_dev_alloc_security
+024efdf0  selinux_tun_dev_attach
+024efe07  selinux_tun_dev_attach_queue
+024efe24  selinux_tun_dev_create
+024efe3b  selinux_tun_dev_free_security
+024efe59  selinux_tun_dev_open
+024efe6e  selinux_umount
+024efe7d  selinux_vm_enough_memory
+024f2966  setup_selinux
+025131fa  trace_event_raw_event_selinux_audited
+0251a0c8  trace_raw_output_selinux_audited
+# (321 unique)
+
+====================================================================================================
+## F. 模块加载器 / 签名与版本校验
+====================================================================================================
+01b41eab  Malformed file signature
+01b41ec4  Error %d verifying file signature
+01b57903  4%s: disagrees about version of symbol %s
+01b79173  require_signatures
+01ba7f0d  4Swap area shorter than signature indicates
+01bc8277  Incorrect file signature
+01be0f27  crypto/asymmetric_keys/signature.c
+01be8227  invalid boot record signature
+01c06862  3Unable to find swap-space signature
+01c0e018  5%s: module verification failed: signature and/or required key missing - tainting kernel
+01c1da03  4%s: no symbol version for %s
+01f7a315  __fsverity_verify_signature
+01f8aafd  verify_signature
+01f9ac87  create_signature
+01fab829  public_key_signature_free
+01fc3c32  public_key_verify_signature
+01fc6249  verify_pkcs7_signature
+02306271  signature
+02327550  module_signature
+02334446  asym_verify_signature
+0234740e  signature1
+02347419  signature2
+0234a3c5  df_signature
+0234a3e8  df_verity_signature
+0234a4c8  incfs_df_signature
+0234a4e6  incfs_df_verity_signature
+0234a5fa  verity_signature
+0234a65d  handle_signature
+0234a67c  handle_verity_signature
+0234a71b  incfs_file_signature
+0234a7c8  incfs_file_verity_signature
+0234ab85  signature_info
+0234abf5  signature_size
+0234ae2d  file_signature
+0234ae3c  file_signature_buf_size
+0234ae54  file_signature_len_out
+02359b6d  public_key_signature
+0235b89f  unique_mbr_signature
+02393136  bcs_signature
+023a4c15  signature_key_desc
+023c8e5d  ib_signature_type
+0243a0c7  asymmetric_key_verify_signature
+024844f3  fsverity_init_signature
+02484614  fsverity_verify_signature
+0248c6e4  has_v1_signature_file
+02495862  incfs_get_verity_signature
+02495a92  incfs_read_file_signature
+02495c5b  incfs_write_signature_to_backing_file
+02495cda  incfs_write_verity_signature_to_backing_file
+024976c1  user_signature_info
+024d1957  pkcs7_sig_note_signature
+024d7165  process_file_signature_md
+024d717f  process_file_verity_signature_md
+024d8c3a  public_key_verify_signature_2
+024e2288  restrict_link_by_signature
+02535309  x509_note_signature
+# (56 unique)
+
+====================================================================================================
+## G. 能力证据（config/debugfs/kprobe/bpf/devmem）
+====================================================================================================
+01b374f4  kernel/bpf/core.c
+01b37dd9  unprivileged_bpf_disabled
+01b3841e  __bpf_raw_tp_map
+01b3855b  6kprobes: Kprobes globally disabled
+01b388c3  tracing progs cannot use bpf_spin_lock yet
+01b389de  bpf_map_update_elem
+01b389f2  bpf_xdp_adjust_head
+01b38a06  bpf_skb_load_bytes_relative
+01b38a22  bpf_fib_lookup
+01b38a31  bpf_lwt_seg6_action
+01b38a45  bpf_probe_read_user
+01b38a59  bpf_probe_read_kernel
+01b38a6f  bpf_tcp_send_ack
+01b38b29  bpf_cpu_map
+01b39dde  use of bpf to write user RAM
+01b3fa1a  __bpf_mt_check_bytecode
+01b4143a  4could not enable bpf_trace_printk events
+01b416d7  bpf_ktime_get_ns
+01b416e8  bpf_redirect_map
+01b416f9  bpf_csum_level
+01b41708  bpf_skc_to_tcp_sock
+01b4171c  bpf_task_storage_get
+01b41731  bpf_timer_cancel
+01b425d1  fuse_bpf_aio_req
+01b48ab0  bpf_trace_printk
+01b48cec  unrecognized bpf_ld_imm64 insn
+01b48d0c  sleepable progs cannot use bpf_spin_lock yet
+01b48d3a  bpf_spin_unlock is missing
+01b48ebb  kernel/bpf/hashtab.c
+01b48ed0  bpf_array
+01b48eda  bpf_get_cgroup_classid
+01b48ef1  bpf_perf_event_read
+01b48f05  bpf_set_hash
+01b48f12  bpf_sock_map_update
+01b48f26  bpf_perf_prog_read_value
+01b48f3f  bpf_tcp_check_syncookie
+01b48f57  bpf_skc_to_tcp_request_sock
+01b48f73  bpf_load_hdr_opt
+01b48f84  bpf_ima_inode_hash
+01b49034  kernel/bpf/devmap.c
+01b4a17d  debugfs file owner did not clean up at exit: %pd
+01b4e58f  bpf_jit_kallsyms
+01b4f057  arch/arm64/kernel/probes/kprobes.c
+01b4ff1a  kprobe_insn_page
+01b4ff2c  4kprobes: Kprobes globally enabled, but failed to enable %d out of %d probes. Please check which kprobes are kept disabled via debugfs.
+01b50483  bpf_cgroup_storage_map
+01b504ad  bpf_clone_redirect
+01b504c0  bpf_sk_storage_get
+01b504d3  bpf_get_current_ancestor_cgroup_id
+01b504f6  bpf_ktime_get_boot_ns
+01b5050c  bpf_check_mtu
+01b57cdf  bpf_map
+01b57cf7  bpf_probe_read_str
+01b57d0a  bpf_msg_redirect_hash
+01b57d20  bpf_skb_cgroup_classid
+01b5dc7e  iio_debugfs_read_reg
+01b5e85d  bpf_sk_storage_map
+01b6059a  __builtin__kprobes
+01b6088a  bpf_get_trace_printk_proto
+01b60aa6  bpf_local_storage_map
+01b60abf  bpf_skb_output
+01b60ace  bpf_inode_storage_delete
+01b6885d  _kprobe_blacklist
+01b68d32  invalid bpf_ld_imm64 insn
+01b68d4d  bpf_struct_ops map cannot be used in prog
+01b68e9d  bpf verifier narrow ctx load misconfigured
+01b68f18  bpf_redirect
+01b68f25  bpf_get_current_cgroup_id
+01b68f3f  bpf_store_hdr_opt
+01b68f51  bpf_copy_from_user
+01b68f64  bpf_task_pt_regs
+01b68f75  bpf_timer
+01b69c07  root_bpf
+01b6e19b  failed to create debugfs trace entry
+01b6ec92  bpf_jit_enable
+01b6eca1  bpf_jit_limit
+01b6f946  kernel/bpf/verifier.c
+01b6f95c  kernel/bpf/inode.c
+01b6f96f  kernel/bpf/trampoline.c
+01b6f987  kernel/bpf/cpumap.c
+01b70c28  bpf_get_probe_write_proto
+01b70f3d  bpf_prog
+01b70f5e  bpf_skb_ancestor_cgroup_id
+01b70f79  bpf_msg_push_data
+01b71e23  Unable to open bpf program
+01b72946  4pinctrl core: failed to determine debugfs dir name for %s
+01b7834a  kallsyms
+01b789af  kernel/bpf/disasm.c
+01b789d4  bpf_map_delete_elem
+01b789e8  bpf_tail_call
+01b789f6  bpf_skb_vlan_push
+01b78a08  bpf_lwt_push_encap
+01b78a1b  bpf_ringbuf_discard
+01b78ab6  Please fix kernel include/linux/bpf_types.h
+01b78ae4  4Error in init bpf_struct_ops %s
+01b79d9e  debugfs access
+01b7f2dc  kernel/bpf/syscall.c
+01b7f825  4kprobes: Failed to recover from reentered kprobes.
+01b80583  bpf_timer cannot be accessed directly by load/store
+01b807a5  tail_calls are not allowed in non-JITed programs with bpf-to-bpf calls
+01b8084f  bpf_get_prandom_u32
+01b80863  bpf_sk_redirect_map
+01b80877  bpf_spin_unlock
+01b80887  bpf_sk_assign
+01b80895  bpf_ktime_get_coarse_ns
+01b817dd  bpf_prog_type_fuse
+01b81c6e  /dev/mem,kmem,port
+01b862af  4TCP: Warning: could not register bpf iterator tcp
+01b87faf  socket filter progs cannot use bpf_spin_lock yet
+01b880ad  bpf_skb_pull_data
+01b880bf  bpf_override_return
+01b880d3  bpf_get_local_storage
+01b880e9  bpf_map_peek_elem
+01b880fb  bpf_rc_pointer_rel
+01b8810e  bpf_sysctl_get_new_value
+01b88127  bpf_ringbuf_submit
+01b900d5  bpf_spin_unlock of different lock
+01b90167  bpf_map_lookup_elem
+01b9017b  bpf_skb_store_bytes
+01b9018f  bpf_skb_get_tunnel_key
+01b901a6  bpf_get_hash_recalc
+01b901ba  bpf_get_socket_cookie
+01b901d0  bpf_skb_ecn_set_ce
+01b901e3  bpf_get_ns_current_pid_tgid
+01b901ff  bpf_skc_to_tcp6_sock
+01b90214  bpf_this_cpu_ptr
+01b9022c  bpf_trampoline_%llu_%u
+01b96080  4UDP: Warning: could not register bpf iterator udp
+01b967a6  kernel/kallsyms.c
+01b967b8  kernel/kprobes.c
+01b967db  kernel/bpf/bpf_struct_ops.c
+01b96965  drivers/base/regmap/regmap-debugfs.c
+01b96e90  3bpf_jit: unknown atomic op code %02x
+01b977b2  3kprobes: Dump kprobe:
+01b97a8f  bpf-prog
+01b97a98  bpf_link
+01b97d0c  bpf_unspec
+01b97d17  bpf_get_current_uid_gid
+01b97d2f  bpf_get_numa_node_id
+01b97d44  bpf_map_push_elem
+01b97d56  bpf_probe_read_user_str
+01b97e39  bpf_struct_ops_map
+01b9d914  bpf_jit_harden
+01b9da87  bpf_stab
+01b9dbc7  6xt_bpf: check failed: parse error
+01b9e492  fs/debugfs/inode.c
+01b9e65b  net/bpf/test_run.c
+01b9f788  bpf_string
+01b9f793  kprobe_events
+01b9f9ae  bpf verifier narrow ctx access misconfigured
+01b9fa02  bpf_l3_csum_replace
+01b9fa16  bpf_get_current_pid_tgid
+01b9fa2f  bpf_csum_update
+01b9fa3f  bpf_rc_keydown
+01b9fa4e  bpf_spin_lock
+01ba4eae  rproc_init_debugfs
+01ba7646  3kprobes: kretprobe: Return address not found, not execute handler. Maybe there is a bug in the kernel.
+01ba7aca  bpf_iter_
+01ba7ae7  bpf_skb_vlan_pop
+01ba7af8  bpf_msg_redirect_map
+01ba7b0d  bpf_msg_pull_data
+01ba7b1f  bpf_sysctl_get_name
+01ba7b33  bpf_send_signal
+01ba7b43  bpf_seq_printf
+01ba7b52  bpf_d_path
+01ba7b5d  bpf_task_storage_delete
+01baeef9  arch/arm64/net/bpf_jit_comp.c
+01baef55  kernel/bpf/net_namespace.c
+01baf554  4KVM: debugfs: duplicate directory %s
+01bb009a  bpf-stats
+01bb01c7  bpf_spin_unlock without taking a lock
+01bb0233  bpf_sk_lookup_udp
+01bb0245  bpf_read_branch_records
+01bb025d  bpf_get_netns_cookie
+01bb45d7  4cec: Failed to create debugfs cec dir
+01bb60f5  bpf_sk_storage
+01bb648b  4unix: Warning: could not register bpf iterator unix
+01bb6993  kernel/trace/bpf_trace.c
+01bb69ac  kernel/trace/trace_kprobe.c
+01bb7c80  r:kprobes/%s
+01bb7f0e  bpf_queue_stack
+01bb7f58  bpf_tcp_gen_syncookie
+01bb7f6e  bpf_send_signal_thread
+01bb7f85  bpf_sk_cgroup_id
+01bb7f96  bpf_get_attach_cookie
+01bb99b9  4pinctrl core: failed to create debugfs directory for %s
+01bbf10d  bpf_stats_enabled
+01bbfd97  bpf_skb_set_tunnel_opt
+01bc0da6  debugfs file owner replaced proxy fops: %pd
+01bc5c84  net/ipv4/udp_bpf.c
+01bc63da  kernel/bpf/cgroup.c
+01bc7687  bpf-link
+01bc76d9  bpf_spin_lock cannot be accessed directly by load/store
+01bc7712  loading/calling other bpf or kernel functions are allowed for CAP_BPF and CAP_SYS_ADMIN
+01bc795e  bpf_bind
+01bc7967  bpf_jiffies64
+01bc7975  bpf_seq_write
+01bc7983  bpf_per_cpu_ptr
+01bce47e  kernel/bpf/helpers.c
+01bcf91f  File offset is not available with kprobe
+01bcfa8b  bpf verifier is misconfigured
+01bcfaea  bpf_get_route_realm
+01bcfafe  bpf_lwt_seg6_store_bytes
+01bcfb17  bpf_sk_lookup_tcp
+01bcfb29  bpf_bprm_opts_set
+01bd6217  kernel/bpf/bpf_lru_list.c
+01bd62a2  block/blk-mq-debugfs.c
+01bd6338  drivers/gpu/drm/drm_debugfs_crc.c
+01bd680a  kvm_create_vm_debugfs
+01bd7653  fd %d is not pointing to valid bpf_map
+01bd7784  3bpf_preload module get failed.
+01bd77a9  bpf_l4_csum_replace
+01bd77bd  bpf_skb_set_tunnel_key
+01bd77d4  bpf_probe_write_user
+01bd77e9  bpf_msg_apply_bytes
+01bd77fd  bpf_sock_hash_update
+01bd7812  bpf_get_current_task_btf
+01bd782b  bpf_sock_from_file
+01bd78a3  bpf_struct_ops_
+01bdf1e0  __versions
+01bdf3e3  p:kprobes/%s
+01bdf3f0  trace_kprobe
+01bdf68d  bpf_htab
+01bdf6f0  bpf_xdp_adjust_meta
+01bdf704  bpf_lwt_seg6_adjust_srh
+01bdf71c  bpf_msg_pop_data
+01bdf72d  bpf_skc_lookup_tcp
+01bdf740  bpf_redirect_neigh
+01bdf753  bpf_sys_bpf
+01be5ecf  kernel/bpf/bpf_iter.c
+01be5ee5  kernel/bpf/local_storage.c
+01be5f00  kernel/bpf/btf.c
+01be6eaf  Maxactive is not for kprobe
+01be6f3c  bpf-map
+01be7065  bpf_get_current_comm
+01be707a  bpf_sock_ops_cb_flags_set
+01be7094  bpf_skb_get_xfrm_state
+01be70ab  bpf_sysctl_get_current_value
+01be70c8  bpf_inode_storage_get
+01be70de  bpf_redirect_peer
+01be828f  fuse_bpf
+01be92e2  4pinctrl core: failed to create debugfs directory
+01bed678  net/sched/cls_bpf.c
+01bef1e3  .kprobes.text
+01bef259  config.gz
+01bef666  bpf_skb_load_bytes
+01bef679  bpf_get_socket_uid
+01bef68c  bpf_map_pop_elem
+01bef69d  bpf_snprintf
+01bef7eb  bpf_dtab
+01bf5d12  3bpf_jit: unknown opcode %02x
+01bf6ba5  bpf_csum_diff
+01bf6bb3  bpf_get_current_task
+01bf6bc8  bpf_set_hash_invalid
+01bf6bdd  bpf_perf_event_read_value
+01bf6bf7  bpf_sk_fullsock
+01bf6c07  bpf_ringbuf_output
+01bf6c1a  bpf_for_each_map_elem
+01bf6c30  bpf_btf_find_by_name_kind
+01bfe55f  kprobe_profile
+01bfe636  bpf_iter
+01bfe63f  bpf_seq_read
+01bfe65a  bpf_skb_change_type
+01bfe66e  bpf_get_stack
+01bfe67c  bpf_sk_redirect_hash
+01bfe691  bpf_sk_release
+01bfe6a0  bpf_seq_printf_btf
+01c0152c  ufs_debugfs_exception_event
+01c05e91  6kprobes: Kprobes globally enabled
+01c05eb6  4kprobes: Kprobes globally disabled, but failed to disable %d out of %d probes. Please check which kprobes are kept enabled via debugfs.
+01c060b7  4trace_kprobe: This probe might be able to register after target module is loaded. Continue.
+01c06308  Locking two bpf_spin_locks are not allowed
+01c063ab  bpf_perf_event_output
+01c063c1  bpf_skb_get_tunnel_opt
+01c063d8  bpf_skb_under_cgroup
+01c063ed  bpf_getsockopt
+01c063fc  bpf_xdp_output
+01c0640b  bpf_get_task_stack
+01c0d209  kernel/bpf/offload.c
+01c0d27b  fs/debugfs/file.c
+01c0e904  bpf_preload
+01c0e910  kernel/bpf/map_in_map.c
+01c0e92e  bpf_probe_read
+01c0e93d  bpf_get_smp_processor_id
+01c0e956  bpf_sys_close
+01c0e964  bpf_timer_start
+01c0ff98  use of kprobes
+01c1464e  bpf_shtab
+01c14ed0  kernel/bpf/arraymap.c
+01c16288  bpf_xdp_adjust_tail
+01c1629c  bpf_tcp_sock
+01c162a9  bpf_sysctl_set_new_value
+01c162c2  bpf_sk_storage_delete
+01c162d8  bpf_skc_to_udp6_sock
+01c162ed  bpf_timer_init
+01c16350  kprobe
+01c1db2b  kprobes
+01c1e1bf  bpf_ringbuf_map
+01c1e1cf  kernel/bpf/bpf_local_storage.c
+01c1e1fc  bpf_skb_change_proto
+01c1e211  bpf_setsockopt
+01c1e220  bpf_skb_adjust_room
+01c1e234  bpf_sk_select_reuseport
+01c1e24c  bpf_strtol
+01c1e257  bpf_probe_read_kernel_str
+01c1e271  bpf_sk_ancestor_cgroup_id
+01c1e28b  bpf_ringbuf_reserve
+01c1e29f  bpf_timer_set_callback
+01c1e2b6  bpf_get_func_ip
+01c209ed  drivers/gpu/drm/drm_debugfs.c
+01c22b12  4efi: More then %d EFI boot service segments, only showing first %d in debugfs
+01c25305  module_layout
+01c25762  bpf_skb_change_head
+01c25776  bpf_msg_cork_bytes
+01c25789  bpf_rc_repeat
+01c25797  bpf_skb_cgroup_id
+01c257a9  bpf_get_listener_sock
+01c257bf  bpf_skc_to_tcp_timewait_sock
+01c257dc  bpf_snprintf_btf
+01c26d78  use of bpf to read kernel RAM
+01c26dec  landlock,lockdown,yama,loadpin,safesetid,integrity,selinux,smack,tomoyo,apparmor,bpf
+01c2cfed  4trace_kprobe: Failed to re-register probe %s on %s: %d
+01c2d0d3  bpf_prog_
+01c2d12f  tracing progs cannot use bpf_timer yet
+01c2d2a2  bpf_map_elem
+01c2d2d3  bpf_get_stackid
+01c2d2e3  bpf_current_task_under_cgroup
+01c2d301  bpf_skb_change_tail
+01c2d315  bpf_strtoul
+01c2d321  bpf_ringbuf_query
+01c2d333  bpf_reserve_hdr_opt
+01c2d3c0  bpf_stack_map
+01c2e4e6  debugfs
+01c32938  iio_debugfs_write_reg
+01c57351  bpf_trace
+01c5c34a    kprobe_events
+01e3ddfc  bpf_test_run
+01f34d92  android_vh_check_bpf_syscall
+01f36350  bpf_test_finish
+01f74ef7  bpf_prog_alloc
+01f7682e  snd_soc_debugfs_root
+01f769e1  bpf_sk_lookup_enabled
+01f774a2  kprobe_event_cmd_init
+01f774f1  bpf_map_put
+01f774fd  __cgroup_bpf_run_filter_sock_ops
+01f7751e  fuse_get_bpf_prog
+01f79f64  unregister_kprobes
+01f7a00a  bpf_offload_dev_netdev_register
+01f7a42e  debugfs_remove
+01f7c3c2  bpf_sk_storage_diag_alloc
+01f7c534  tcp_bpf_bypass_getsockopt
+01f7cc66  kprobe_event_delete
+01f7ccc5  bpf_prog_put
+01f7ccd2  bpf_prog_get_type_dev
+01f7cce8  bpf_offload_dev_match
+01f7faf1  debugfs_real_fops
+01f7fb03  debugfs_file_put
+01f81772  bpf_prog_create
+01f82114  bpf_prog_get_type_path
+01f84a7f  __kprobe_event_gen_cmd_start
+01f84aba  bpf_offload_dev_create
+01f84e85  debugfs_create_file_size
+01f87595  bpf_event_output
+01f875a6  bpf_stats_enabled_key
+01f875d7  __cgroup_bpf_run_filter_sock_addr
+01f8a9c9  debugfs_file_get
+01f8d53d  debugfs_create_symlink
+01f8f428  bpf_sk_storage_diag_put
+01f8fe0a  bpf_trace_run1
+01f9015f  debugfs_create_u64
+01f90172  debugfs_create_x8
+01f92978  debugfs_create_file
+01f9298c  debugfs_create_x64
+01f9299f  debugfs_create_size_t
+01f929b5  debugfs_create_bool
+01f95035  bpf_trace_run5
+01f95073  bpf_prog_inc_not_zero
+01f95089  bpf_verifier_log_write
+01f950a0  __cgroup_bpf_run_filter_sk
+01f950bb  perf_trace_run_bpf_submit
+01f97127  bpf_prog_create_from_user
+01f97a66  unregister_kprobe
+01f97dfd  debugfs_write_file_bool
+01f9930e  iio_get_debugfs_dentry
+01f99d0d  bpf_prog_destroy
+01f9a6b0  register_kprobe
+01f9a6c0  disable_kprobe
+01f9a75c  bpf_prog_select_runtime
+01f9ab2d  debugfs_create_file_unsafe
+01f9ab48  debugfs_attr_write_signed
+01f9cab4  bpf_warn_invalid_xdp_action
+01f9db0b  debugfs_create_u8
+01f9fbf2  tcp_bpf_update_proto
+01fa05d4  debugfs_lookup
+01fa05e3  debugfs_create_automount
+01fa05fc  debugfs_rename
+01fa060b  debugfs_create_u32_array
+01fa2bcb  kvm_debugfs_dir
+01fa337c  debugfs_lookup_and_remove
+01fa5417  bt_debugfs
+01fa59d8  bpf_trace_run10
+01fa59e8  bpf_trace_run11
+01fa59f8  __kprobe_event_add_fields
+01fa5a2f  __bpf_call_base
+01fa5a3f  bpf_prog_inc
+01fa5a4c  bpf_preload_ops
+01fa5e7a  debugfs_create_atomic_t
+01fa6b24  ttm_pool_debugfs
+01fa85d2  register_kprobes
+01fa8934  debugfs_create_dir
+01fa8947  debugfs_attr_read
+01fa8959  debugfs_create_x32
+01fab330  bpf_trace_run12
+01fab35b  bpf_map_inc
+01fad228  copy_bpf_fprog_from_user
+01fadc14  bpf_map_inc_with_uref
+01fadc2a  bpf_map_inc_not_zero
+01fadc3f  bpf_offload_dev_priv
+01fae099  debugfs_print_regs32
+01fae0ae  debugfs_create_regset32
+01faf763  __traceiter_android_vh_check_bpf_syscall
+01fb07df  bpf_trace_run4
+01fb0b85  debugfs_create_devm_seqfile
+01fb2756  bpf_sk_storage_diag_free
+01fb3030  bpf_trace_run8
+01fb3075  bpf_offload_dev_netdev_unregister
+01fb3429  debugfs_attr_write
+01fb343c  debugfs_create_ulong
+01fb3451  debugfs_read_file_bool
+01fb5718  bpf_trace_run7
+01fb796f  bpf_master_redirect_enabled_key
+01fb7c4e  tcp_bpf_sendmsg_redir
+01fb8304  bpf_trace_run3
+01fb832b  bpf_prog_add
+01fb8338  bpf_offload_dev_destroy
+01fba536  ipv6_bpf_stub
+01fbb16e  bpf_trace_run6
+01fbb6ec  blk_mq_debugfs_rq_show
+01fbddde  bpf_prog_sub
+01fc00aa  bpf_dispatcher_xdp_func
+01fc0b9d  bpf_trace_run2
+01fc0f6f  debugfs_initialized
+01fc0f83  debugfs_create_u16
+01fc0f96  debugfs_create_x16
+01fc1198  __blk_mq_debugfs_rq_show
+01fc2e4e  bpf_redirect_info
+01fc3142  udp_bpf_update_proto
+01fc3839  bpf_trace_run9
+01fc3884  bpf_prog_free
+01fc3892  cgroup_bpf_enabled_key
+01fc3b93  debugfs_create_u32
+01fc5052  __SCK__tp_func_android_vh_check_bpf_syscall
+01fc6e76  drm_debugfs_remove_files
+01fc7a03  __tracepoint_android_vh_check_bpf_syscall
+01fc8b4b  enable_kprobe
+01fc8be3  __cgroup_bpf_run_filter_skb
+01fc8fa3  debugfs_create_blob
+01fc9ad1  drm_debugfs_create_files
+022fb71d  debugfs_dentry
+022fb72c  debugfs_stat_data
+022fcb62  core_kallsyms
+022fcc07  num_bpf_raw_events
+022fcc1a  bpf_raw_events
+022fccc6  kprobes_text_start
+022fccd9  kprobes_text_size
+022fcceb  kprobe_blacklist
+022fccfc  num_kprobe_blacklist
+022fe005  bpf_storage
+022fe011  bpf_ctx
+022ff62f  cgroup_bpf
+022ff669  bpf_prog_array
+022ff687  bpf_cookie
+022ff692  bpf_prog_array_item
+022ff6bf  bpf_cgroup_storage
+022ff6e7  bpf_storage_buffer
+022ff711  bpf_cgroup_storage_key
+023013e9  kprobe_func
+02301410  kprobe_addr
+02301592  bpf_event
+02301c75  bpf_local_storage
+02301c87  bpf_run_ctx
+0230209e  mod_kallsyms
+02302330  bpf_raw_event_map
+02302345  bpf_func
+0230b10f  netns_bpf
+0230c4ff  debugfs_mutex
+0230c5be  debugfs_dir
+0230c5ca  sched_debugfs_dir
+0230c5dc  rqos_debugfs_dir
+0230ca58  queue_debugfs_attrs
+0230ca6c  hctx_debugfs_attrs
+0230cc39  blk_mq_debugfs_attr
+02310388  sk_bpf_storage
+0231063a  bpf_bypass_getsockopt
+023113a8  ndo_bpf
+02311e76  kprobe_override
+02311f0f  bpf_prog_type
+02312245  bpf_attach_type
+023125f7  bpf_prog_stats
+02312621  bpf_insn
+02312642  bpf_prog_aux
+023128a1  bpf_ctx_arg_aux
+023128c1  bpf_reg_type
+02312abd  bpf_trampoline
+02312b2d  bpf_tramp_image
+02312b63  bpf_ksym
+02312b8b  bpf_jit_poke_descriptor
+02312cc2  bpf_map_ops
+023130c2  bpf_fd
+023130de  attach_bpf_fd
+023130f9  replace_bpf_fd
+02313275  bpf_attr
+02313302  bpf_verifier_env
+02313313  bpf_func_state
+02313322  bpf_iter_seq_info
+0231336c  bpf_iter_init_seq_priv_t
+02313385  bpf_iter_aux_info
+02313397  bpf_iter_fini_seq_priv_t
+023133b0  bpf_map_type
+02313690  bpf_kfunc_desc_tab
+023136a3  bpf_prog_ops
+023136c6  bpf_prog_offload
+02313718  bpf_offload_dev
+02313728  bpf_func_info
+02313747  bpf_func_info_aux
+0231376c  bpf_line_info
+023137ed  netdev_bpf
+02313800  bpf_netdev_command
+02313872  bpf_offloaded_map
+0231388c  bpf_map_dev_ops
+02314b48  bpf_xdp_entity
+02314b57  bpf_xdp_link
+02319a09  kprobe_opcode_t
+02319a19  kprobe_pre_handler_t
+02319a2e  kprobe_post_handler_t
+02319a95  kprobe_ctlblk
+02319aa3  kprobe_status
+02319abf  prev_kprobe
+02319b00  kprobe_insn_cache
+0231b7ed  bpf_binary_header
+0231b7ff  bpf_jit_fill_hole_t
+02325a25  debugfs_u32_array
+02327426  mod_kallsyms_init_off
+023275f4  pos_bpf_end
+023279fe  bpf_link_type
+02327d81  bpf_cgroup_link
+02327d9a  bpf_link_ops
+02327e2a  bpf_link_info
+02328f76  kprobe_slot_state
+02329063  kprobe_blacklist_entry
+02329179  bpf_dispatcher_fn
+023291dd  bpf_aux_classic_check_t
+0232a635  debugfs_automount_t
+0232c5b5  bpf_local_storage_data
+0232c5f0  bpf_local_storage_map_bucket
+0232c60d  btf_trace_bpf_trace_printk
+0232c6aa  bpf_func_proto
+0232c6e9  bpf_return_type
+0232c871  bpf_arg_type
+0232cb2a  bpf_verifier_ops
+0232cba8  bpf_func_id
+0232dbbf  BPF_FUNC_sys_bpf
+0232dcb5  bpf_access_type
+0232dce7  bpf_insn_access_aux
+0232dcfb  bpf_verifier_log
+0232dd0c  bpf_nested_pt_regs
+0232dd1f  bpf_trace_sample_data
+0232dd4a  bpf_raw_tp_regs
+0232dd5a  bpf_task_fd_type
+0232de76  btf_bpf_probe_read_user
+0232de8e  btf_bpf_probe_read_user_str
+0232deaa  btf_bpf_probe_read_kernel
+0232dec4  btf_bpf_probe_read_kernel_str
+0232dee2  btf_bpf_probe_read_compat
+0232defc  btf_bpf_probe_read_compat_str
+0232df1a  btf_bpf_probe_write_user
+0232df33  btf_bpf_trace_printk
+0232df48  btf_bpf_seq_printf
+0232df5b  btf_bpf_seq_write
+0232df6d  btf_bpf_seq_printf_btf
+0232df8c  btf_bpf_perf_event_read
+0232dfa4  btf_bpf_perf_event_read_value
+0232dfc2  bpf_perf_event_value
+0232dfd7  btf_bpf_perf_event_output
+0232dff1  btf_bpf_get_current_task
+0232e00a  btf_bpf_get_current_task_btf
+0232e027  btf_bpf_task_pt_regs
+0232e03c  btf_bpf_current_task_under_cgroup
+0232e05e  btf_bpf_send_signal
+0232e072  btf_bpf_send_signal_thread
+0232e08d  btf_bpf_d_path
+0232e09c  btf_bpf_snprintf_btf
+0232e0b1  btf_bpf_get_func_ip_tracing
+0232e0cd  btf_bpf_get_func_ip_kprobe
+0232e0e8  btf_bpf_get_attach_cookie_trace
+0232e108  btf_bpf_get_attach_cookie_pe
+0232e125  bpf_perf_event_data_kern
+0232e13e  bpf_user_pt_regs_t
+0232e151  btf_bpf_perf_event_output_tp
+0232e16e  btf_bpf_get_stackid_tp
+0232e185  btf_bpf_get_stack_tp
+0232e19a  btf_bpf_perf_prog_read_value
+0232e1b7  btf_bpf_read_branch_records
+0232e1d3  btf_bpf_perf_event_output_raw_tp
+0232e1f4  bpf_raw_tracepoint_args
+0232e20c  btf_bpf_get_stackid_raw_tp
+0232e227  btf_bpf_get_stack_raw_tp
+0232e240  trace_event_raw_bpf_trace_printk
+0232e261  __data_loc_bpf_string
+0232e297  bpf_array_aux
+0232e2bb  bpf_trace_run_ctx
+0232e2d5  bpf_trace_module
+0232e2e6  trace_event_data_offsets_bpf_trace_printk
+0232e31b  bpf_prog_run_fn
+0232e32b  bpf_bprintf_data
+0232e35a  bpf_event_entry
+0232e388  bpf_ctx_copy_t
+0232e397  perf_event_query_bpf
+0232e3ef  kprobe_trace_entry_head
+0232efb0  bpf_prog_dummy
+0232efbf  bpf_jit_poke_reason
+0232efed  bpf_text_poke_type
+0232f057  btf_bpf_user_rnd_u32
+0232f06c  btf_bpf_get_raw_cpu_id
+0232f0c6  _bpf_dtab_netdev
+0232f45a  bpf_capable
+0232f59a  bpf_verifier_stack_elem
+0232f5b2  bpf_verifier_state
+0232f6b7  bpf_reg_state
+0232f754  bpf_reg_liveness
+0232f7c0  bpf_reference_state
+0232f7d4  bpf_stack_state
+0232f7fa  bpf_idx_pair
+0232f810  bpf_verifier_state_list
+0232f873  bpf_insn_aux_data
+0232f8d5  bpf_subprog_info
+0232f90b  bpf_id_pair
+0232f917  bpfptr_t
+0232fa22  perf_bpf_event_type
+0232fa94  bpf_audit
+0232facc  bpf_cmd
+0232fd8e  bpf_stats_type
+0232fdb0  btf_bpf_sys_bpf
+0232fdc0  btf_bpf_sys_close
+0232fdd2  bpf_tracing_link
+0232fdf7  bpf_raw_tp_link
+0232fe0b  bpf_perf_link
+0232fe19  bpf_prog_kstats
+0232fe29  bpf_prog_info
+0232ff75  bpf_map_info
+0232ff82  bpf_btf_info
+0232ff9a  bpf_attach_target_info
+0232ffd3  bpf_link_primer
+02330078  bpf_kfunc_desc
+0233009a  bpf_reg_types
+023300a8  bpf_type_flag
+02330112  bpf_stack_slot_type
+023302a0  bpf_convert_ctx_access_t
+023302b9  bpf_struct_ops
+0233030e  bpf_insn_cbs
+02330333  bpf_insn_print_t
+02330344  bpf_insn_revmap_call_t
+0233035b  bpf_insn_print_imm_t
+02330370  bpf_call_arg_meta
+023303b5  bpf_sanitize_info
+02330886  bpf_preload_info
+023308ac  bpf_type
+02330900  bpf_mount_opts
+0233090f  bpf_hrtimer
+02330927  bpf_bprintf_buffers
+0233093b  bpf_cgroup_storage_type
+023309a0  btf_bpf_map_lookup_elem
+023309b8  btf_bpf_map_update_elem
+023309d0  btf_bpf_map_delete_elem
+023309e8  btf_bpf_map_push_elem
+023309fe  btf_bpf_map_pop_elem
+02330a13  btf_bpf_map_peek_elem
+02330a29  btf_bpf_get_smp_processor_id
+02330a46  btf_bpf_get_numa_node_id
+02330a5f  btf_bpf_ktime_get_ns
+02330a74  btf_bpf_ktime_get_boot_ns
+02330a8e  btf_bpf_ktime_get_coarse_ns
+02330aaa  btf_bpf_get_current_pid_tgid
+02330ac7  btf_bpf_get_current_uid_gid
+02330ae3  btf_bpf_get_current_comm
+02330afc  btf_bpf_spin_lock
+02330b1c  btf_bpf_spin_unlock
+02330b30  btf_bpf_jiffies64
+02330b42  btf_bpf_get_current_cgroup_id
+02330b60  btf_bpf_get_current_ancestor_cgroup_id
+02330b87  btf_bpf_get_local_storage
+02330ba1  btf_bpf_strtol
+02330bb0  btf_bpf_strtoul
+02330bc0  btf_bpf_get_ns_current_pid_tgid
+02330be0  bpf_pidns_info
+02330bef  btf_bpf_event_output_data
+02330c09  btf_bpf_copy_from_user
+02330c20  btf_bpf_per_cpu_ptr
+02330c34  btf_bpf_this_cpu_ptr
+02330c49  btf_bpf_snprintf
+02330c5a  btf_bpf_timer_init
+02330c6d  bpf_timer_kern
+02330c7c  btf_bpf_timer_set_callback
+02330c97  btf_bpf_timer_start
+02330cab  btf_bpf_timer_cancel
+02330cc0  bpf_cg_run_ctx
+02330cd9  bpf_iter_feature
+02330cfb  bpf_iter_target_info
+02330d19  bpf_iter_reg
+02330d4b  bpf_iter_attach_target_t
+02330d64  bpf_iter_link_info
+02330d77  bpf_iter_detach_target_t
+02330d90  bpf_iter_show_fdinfo_t
+02330da7  bpf_iter_fill_link_info_t
+02330dc1  bpf_iter_get_func_proto_t
+02330ddb  bpf_iter_link
+02330def  bpf_iter_priv_data
+02330e2e  btf_bpf_for_each_map_elem
+02330e48  bpf_iter_meta
+02330e5b  bpf_iter__bpf_map
+02330e6d  bpf_iter_seq_map_info
+02330e83  bpf_task_vma_iter_find_op
+02330ee3  bpf_iter__task
+02330ef2  bpf_iter__task_file
+02330f06  bpf_iter_seq_task_file_info
+02330f22  bpf_iter_seq_task_common
+02330f3b  bpf_iter__task_vma
+02330f4e  bpf_iter_seq_task_vma_info
+02330f83  bpf_iter_seq_task_info
+02330f9a  bpf_iter__bpf_prog
+02330fad  bpf_iter_seq_prog_info
+0233105c  bpf_lru
+0233108f  bpf_common_lru
+023310b2  bpf_lru_list
+023310dd  bpf_lru_locallist
+0233110d  bpf_lru_node
+02331144  bpf_iter_seq_hash_map_info
+0233117b  bpf_iter__bpf_map_elem
+023311a1  bpf_iter_seq_array_map_info
+023311bd  bpf_lru_list_type
+02331281  bpf_lpm_trie_key
+0233134a  btf_bpf_ringbuf_reserve
+02331362  btf_bpf_ringbuf_submit
+02331379  btf_bpf_ringbuf_discard
+02331391  btf_bpf_ringbuf_output
+023313a8  btf_bpf_ringbuf_query
+023313be  bpf_ringbuf
+02331400  bpf_ringbuf_hdr
+02331417  bpf_local_storage_elem
+02331451  bpf_local_storage_cache
+023314be  btf_bpf_task_storage_get
+023314d7  btf_bpf_task_storage_delete
+023314f3  bpf_tramp_prog_type
+02331560  bpf_tramp_progs
+0233157f  bpf_ctx_convert
+02331d76  bpf_flow_keys
+02331dcd  bpf_sock
+02331e4b  bpf_sock_addr
+02331e99  bpf_sock_addr_kern
+02331ee0  bpf_sock_ops
+02331f0a  bpf_sock_ops_cb_flags
+02332018  bpf_sock_ops_kern
+0233204e  bpf_flow_dissector
+02332061  bpf_perf_event_data
+02332075  bpf_cgroup_dev_ctx
+02332094  bpf_sysctl
+023320a8  bpf_sysctl_kern
+023320fb  bpf_sockopt
+02332116  bpf_sockopt_kern
+0233217b  bpf_sk_lookup
+02332189  bpf_sk_lookup_kern
+023321a9  fuse_bpf_args
+023321f8  fuse_bpf_in_arg
+02332208  fuse_bpf_arg
+0233236f  bpf_struct_walk_result
+02332436  btf_bpf_btf_find_by_name_kind
+0233249a  bpf_dispatcher
+023324bd  bpf_dispatcher_prog
+02332afb  bpf_dtab_netdev
+02332b10  bpf_devmap_val
+02332b63  bpf_nh_params
+02332cda  bpf_cpu_map_entry
+02332d2b  bpf_cpumap_val
+02332d42  bpf_prog_offload_ops
+02332d7b  bpf_offload_netdev
+02332dc4  ns_get_path_bpf_prog_args
+02332dde  ns_get_path_bpf_map_args
+02332df7  netns_bpf_attach_type
+02332e66  bpf_netns_link
+02332ef7  bpf_stack_build_id_status
+02332ffc  btf_bpf_get_stackid
+02333010  btf_bpf_get_stackid_pe
+02333027  btf_bpf_get_stack
+02333039  btf_bpf_get_task_stack
+02333050  btf_bpf_get_stack_pe
+02333084  bpf_stack_build_id
+02333097  cgroup_bpf_attach_type
+02333385  bpf_prog_list
+0233339b  btf_bpf_sysctl_get_name
+023333b3  btf_bpf_sysctl_get_current_value
+023333d4  btf_bpf_sysctl_get_new_value
+023333f1  btf_bpf_sysctl_set_new_value
+0233340e  btf_bpf_get_netns_cookie_sockopt
+0233342f  bpf_skb_data_end
+02333476  bpf_sockopt_buf
+023337ed  bpf_struct_ops_state
+02333855  bpf_struct_ops_tcp_congestion_ops
+0233389f  bpf_struct_ops_value
+0233424f  perf_bpf_event
+0233d5b1  debugfs_attrs
+02348543  fuse_entry_bpf_out
+02348570  bpf_action
+0234857b  fuse_entry_bpf
+0234858a  bpf_file
+0234af99  debugfs_fsdata
+0234afb2  debugfs_fs_info
+0234afc2  debugfs_mount_opts
+0234afd5  debugfs_reg32
+0234afe3  debugfs_blob_wrapper
+0234aff8  debugfs_regset32
+0234b00f  debugfs_devm_entry
+02353182  bpf_map_alloc_security
+02353199  bpf_map_free_security
+023531af  bpf_prog_alloc_security
+023531c7  bpf_prog_free_security
+02357669  bpf_security_struct
+0236f33d  debugfs_entry
+02371fc0  debugfs_init
+0237217a  debugfs_root
+02372187  debugfs_list
+02372194  debugfs_lock
+023775d9  debugfs_disable
+023775e9  debugfs_name
+023775f6  debugfs_reg_len
+02377606  debugfs_val_len
+02377616  debugfs_tot_len
+02377626  debugfs_off_cache
+02377cf2  regmap_debugfs_node
+02377d06  regmap_debugfs_off_cache
+0237f742  debugfs_ee_work
+0237f752  debugfs_ee_rate_limit_ms
+02391502  debugfs_slots
+0239188a  debugfs_private
+023a0130  bpf_sample
+023a02a2  btf_bpf_rc_repeat
+023a02b4  btf_bpf_rc_keydown
+023a02c7  btf_bpf_rc_pointer_rel
+023a17ad  uvc_debugfs_buffer
+023b1b39  mod_kallsyms_offset
+023b2d6c  debugfs_reg_access
+023b431c  binder_debugfs_entry
+023bb1be  debugfs_card_root
+023bb305  debugfs_dapm
+023bb401  debugfs_prefix
+023bbd6b  debugfs_dpcm_root
+023bcc83  debugfs_state
+023bf330  bpf_ret_code
+023c09e8  bpf_xdp_mode
+023c0c27  bpf_op_t
+023c248b  bpf_scratchpad
+023c24ea  bpf_hdr_start_off
+023c2a40  bpf_adj_room_mode
+023c2e72  bpf_check_mtu_ret
+023c2ed4  bpf_check_mtu_flags
+023c30e3  btf_bpf_skb_get_pay_offset
+023c30fe  btf_bpf_skb_get_nlattr
+023c3115  btf_bpf_skb_get_nlattr_nest
+023c3131  btf_bpf_skb_load_helper_8
+023c314b  btf_bpf_skb_load_helper_8_no_cache
+023c316e  btf_bpf_skb_load_helper_16
+023c3189  btf_bpf_skb_load_helper_16_no_cache
+023c31ad  btf_bpf_skb_load_helper_32
+023c31c8  btf_bpf_skb_load_helper_32_no_cache
+023c31ec  btf_bpf_skb_store_bytes
+023c3204  btf_bpf_skb_load_bytes
+023c321b  btf_bpf_flow_dissector_load_bytes
+023c323d  btf_bpf_skb_load_bytes_relative
+023c325d  btf_bpf_skb_pull_data
+023c3273  btf_bpf_sk_fullsock
+023c329c  btf_bpf_l3_csum_replace
+023c32b4  btf_bpf_l4_csum_replace
+023c32cc  btf_bpf_csum_diff
+023c32de  btf_bpf_csum_update
+023c32f2  btf_bpf_csum_level
+023c3305  btf_bpf_clone_redirect
+023c331c  btf_bpf_redirect
+023c332d  btf_bpf_redirect_peer
+023c3343  btf_bpf_redirect_neigh
+023c335a  bpf_redir_neigh
+023c336a  btf_bpf_msg_apply_bytes
+023c3382  btf_bpf_msg_cork_bytes
+023c3399  btf_bpf_msg_pull_data
+023c33af  btf_bpf_msg_push_data
+023c33c5  btf_bpf_msg_pop_data
+023c33da  btf_bpf_get_cgroup_classid
+023c33f5  btf_bpf_get_route_realm
+023c340d  btf_bpf_get_hash_recalc
+023c3425  btf_bpf_set_hash_invalid
+023c343e  btf_bpf_set_hash
+023c344f  btf_bpf_skb_vlan_push
+023c3465  btf_bpf_skb_vlan_pop
+023c347a  btf_bpf_skb_change_proto
+023c3493  btf_bpf_skb_change_type
+023c34c2  btf_bpf_skb_adjust_room
+023c34da  btf_bpf_skb_change_tail
+023c3509  btf_bpf_skb_change_head
+023c3538  btf_bpf_xdp_adjust_head
+023c3550  btf_bpf_xdp_adjust_tail
+023c3568  btf_bpf_xdp_adjust_meta
+023c3580  btf_bpf_xdp_redirect
+023c3595  btf_bpf_xdp_redirect_map
+023c35ae  btf_bpf_skb_event_output
+023c35c7  btf_bpf_skb_get_tunnel_key
+023c35fa  bpf_tunnel_key
+023c3641  btf_bpf_skb_get_tunnel_opt
+023c365c  btf_bpf_skb_set_tunnel_key
+023c3677  btf_bpf_skb_set_tunnel_opt
+023c3692  btf_bpf_skb_under_cgroup
+023c36ab  btf_bpf_skb_cgroup_id
+023c36c1  btf_bpf_skb_ancestor_cgroup_id
+023c36e0  btf_bpf_sk_cgroup_id
+023c36f5  btf_bpf_sk_ancestor_cgroup_id
+023c3713  btf_bpf_xdp_event_output
+023c372c  btf_bpf_get_socket_cookie
+023c3746  btf_bpf_get_socket_cookie_sock_addr
+023c376a  btf_bpf_get_socket_cookie_sock
+023c3789  btf_bpf_get_socket_ptr_cookie
+023c37a7  btf_bpf_get_socket_cookie_sock_ops
+023c37ca  btf_bpf_get_netns_cookie_sock
+023c37e8  btf_bpf_get_netns_cookie_sock_addr
+023c380b  btf_bpf_get_netns_cookie_sock_ops
+023c382d  btf_bpf_get_netns_cookie_sk_msg
+023c384d  btf_bpf_get_socket_uid
+023c3864  btf_bpf_sk_setsockopt
+023c387a  btf_bpf_sk_getsockopt
+023c3890  btf_bpf_sock_addr_setsockopt
+023c38ad  btf_bpf_sock_addr_getsockopt
+023c38ca  btf_bpf_sock_ops_setsockopt
+023c38e6  btf_bpf_sock_ops_getsockopt
+023c3902  btf_bpf_sock_ops_cb_flags_set
+023c3920  btf_bpf_bind
+023c392d  btf_bpf_skb_get_xfrm_state
+023c3948  bpf_xfrm_state
+023c3957  btf_bpf_xdp_fib_lookup
+023c39b6  btf_bpf_skb_fib_lookup
+023c39cd  btf_bpf_skb_check_mtu
+023c39e3  btf_bpf_xdp_check_mtu
+023c39f9  btf_bpf_lwt_in_push_encap
+023c3a13  btf_bpf_lwt_xmit_push_encap
+023c3a2f  btf_bpf_skc_lookup_tcp
+023c3a46  bpf_sock_tuple
+023c3a55  btf_bpf_sk_lookup_tcp
+023c3a6b  btf_bpf_sk_lookup_udp
+023c3a81  btf_bpf_tc_skc_lookup_tcp
+023c3a9b  btf_bpf_tc_sk_lookup_tcp
+023c3ab4  btf_bpf_tc_sk_lookup_udp
+023c3acd  btf_bpf_sk_release
+023c3ae0  btf_bpf_xdp_sk_lookup_udp
+023c3afa  btf_bpf_xdp_skc_lookup_tcp
+023c3b15  btf_bpf_xdp_sk_lookup_tcp
+023c3b2f  btf_bpf_sock_addr_skc_lookup_tcp
+023c3b50  btf_bpf_sock_addr_sk_lookup_tcp
+023c3b70  btf_bpf_sock_addr_sk_lookup_udp
+023c3b90  btf_bpf_tcp_sock
+023c3ba1  btf_bpf_get_listener_sock
+023c3bbb  btf_bpf_skb_ecn_set_ce
+023c3bd2  btf_bpf_tcp_check_syncookie
+023c3bee  btf_bpf_tcp_gen_syncookie
+023c3c08  btf_bpf_sk_assign
+023c3c1a  btf_bpf_sock_ops_load_hdr_opt
+023c3c38  btf_bpf_sock_ops_store_hdr_opt
+023c3c57  btf_bpf_sock_ops_reserve_hdr_opt
+023c3cd1  btf_bpf_sk_lookup_assign
+023c3cea  btf_bpf_skc_to_tcp6_sock
+023c3d03  btf_bpf_skc_to_tcp_sock
+023c3d1b  btf_bpf_skc_to_tcp_timewait_sock
+023c3d3c  btf_bpf_skc_to_tcp_request_sock
+023c3d5c  btf_bpf_skc_to_udp6_sock
+023c3d75  btf_bpf_sock_from_file
+023cdca2  btf_bpf_sock_map_update
+023cdcba  btf_bpf_sk_redirect_map
+023cdcd2  btf_bpf_msg_redirect_map
+023cdceb  btf_bpf_sock_hash_update
+023cdd04  btf_bpf_sk_redirect_hash
+023cdd1d  btf_bpf_msg_redirect_hash
+023cdd56  bpf_shtab_bucket
+023cdd67  bpf_shtab_elem
+023cdd88  bpf_iter__sockmap
+023cdeda  btf_bpf_sk_storage_get
+023cdef1  btf_bpf_sk_storage_delete
+023cdf0b  btf_bpf_sk_storage_get_tracing
+023cdf2a  btf_bpf_sk_storage_delete_tracing
+023cdf4c  bpf_sk_storage_diag
+023cdf60  bpf_iter_seq_sk_storage_map_info
+023cdf81  bpf_iter__bpf_sk_storage_map
+023cf243  bpf_num_ops
+023cf24f  tcf_bpf
+023cf257  bpf_ops
+023cf25f  bpf_name
+023cf268  tcf_bpf_cfg
+023cf274  is_ebpf
+023cf27c  tc_act_bpf
+023d0d91  tc_clsbpf_command
+023d0e78  cls_bpf_prog
+023d0e9f  tc_cls_bpf_offload
+023d0eba  cls_bpf_head
+023d1986  bpf_iter__netlink
+023d208d  btf_trace_bpf_test_finish
+023d20bd  bpf_test_timer
+023d20d7  bpf_fentry_test_t
+023d20e9  trace_event_raw_bpf_test_finish
+023d2109  trace_event_data_offsets_bpf_test_finish
+023d2132  bpf_raw_tp_test_run_info
+023de8f0  xt_bpf_modes
+023de93b  xt_bpf_info
+023de947  bpf_program_num_elem
+023de95c  bpf_program
+023de968  xt_bpf_info_v1
+023e0a74  bpf_opt_len
+023e0e01  bpf_iter__tcp
+023e0e0f  bpf_tcp_iter_state
+023e1330  bpf_seq_afinfo
+023e1346  bpf_iter__udp
+023e3ab4  bpf_stg_diag
+023e3e7c  btf_bpf_tcp_send_ack
+023e4bda  bpf_iter__unix
+023e5de8  bpf_iter__ipv6_route
+023ef1eb  debugfsdir
+023f410c  iface_debugfs
+023f869e  current_kprobe
+023f8ab3  kprobe_instance
+023f8c07  bpf_event_output_nest_level
+023f8c23  bpf_pt_regs
+023f8c2f  bpf_misc_sds
+023f8c3c  bpf_trace_sds
+023f8c4a  bpf_trace_nest_level
+023f8c70  bpf_raw_tp_nest_level
+023f8c9c  bpf_user_rnd_state
+023f8caf  bpf_prog_active
+023f8cbf  bpf_bprintf_nest_level
+023f8cf4  bpf_bprintf_bufs
+023f8d05  bpf_task_storage_busy
+023f92a4  bpf_sp
+02400687  ____bpf_bind
+0240069c  ____bpf_btf_find_by_name_kind
+024006ba  ____bpf_clone_redirect
+024006d1  ____bpf_copy_from_user
+024006fa  ____bpf_csum_diff
+0240070c  ____bpf_csum_level
+0240071f  ____bpf_csum_update
+02400733  ____bpf_current_task_under_cgroup
+02400755  ____bpf_d_path
+02400764  ____bpf_event_output_data
+0240077e  ____bpf_flow_dissector_load_bytes
+024007ad  ____bpf_for_each_map_elem
+024007c7  ____bpf_get_attach_cookie_pe
+024007e4  ____bpf_get_attach_cookie_trace
+02400804  ____bpf_get_cgroup_classid
+0240082e  ____bpf_get_current_ancestor_cgroup_id
+02400855  ____bpf_get_current_cgroup_id
+02400873  ____bpf_get_current_comm
+0240088c  ____bpf_get_current_pid_tgid
+024008a9  ____bpf_get_current_task
+024008c2  ____bpf_get_current_task_btf
+024008df  ____bpf_get_current_uid_gid
+024008fb  ____bpf_get_func_ip_kprobe
+02400916  ____bpf_get_func_ip_tracing
+02400932  ____bpf_get_hash_recalc
+0240094a  ____bpf_get_listener_sock
+02400964  ____bpf_get_local_storage
+0240097e  ____bpf_get_netns_cookie_sk_msg
+0240099e  ____bpf_get_netns_cookie_sock
+024009bc  ____bpf_get_netns_cookie_sock_addr
+024009df  ____bpf_get_netns_cookie_sock_ops
+02400a01  ____bpf_get_netns_cookie_sockopt
+02400a29  ____bpf_get_ns_current_pid_tgid
+02400a49  ____bpf_get_numa_node_id
+02400a62  ____bpf_get_raw_cpu_id
+02400a79  ____bpf_get_route_realm
+02400a91  ____bpf_get_smp_processor_id
+02400aae  ____bpf_get_socket_cookie
+02400ac8  ____bpf_get_socket_cookie_sock
+02400ae7  ____bpf_get_socket_cookie_sock_addr
+02400b0b  ____bpf_get_socket_cookie_sock_ops
+02400b2e  ____bpf_get_socket_ptr_cookie
+02400b4c  ____bpf_get_socket_uid
+02400b63  ____bpf_get_stack
+02400b75  ____bpf_get_stack_pe
+02400b8a  ____bpf_get_stack_raw_tp
+02400bab  ____bpf_get_stack_tp
+02400bc0  ____bpf_get_stackid
+02400bd4  ____bpf_get_stackid_pe
+02400beb  ____bpf_get_stackid_raw_tp
+02400c06  ____bpf_get_stackid_tp
+02400c1d  ____bpf_get_task_stack
+02400c34  ____bpf_jiffies64
+02400c46  ____bpf_ktime_get_boot_ns
+02400c60  ____bpf_ktime_get_coarse_ns
+02400c7c  ____bpf_ktime_get_ns
+02400c91  ____bpf_l3_csum_replace
+02400ca9  ____bpf_l4_csum_replace
+02400cc1  ____bpf_lwt_in_push_encap
+02400cdb  ____bpf_lwt_xmit_push_encap
+02400cf7  ____bpf_map_delete_elem
+02400d0f  ____bpf_map_lookup_elem
+02400d27  ____bpf_map_peek_elem
+02400d3d  ____bpf_map_pop_elem
+02400d52  ____bpf_map_push_elem
+02400d68  ____bpf_map_update_elem
+02400d80  ____bpf_msg_apply_bytes
+02400d98  ____bpf_msg_cork_bytes
+02400daf  ____bpf_msg_pop_data
+02400dc4  ____bpf_msg_pull_data
+02400dda  ____bpf_msg_push_data
+02400df0  ____bpf_msg_redirect_hash
+02400e0a  ____bpf_msg_redirect_map
+02400e23  ____bpf_per_cpu_ptr
+02400e37  ____bpf_perf_event_output
+02400e51  ____bpf_perf_event_output_raw_tp
+02400e72  ____bpf_perf_event_output_tp
+02400e8f  ____bpf_perf_event_read
+02400ea7  ____bpf_perf_event_read_value
+02400ec5  ____bpf_perf_prog_read_value
+02400eed  ____bpf_probe_read_compat
+02400f07  ____bpf_probe_read_compat_str
+02400f25  ____bpf_probe_read_kernel
+02400f3f  ____bpf_probe_read_kernel_str
+02400f5d  ____bpf_probe_read_user
+02400f75  ____bpf_probe_read_user_str
+02400f91  ____bpf_probe_write_user
+02400faa  ____bpf_rc_keydown
+02400fc9  ____bpf_rc_pointer_rel
+02400fe0  ____bpf_rc_repeat
+02400ff2  ____bpf_read_branch_records
+0240100e  ____bpf_redirect
+0240101f  ____bpf_redirect_neigh
+02401036  ____bpf_redirect_peer
+0240104c  ____bpf_ringbuf_discard
+02401064  ____bpf_ringbuf_output
+0240107b  ____bpf_ringbuf_query
+02401091  ____bpf_ringbuf_reserve
+024010a9  ____bpf_ringbuf_submit
+024010c0  ____bpf_send_signal
+024010d4  ____bpf_send_signal_thread
+024010ef  ____bpf_seq_printf
+0240110f  ____bpf_seq_printf_btf
+02401126  ____bpf_seq_write
+02401138  ____bpf_set_hash
+02401149  ____bpf_set_hash_invalid
+02401162  ____bpf_sk_ancestor_cgroup_id
+02401180  ____bpf_sk_assign
+02401192  ____bpf_sk_cgroup_id
+024011a7  ____bpf_sk_fullsock
+024011bb  ____bpf_sk_getsockopt
+024011d1  ____bpf_sk_lookup_assign
+024011f3  ____bpf_sk_lookup_tcp
+02401209  ____bpf_sk_lookup_udp
+0240121f  ____bpf_sk_redirect_hash
+02401238  ____bpf_sk_redirect_map
+02401250  ____bpf_sk_release
+02401263  ____bpf_sk_setsockopt
+02401279  ____bpf_sk_storage_delete
+02401293  ____bpf_sk_storage_delete_tracing
+024012b5  ____bpf_sk_storage_get
+024012cc  ____bpf_sk_storage_get_tracing
+024012f4  ____bpf_skb_adjust_room
+0240130c  ____bpf_skb_ancestor_cgroup_id
+0240132b  ____bpf_skb_cgroup_id
+0240134b  ____bpf_skb_change_head
+02401363  ____bpf_skb_change_proto
+0240137c  ____bpf_skb_change_tail
+02401394  ____bpf_skb_change_type
+024013b4  ____bpf_skb_check_mtu
+024013ca  ____bpf_skb_ecn_set_ce
+024013eb  ____bpf_skb_event_output
+02401404  ____bpf_skb_fib_lookup
+0240141b  ____bpf_skb_get_nlattr
+02401432  ____bpf_skb_get_nlattr_nest
+0240144e  ____bpf_skb_get_pay_offset
+02401469  ____bpf_skb_get_tunnel_key
+02401484  ____bpf_skb_get_tunnel_opt
+0240149f  ____bpf_skb_get_xfrm_state
+024014ba  ____bpf_skb_load_bytes
+024014de  ____bpf_skb_load_bytes_relative
+02401506  ____bpf_skb_load_helper_16
+02401521  ____bpf_skb_load_helper_16_no_cache
+02401545  ____bpf_skb_load_helper_32
+02401560  ____bpf_skb_load_helper_32_no_cache
+02401584  ____bpf_skb_load_helper_8
+0240159e  ____bpf_skb_load_helper_8_no_cache
+024015c1  ____bpf_skb_pull_data
+024015d7  ____bpf_skb_set_tunnel_key
+024015f2  ____bpf_skb_set_tunnel_opt
+0240160d  ____bpf_skb_store_bytes
+02401625  ____bpf_skb_under_cgroup
+0240163e  ____bpf_skb_vlan_pop
+02401653  ____bpf_skb_vlan_push
+02401669  ____bpf_skc_lookup_tcp
+02401680  ____bpf_skc_to_tcp6_sock
+02401699  ____bpf_skc_to_tcp_request_sock
+024016b9  ____bpf_skc_to_tcp_sock
+024016d1  ____bpf_skc_to_tcp_timewait_sock
+024016f2  ____bpf_skc_to_udp6_sock
+02401714  ____bpf_snprintf
+02401725  ____bpf_snprintf_btf
+0240173a  ____bpf_sock_addr_getsockopt
+02401757  ____bpf_sock_addr_setsockopt
+02401774  ____bpf_sock_addr_sk_lookup_tcp
+02401794  ____bpf_sock_addr_sk_lookup_udp
+024017b4  ____bpf_sock_addr_skc_lookup_tcp
+024017d5  ____bpf_sock_from_file
+024017f1  ____bpf_sock_hash_update
+0240180a  ____bpf_sock_map_update
+02401829  ____bpf_sock_ops_cb_flags_set
+02401847  ____bpf_sock_ops_getsockopt
+0240186e  ____bpf_sock_ops_load_hdr_opt
+0240188c  ____bpf_sock_ops_reserve_hdr_opt
+024018ad  ____bpf_sock_ops_setsockopt
+024018c9  ____bpf_sock_ops_store_hdr_opt
+024018e8  ____bpf_spin_lock
+024018fa  ____bpf_spin_unlock
+0240190e  ____bpf_strtol
+0240191d  ____bpf_strtoul
+0240192d  ____bpf_sys_bpf
+0240193d  ____bpf_sys_close
+0240194f  ____bpf_sysctl_get_current_value
+02401970  ____bpf_sysctl_get_name
+02401988  ____bpf_sysctl_get_new_value
+024019a5  ____bpf_sysctl_set_new_value
+024019c2  ____bpf_task_pt_regs
+024019d7  ____bpf_task_storage_delete
+024019f3  ____bpf_task_storage_get
+02401a0c  ____bpf_tc_sk_lookup_tcp
+02401a25  ____bpf_tc_sk_lookup_udp
+02401a3e  ____bpf_tc_skc_lookup_tcp
+02401a67  ____bpf_tcp_check_syncookie
+02401a83  ____bpf_tcp_gen_syncookie
+02401a9d  ____bpf_tcp_send_ack
+02401ab2  ____bpf_tcp_sock
+02401ace  ____bpf_this_cpu_ptr
+02401ae3  ____bpf_timer_cancel
+02401af8  ____bpf_timer_init
+02401b0b  ____bpf_timer_set_callback
+02401b26  ____bpf_timer_start
+02401b3a  ____bpf_trace_printk
+02401b4f  ____bpf_user_rnd_u32
+02401b64  ____bpf_xdp_adjust_head
+02401b7c  ____bpf_xdp_adjust_meta
+02401b94  ____bpf_xdp_adjust_tail
+02401bac  ____bpf_xdp_check_mtu
+02401bc2  ____bpf_xdp_event_output
+02401bdb  ____bpf_xdp_fib_lookup
+02401bf2  ____bpf_xdp_redirect
+02401c07  ____bpf_xdp_redirect_map
+02401c20  ____bpf_xdp_sk_lookup_tcp
+02401c3a  ____bpf_xdp_sk_lookup_udp
+02401c54  ____bpf_xdp_skc_lookup_tcp
+0240310c  __arm64_sys_bpf
+02405f67  __bpf_address_lookup
+02405f92  __bpf_event_entry_free
+02405fa9  __bpf_free_used_btfs
+02405fbe  __bpf_free_used_maps
+02405fd3  __bpf_get_stackid
+02405fe5  __bpf_lru_list_rotate
+02406015  __bpf_lru_list_shrink
+0240602b  __bpf_map_get
+02406039  __bpf_map_offload_destroy
+02406053  __bpf_prog_enter
+02406064  __bpf_prog_enter_sleepable
+0240607f  __bpf_prog_exit
+0240608f  __bpf_prog_exit_sleepable
+024060a9  __bpf_prog_free
+024060b9  __bpf_prog_put_noref
+024060ce  __bpf_prog_put_rcu
+024060e1  __bpf_prog_ret0_warn
+024060f6  __bpf_prog_ret1
+02406106  __bpf_prog_run_save_cb
+0240611d  __bpf_prog_test_run_raw_tp
+02406138  __bpf_redirect
+02406147  __bpf_ringbuf_reserve
+0240615d  __bpf_skb_change_tail
+0240617f  __bpf_strtoull
+0240618e  __bpf_trace_802154_drv_return_int
+024061b0  __bpf_trace_802154_drv_set_cca_ed_level
+024061d8  __bpf_trace_802154_drv_set_cca_mode
+024061fc  __bpf_trace_802154_drv_set_channel
+0240621f  __bpf_trace_802154_drv_set_csma_params
+02406246  __bpf_trace_802154_drv_set_extended_addr
+0240626f  __bpf_trace_802154_drv_set_lbt_mode
+02406293  __bpf_trace_802154_drv_set_max_frame_retries
+024062c0  __bpf_trace_802154_drv_set_pan_coord
+024062e5  __bpf_trace_802154_drv_set_pan_id
+02406307  __bpf_trace_802154_drv_set_promiscuous_mode
+02406333  __bpf_trace_802154_drv_set_short_addr
+02406359  __bpf_trace_802154_drv_set_tx_power
+0240637d  __bpf_trace_802154_le16_template
+0240639e  __bpf_trace_802154_rdev_add_virtual_intf
+024063c7  __bpf_trace_802154_rdev_del_virtual_intf
+024063f0  __bpf_trace_802154_rdev_return_int
+02406413  __bpf_trace_802154_rdev_set_ackreq_default
+0240643e  __bpf_trace_802154_rdev_set_backoff_exponent
+0240646b  __bpf_trace_802154_rdev_set_cca_ed_level
+02406494  __bpf_trace_802154_rdev_set_cca_mode
+024064b9  __bpf_trace_802154_rdev_set_channel
+024064dd  __bpf_trace_802154_rdev_set_csma_backoffs
+02406507  __bpf_trace_802154_rdev_set_lbt_mode
+0240652c  __bpf_trace_802154_rdev_set_max_frame_retries
+0240655a  __bpf_trace_802154_rdev_set_tx_power
+0240657f  __bpf_trace_9p_client_req
+02406599  __bpf_trace_9p_client_res
+024065b3  __bpf_trace_9p_protocol_dump
+024065d0  __bpf_trace_aer_event
+024065e6  __bpf_trace_alarm_class
+024065fe  __bpf_trace_alarmtimer_suspend
+0240661d  __bpf_trace_android_fs_data_end_template
+02406646  __bpf_trace_android_fs_data_start_template
+02406671  __bpf_trace_android_vh_loop_prepare_cmd
+02406699  __bpf_trace_arm_event
+024066ba  __bpf_trace_balance_dirty_pages
+024066da  __bpf_trace_bdi_dirty_ratelimit
+024066fa  __bpf_trace_binder_buffer_class
+0240671a  __bpf_trace_binder_command
+02406735  __bpf_trace_binder_function_return_class
+0240675e  __bpf_trace_binder_ioctl
+02406777  __bpf_trace_binder_lock_class
+02406795  __bpf_trace_binder_lru_page_class
+024067b7  __bpf_trace_binder_return
+024067d1  __bpf_trace_binder_set_priority
+024067f1  __bpf_trace_binder_transaction
+02406810  __bpf_trace_binder_transaction_fd_recv
+02406837  __bpf_trace_binder_transaction_fd_send
+0240685e  __bpf_trace_binder_transaction_node_to_ref
+02406889  __bpf_trace_binder_transaction_received
+024068b1  __bpf_trace_binder_transaction_ref_to_node
+024068ed  __bpf_trace_binder_transaction_ref_to_ref
+02406917  __bpf_trace_binder_txn_latency_free
+0240693b  __bpf_trace_binder_update_page_range
+02406960  __bpf_trace_binder_wait_for_work
+02406981  __bpf_trace_block_bio
+02406997  __bpf_trace_block_bio_complete
+024069b6  __bpf_trace_block_bio_remap
+024069d2  __bpf_trace_block_buffer
+024069eb  __bpf_trace_block_plug
+02406a02  __bpf_trace_block_rq
+02406a17  __bpf_trace_block_rq_complete
+02406a35  __bpf_trace_block_rq_remap
+02406a50  __bpf_trace_block_rq_requeue
+02406a6d  __bpf_trace_block_split
+02406a8e  __bpf_trace_block_unplug
+02406aa7  __bpf_trace_bpf_test_finish
+02406ac3  __bpf_trace_bpf_trace_printk
+02406ae4  __bpf_trace_br_fdb_add
+02406afb  __bpf_trace_br_fdb_external_learn_add
+02406b21  __bpf_trace_br_fdb_update
+02406b3b  __bpf_trace_cdev_update
+02406b53  __bpf_trace_cgroup
+02406b66  __bpf_trace_cgroup_event
+02406b94  __bpf_trace_cgroup_migrate
+02406baf  __bpf_trace_cgroup_root
+02406bc7  __bpf_trace_clk
+02406bd7  __bpf_trace_clk_duty_cycle
+02406bf2  __bpf_trace_clk_parent
+02406c09  __bpf_trace_clk_phase
+02406c1f  __bpf_trace_clk_rate
+02406c34  __bpf_trace_clk_rate_range
+02406c4f  __bpf_trace_clock
+02406c61  __bpf_trace_cma_alloc_class
+02406c7d  __bpf_trace_cma_alloc_start
+02406c99  __bpf_trace_cma_release
+02406cb1  __bpf_trace_compact_retry
+02406ccb  __bpf_trace_console
+02406cdf  __bpf_trace_consume_skb
+02406cf7  __bpf_trace_cpu
+02406d07  __bpf_trace_cpu_frequency_limits
+02406d28  __bpf_trace_cpu_latency_qos_request
+02406d4c  __bpf_trace_cpuhp_enter
+02406d64  __bpf_trace_cpuhp_exit
+02406d7b  __bpf_trace_cpuhp_multi_enter
+02406d99  __bpf_trace_damon_aggregated
+02406db6  __bpf_trace_dev_pm_qos_request
+02406dd5  __bpf_trace_devfreq_frequency
+02406df3  __bpf_trace_devfreq_monitor
+02406e0f  __bpf_trace_device_pm_callback_end
+02406e32  __bpf_trace_device_pm_callback_start
+02406e57  __bpf_trace_devlink_health_recover_aborted
+02406e82  __bpf_trace_devlink_health_report
+02406ea4  __bpf_trace_devlink_health_reporter_state_update
+02406ed5  __bpf_trace_devlink_hwerr
+02406eef  __bpf_trace_devlink_hwmsg
+02406f12  __bpf_trace_devlink_trap_report
+02406f32  __bpf_trace_devres
+02406f45  __bpf_trace_dma_fence
+02406f5b  __bpf_trace_drm_vblank_event
+02406f78  __bpf_trace_drm_vblank_event_delivered
+02406f9f  __bpf_trace_drm_vblank_event_queued
+02406fc3  __bpf_trace_dwc3_log_ctrl
+02406fdd  __bpf_trace_dwc3_log_ep
+02406ff5  __bpf_trace_dwc3_log_event
+02407010  __bpf_trace_dwc3_log_gadget_ep_cmd
+02407033  __bpf_trace_dwc3_log_generic_cmd
+02407054  __bpf_trace_dwc3_log_io
+0240706c  __bpf_trace_dwc3_log_request
+02407089  __bpf_trace_dwc3_log_trb
+024070a2  __bpf_trace_erofs__map_blocks_enter
+024070c6  __bpf_trace_erofs__map_blocks_exit
+024070e9  __bpf_trace_erofs_destroy_inode
+02407109  __bpf_trace_erofs_fill_inode
+02407126  __bpf_trace_erofs_lookup
+0240713f  __bpf_trace_erofs_readpage
+0240715a  __bpf_trace_erofs_readpages
+02407176  __bpf_trace_error_report_template
+02407198  __bpf_trace_ext4__bitmap_load
+024071b9  __bpf_trace_ext4__es_extent
+024071d5  __bpf_trace_ext4__es_shrink_enter
+024071f7  __bpf_trace_ext4__fallocate_mode
+02407218  __bpf_trace_ext4__map_blocks_enter
+0240723b  __bpf_trace_ext4__map_blocks_exit
+0240725d  __bpf_trace_ext4__mb_new_pa
+02407279  __bpf_trace_ext4__mballoc
+02407293  __bpf_trace_ext4__page_op
+024072ad  __bpf_trace_ext4__trim
+024072c4  __bpf_trace_ext4__truncate
+024072df  __bpf_trace_ext4__write_begin
+024072fd  __bpf_trace_ext4__write_end
+02407319  __bpf_trace_ext4_alloc_da_blocks
+0240733a  __bpf_trace_ext4_allocate_blocks
+0240735b  __bpf_trace_ext4_allocate_inode
+0240737b  __bpf_trace_ext4_begin_ordered_truncate
+024073a3  __bpf_trace_ext4_collapse_range
+024073c3  __bpf_trace_ext4_da_release_space
+024073e5  __bpf_trace_ext4_da_reserve_space
+02407407  __bpf_trace_ext4_da_update_reserve_space
+02407430  __bpf_trace_ext4_da_write_pages
+02407450  __bpf_trace_ext4_da_write_pages_extent
+02407477  __bpf_trace_ext4_discard_blocks
+02407497  __bpf_trace_ext4_discard_preallocations
+024074bf  __bpf_trace_ext4_drop_inode
+024074db  __bpf_trace_ext4_error
+024074f2  __bpf_trace_ext4_es_find_extent_range_enter
+0240751e  __bpf_trace_ext4_es_find_extent_range_exit
+02407549  __bpf_trace_ext4_es_insert_delayed_block
+02407572  __bpf_trace_ext4_es_lookup_extent_enter
+0240759a  __bpf_trace_ext4_es_lookup_extent_exit
+024075c1  __bpf_trace_ext4_es_remove_extent
+024075e3  __bpf_trace_ext4_es_shrink
+024075fe  __bpf_trace_ext4_es_shrink_scan_exit
+02407623  __bpf_trace_ext4_evict_inode
+02407643  __bpf_trace_ext4_ext_convert_to_initialized_enter
+02407678  __bpf_trace_ext4_ext_convert_to_initialized_fastpath
+024076b6  __bpf_trace_ext4_ext_handle_unwritten_extents
+024076e4  __bpf_trace_ext4_ext_load_extent
+02407705  __bpf_trace_ext4_ext_remove_space
+02407727  __bpf_trace_ext4_ext_remove_space_done
+0240774e  __bpf_trace_ext4_ext_rm_idx
+0240776a  __bpf_trace_ext4_ext_rm_leaf
+02407787  __bpf_trace_ext4_ext_show_extent
+024077a8  __bpf_trace_ext4_fallocate_exit
+024077c8  __bpf_trace_ext4_fc_commit_start
+024077e9  __bpf_trace_ext4_fc_commit_stop
+02407809  __bpf_trace_ext4_fc_replay
+02407824  __bpf_trace_ext4_fc_replay_scan
+02407844  __bpf_trace_ext4_fc_stats
+0240785e  __bpf_trace_ext4_fc_track_create
+0240787f  __bpf_trace_ext4_fc_track_inode
+0240789f  __bpf_trace_ext4_fc_track_link
+024078be  __bpf_trace_ext4_fc_track_range
+024078de  __bpf_trace_ext4_fc_track_unlink
+024078ff  __bpf_trace_ext4_forget
+02407917  __bpf_trace_ext4_free_blocks
+02407934  __bpf_trace_ext4_free_inode
+02407950  __bpf_trace_ext4_fsmap_class
+0240796d  __bpf_trace_ext4_get_implied_cluster_alloc_exit
+0240799d  __bpf_trace_ext4_getfsmap_class
+024079bd  __bpf_trace_ext4_insert_range
+024079db  __bpf_trace_ext4_invalidatepage_op
+02407a01  __bpf_trace_ext4_journal_start
+02407a20  __bpf_trace_ext4_journal_start_reserved
+02407a48  __bpf_trace_ext4_lazy_itable_init
+02407a6a  __bpf_trace_ext4_load_inode
+02407a86  __bpf_trace_ext4_mark_inode_dirty
+02407aa8  __bpf_trace_ext4_mb_discard_preallocations
+02407ad3  __bpf_trace_ext4_mb_release_group_pa
+02407af8  __bpf_trace_ext4_mb_release_inode_pa
+02407b1d  __bpf_trace_ext4_mballoc_alloc
+02407b3c  __bpf_trace_ext4_mballoc_prealloc
+02407b5e  __bpf_trace_ext4_nfs_commit_metadata
+02407b83  __bpf_trace_ext4_other_inode_update_time
+02407bb9  __bpf_trace_ext4_prefetch_bitmaps
+02407bdb  __bpf_trace_ext4_read_block_bitmap_load
+02407c03  __bpf_trace_ext4_remove_blocks
+02407c22  __bpf_trace_ext4_request_blocks
+02407c42  __bpf_trace_ext4_request_inode
+02407c61  __bpf_trace_ext4_shutdown
+02407c7b  __bpf_trace_ext4_sync_file_enter
+02407c9c  __bpf_trace_ext4_sync_file_exit
+02407cbc  __bpf_trace_ext4_sync_fs
+02407cd5  __bpf_trace_ext4_unlink_enter
+02407cf3  __bpf_trace_ext4_unlink_exit
+02407d10  __bpf_trace_ext4_writepages
+02407d2c  __bpf_trace_ext4_writepages_result
+02407d4f  __bpf_trace_f2fs__bio
+02407d65  __bpf_trace_f2fs__inode
+02407d7d  __bpf_trace_f2fs__inode_exit
+02407d9a  __bpf_trace_f2fs__page
+02407db1  __bpf_trace_f2fs__rw_end
+02407dca  __bpf_trace_f2fs__rw_start
+02407de5  __bpf_trace_f2fs__submit_page_bio
+02407e07  __bpf_trace_f2fs__truncate_node
+02407e27  __bpf_trace_f2fs__truncate_op
+02407e45  __bpf_trace_f2fs_background_gc
+02407e64  __bpf_trace_f2fs_bmap
+02407e7a  __bpf_trace_f2fs_destroy_extent_tree
+02407e9f  __bpf_trace_f2fs_direct_IO_enter
+02407ec0  __bpf_trace_f2fs_direct_IO_exit
+02407ee0  __bpf_trace_f2fs_discard
+02407ef9  __bpf_trace_f2fs_fallocate
+02407f14  __bpf_trace_f2fs_fiemap
+02407f2c  __bpf_trace_f2fs_file_write_iter
+02407f4d  __bpf_trace_f2fs_filemap_fault
+02407f6c  __bpf_trace_f2fs_gc_begin
+02407f86  __bpf_trace_f2fs_gc_end
+02407f9e  __bpf_trace_f2fs_get_victim
+02407fba  __bpf_trace_f2fs_iostat
+02407fdd  __bpf_trace_f2fs_iostat_latency
+02407ffd  __bpf_trace_f2fs_issue_flush
+0240801a  __bpf_trace_f2fs_issue_reset_zone
+0240803c  __bpf_trace_f2fs_lookup_end
+02408058  __bpf_trace_f2fs_lookup_extent_tree_end
+02408080  __bpf_trace_f2fs_lookup_extent_tree_start
+024080aa  __bpf_trace_f2fs_lookup_start
+024080c8  __bpf_trace_f2fs_map_blocks
+024080f6  __bpf_trace_f2fs_readdir
+0240810f  __bpf_trace_f2fs_readpages
+0240812a  __bpf_trace_f2fs_replace_atomic_write_block
+02408156  __bpf_trace_f2fs_reserve_new_blocks
+0240817a  __bpf_trace_f2fs_shrink_extent_tree
+0240819e  __bpf_trace_f2fs_shutdown
+024081b8  __bpf_trace_f2fs_sync_dirty_inodes
+024081db  __bpf_trace_f2fs_sync_file_exit
+024081fb  __bpf_trace_f2fs_sync_fs
+02408214  __bpf_trace_f2fs_truncate_data_blocks_range
+02408240  __bpf_trace_f2fs_truncate_partial_nodes
+02408268  __bpf_trace_f2fs_unlink_enter
+02408286  __bpf_trace_f2fs_update_extent_tree_range
+024082b0  __bpf_trace_f2fs_write_begin
+024082cd  __bpf_trace_f2fs_write_checkpoint
+024082ef  __bpf_trace_f2fs_write_end
+0240830a  __bpf_trace_f2fs_writepages
+02408326  __bpf_trace_f2fs_zip_end
+0240833f  __bpf_trace_f2fs_zip_start
+0240835a  __bpf_trace_fdb_delete
+02408375  __bpf_trace_fib6_table_lookup
+02408393  __bpf_trace_fib_table_lookup
+024083b0  __bpf_trace_file_check_and_advance_wb_err
+024083da  __bpf_trace_filelock_lease
+024083f5  __bpf_trace_filelock_lock
+02408414  __bpf_trace_filemap_set_wb_err
+02408433  __bpf_trace_finish_task_reaping
+02408453  __bpf_trace_flush_foreign
+0240846d  __bpf_trace_generic_add_lease
+0240848b  __bpf_trace_global_dirty_state
+024084aa  __bpf_trace_gpio_direction
+024084c5  __bpf_trace_gpio_value
+024084dc  __bpf_trace_gpu_mem_total
+024084f6  __bpf_trace_hrtimer_class
+02408510  __bpf_trace_hrtimer_expire_entry
+02408531  __bpf_trace_hrtimer_init
+0240854a  __bpf_trace_hrtimer_start
+02408564  __bpf_trace_i2c_read
+02408579  __bpf_trace_i2c_reply
+0240858f  __bpf_trace_i2c_result
+024085a6  __bpf_trace_i2c_write
+024085bc  __bpf_trace_icc_set_bw
+024085d3  __bpf_trace_icc_set_bw_end
+024085ee  __bpf_trace_inet_sk_error_report
+0240860f  __bpf_trace_inet_sock_set_state
+0240862f  __bpf_trace_initcall_finish
+0240864b  __bpf_trace_initcall_level
+02408666  __bpf_trace_initcall_start
+02408681  __bpf_trace_inode_foreign_history
+024086aa  __bpf_trace_inode_switch_wbs
+024086c7  __bpf_trace_instruction_emulation
+024086e9  __bpf_trace_io_uring_complete
+02408707  __bpf_trace_io_uring_cqring_wait
+02408728  __bpf_trace_io_uring_create
+02408744  __bpf_trace_io_uring_defer
+0240875f  __bpf_trace_io_uring_fail_link
+0240877e  __bpf_trace_io_uring_file_get
+0240879c  __bpf_trace_io_uring_link
+024087b6  __bpf_trace_io_uring_poll_arm
+024087d4  __bpf_trace_io_uring_poll_wake
+024087f3  __bpf_trace_io_uring_queue_async_work
+02408819  __bpf_trace_io_uring_register
+02408837  __bpf_trace_io_uring_submit_sqe
+02408857  __bpf_trace_io_uring_task_add
+02408875  __bpf_trace_io_uring_task_run
+024088ad  __bpf_trace_iocg_inuse_update
+024088d6  __bpf_trace_iocost_ioc_vrate_adj
+024088f7  __bpf_trace_iocost_iocg_forgive_debt
+0240891c  __bpf_trace_iocost_iocg_state
+0240893a  __bpf_trace_iomap_class
+02408952  __bpf_trace_iomap_iter
+02408969  __bpf_trace_iomap_range_class
+02408987  __bpf_trace_iomap_readpage_class
+024089a8  __bpf_trace_iommu_device_event
+024089c7  __bpf_trace_iommu_error
+024089df  __bpf_trace_iommu_group_event
+024089fd  __bpf_trace_ipi_handler
+02408a15  __bpf_trace_ipi_raise
+02408a2b  __bpf_trace_irq_handler_entry
+02408a49  __bpf_trace_irq_handler_exit
+02408a66  __bpf_trace_itimer_expire
+02408a80  __bpf_trace_itimer_state
+02408a99  __bpf_trace_jbd2_checkpoint
+02408ab5  __bpf_trace_jbd2_checkpoint_stats
+02408aea  __bpf_trace_jbd2_commit
+02408b02  __bpf_trace_jbd2_end_commit
+02408b1e  __bpf_trace_jbd2_handle_extend
+02408b3d  __bpf_trace_jbd2_handle_start_class
+02408b61  __bpf_trace_jbd2_handle_stats
+02408b7f  __bpf_trace_jbd2_journal_shrink
+02408b9f  __bpf_trace_jbd2_lock_buffer_stall
+02408bc2  __bpf_trace_jbd2_run_stats
+02408bdd  __bpf_trace_jbd2_shrink_checkpoint_list
+02408c05  __bpf_trace_jbd2_shrink_scan_exit
+02408c27  __bpf_trace_jbd2_submit_inode_data
+02408c4a  __bpf_trace_jbd2_update_log_tail
+02408c6b  __bpf_trace_jbd2_write_superblock
+02408c8d  __bpf_trace_kcompactd_wake_template
+02408cb1  __bpf_trace_kfree
+02408cc3  __bpf_trace_kfree_skb
+02408cd9  __bpf_trace_kmem_alloc
+02408cf0  __bpf_trace_kmem_alloc_node
+02408d0c  __bpf_trace_kmem_cache_free
+02408d28  __bpf_trace_kvm_access_fault
+02408d45  __bpf_trace_kvm_ack_irq
+02408d5d  __bpf_trace_kvm_age_hva
+02408d75  __bpf_trace_kvm_arm_clear_debug
+02408d95  __bpf_trace_kvm_arm_set_dreg32
+02408db4  __bpf_trace_kvm_arm_set_regset
+02408dd3  __bpf_trace_kvm_arm_setup_debug
+02408df3  __bpf_trace_kvm_dirty_ring_exit
+02408e13  __bpf_trace_kvm_dirty_ring_push
+02408e33  __bpf_trace_kvm_dirty_ring_reset
+02408e54  __bpf_trace_kvm_entry
+02408e6a  __bpf_trace_kvm_exit
+02408e7f  __bpf_trace_kvm_fpu
+02408e93  __bpf_trace_kvm_get_timer_map
+02408eb1  __bpf_trace_kvm_guest_fault
+02408ecd  __bpf_trace_kvm_halt_poll_ns
+02408eea  __bpf_trace_kvm_handle_sys_reg
+02408f09  __bpf_trace_kvm_hvc_arm64
+02408f23  __bpf_trace_kvm_irq_line
+02408f3c  __bpf_trace_kvm_mmio
+02408f51  __bpf_trace_kvm_mmio_emulate
+02408f6e  __bpf_trace_kvm_set_guest_debug
+02408f8e  __bpf_trace_kvm_set_irq
+02408fa6  __bpf_trace_kvm_set_spte_hva
+02408fc3  __bpf_trace_kvm_set_way_flush
+02408fe1  __bpf_trace_kvm_sys_access
+02408ffc  __bpf_trace_kvm_test_age_hva
+02409019  __bpf_trace_kvm_timer_emulate
+02409037  __bpf_trace_kvm_timer_hrtimer_expire
+0240905c  __bpf_trace_kvm_timer_restore_state
+02409080  __bpf_trace_kvm_timer_save_state
+024090a1  __bpf_trace_kvm_timer_update_irq
+024090c2  __bpf_trace_kvm_toggle_cache
+024090df  __bpf_trace_kvm_unmap_hva_range
+024090ff  __bpf_trace_kvm_userspace_exit
+0240911e  __bpf_trace_kvm_vcpu_wakeup
+0240913a  __bpf_trace_kvm_wfx_arm64
+02409154  __bpf_trace_kyber_adjust
+0240916d  __bpf_trace_kyber_latency
+02409187  __bpf_trace_kyber_throttled
+024091a3  __bpf_trace_leases_conflict
+024091bf  __bpf_trace_local_only_evt4
+024091db  __bpf_trace_locks_get_lock_context
+024091fe  __bpf_trace_map
+0240920e  __bpf_trace_mark_victim
+02409230  __bpf_trace_mc_event
+02409245  __bpf_trace_mdio_access
+0240925d  __bpf_trace_mem_connect
+02409275  __bpf_trace_mem_disconnect
+02409290  __bpf_trace_mem_return_failed
+024092ae  __bpf_trace_mm_collapse_huge_page
+024092d0  __bpf_trace_mm_collapse_huge_page_isolate
+024092fa  __bpf_trace_mm_collapse_huge_page_swapin
+02409323  __bpf_trace_mm_compaction_begin
+02409343  __bpf_trace_mm_compaction_defer_template
+0240936c  __bpf_trace_mm_compaction_end
+0240938a  __bpf_trace_mm_compaction_isolate_template
+024093b5  __bpf_trace_mm_compaction_kcompactd_sleep
+024093f1  __bpf_trace_mm_compaction_migratepages
+02409418  __bpf_trace_mm_compaction_suitable_template
+02409444  __bpf_trace_mm_compaction_try_to_compact_pages
+02409473  __bpf_trace_mm_filemap_op_page_cache
+02409498  __bpf_trace_mm_khugepaged_scan_pmd
+024094bb  __bpf_trace_mm_lru_activate
+024094d7  __bpf_trace_mm_lru_insertion
+024094f4  __bpf_trace_mm_migrate_pages
+02409511  __bpf_trace_mm_migrate_pages_start
+02409534  __bpf_trace_mm_page
+02409548  __bpf_trace_mm_page_alloc
+02409562  __bpf_trace_mm_page_alloc_extfrag
+02409584  __bpf_trace_mm_page_free
+0240959d  __bpf_trace_mm_page_free_batched
+024095be  __bpf_trace_mm_page_pcpu_drain
+0240960a  __bpf_trace_mm_shrink_slab_end
+02409629  __bpf_trace_mm_shrink_slab_start
+0240964a  __bpf_trace_mm_vmscan_direct_reclaim_begin_template
+0240967e  __bpf_trace_mm_vmscan_direct_reclaim_end_template
+024096b0  __bpf_trace_mm_vmscan_kswapd_sleep
+024096d3  __bpf_trace_mm_vmscan_kswapd_wake
+024096f5  __bpf_trace_mm_vmscan_lru_isolate
+02409717  __bpf_trace_mm_vmscan_lru_shrink_active
+0240973f  __bpf_trace_mm_vmscan_lru_shrink_inactive
+02409769  __bpf_trace_mm_vmscan_node_reclaim_begin
+02409792  __bpf_trace_mm_vmscan_wakeup_kswapd
+024097b6  __bpf_trace_mm_vmscan_writepage
+024097d6  __bpf_trace_mmap_lock_acquire_returned
+024097fd  __bpf_trace_mmap_lock_released
+0240981c  __bpf_trace_mmap_lock_start_locking
+02409840  __bpf_trace_mmc_request_done
+0240985d  __bpf_trace_mmc_request_start
+0240987b  __bpf_trace_module_free
+02409893  __bpf_trace_module_load
+024098ab  __bpf_trace_module_refcnt
+024098c5  __bpf_trace_module_request
+024098e0  __bpf_trace_napi_poll
+024098f6  __bpf_trace_neigh__update
+02409910  __bpf_trace_neigh_create
+02409929  __bpf_trace_neigh_update
+02409942  __bpf_trace_net_dev_rx_exit_template
+02409967  __bpf_trace_net_dev_rx_verbose_template
+0240998f  __bpf_trace_net_dev_start_xmit
+024099ae  __bpf_trace_net_dev_template
+024099cb  __bpf_trace_net_dev_xmit
+024099e4  __bpf_trace_net_dev_xmit_timeout
+02409a05  __bpf_trace_netlink_extack
+02409a20  __bpf_trace_non_standard_event
+02409a3f  __bpf_trace_oom_score_adj_update
+02409a60  __bpf_trace_page_pool_release
+02409a7e  __bpf_trace_page_pool_state_hold
+02409a9f  __bpf_trace_page_pool_state_release
+02409ac3  __bpf_trace_page_pool_update_nid
+02409ae4  __bpf_trace_pelt_cfs_tp
+02409afc  __bpf_trace_pelt_dl_tp
+02409b13  __bpf_trace_pelt_irq_tp
+02409b2b  __bpf_trace_pelt_rt_tp
+02409b42  __bpf_trace_pelt_se_tp
+02409b59  __bpf_trace_pelt_thermal_tp
+02409b75  __bpf_trace_percpu_alloc_percpu
+02409b95  __bpf_trace_percpu_alloc_percpu_fail
+02409bba  __bpf_trace_percpu_create_chunk
+02409bda  __bpf_trace_percpu_destroy_chunk
+02409bfb  __bpf_trace_percpu_free_percpu
+02409c1a  __bpf_trace_pm_qos_update
+02409c34  __bpf_trace_power_domain
+02409c4d  __bpf_trace_powernv_throttle
+02409c6a  __bpf_trace_pstate_sample
+02409c84  __bpf_trace_pwm
+02409c94  __bpf_trace_qdisc_create
+02409cad  __bpf_trace_qdisc_dequeue
+02409cc7  __bpf_trace_qdisc_destroy
+02409ce1  __bpf_trace_qdisc_enqueue
+02409cfb  __bpf_trace_qdisc_reset
+02409d13  __bpf_trace_rcu_barrier
+02409d2b  __bpf_trace_rcu_batch_end
+02409d45  __bpf_trace_rcu_batch_start
+02409d61  __bpf_trace_rcu_callback
+02409d7a  __bpf_trace_rcu_dyntick
+02409d92  __bpf_trace_rcu_exp_funnel_lock
+02409db2  __bpf_trace_rcu_exp_grace_period
+02409dd3  __bpf_trace_rcu_fqs
+02409de7  __bpf_trace_rcu_future_grace_period
+02409e0b  __bpf_trace_rcu_grace_period
+02409e28  __bpf_trace_rcu_grace_period_init
+02409e4a  __bpf_trace_rcu_invoke_callback
+02409e6a  __bpf_trace_rcu_invoke_kfree_bulk_callback
+02409e95  __bpf_trace_rcu_invoke_kvfree_callback
+02409ebc  __bpf_trace_rcu_kvfree_callback
+02409edc  __bpf_trace_rcu_nocb_wake
+02409ef6  __bpf_trace_rcu_preempt_task
+02409f13  __bpf_trace_rcu_quiescent_state_report
+02409f3a  __bpf_trace_rcu_segcb_stats
+02409f56  __bpf_trace_rcu_stall_warning
+02409f74  __bpf_trace_rcu_torture_read
+02409f91  __bpf_trace_rcu_unlock_preempted_task
+02409fb7  __bpf_trace_rcu_utilization
+02409fd3  __bpf_trace_reclaim_retry_zone
+02409ff2  __bpf_trace_regcache_drop_region
+0240a013  __bpf_trace_regcache_sync
+0240a02d  __bpf_trace_register_session
+0240a04a  __bpf_trace_register_tunnel
+0240a066  __bpf_trace_regmap_async
+0240a07f  __bpf_trace_regmap_block
+0240a098  __bpf_trace_regmap_bool
+0240a0b0  __bpf_trace_regmap_reg
+0240a0c7  __bpf_trace_regulator_basic
+0240a0e3  __bpf_trace_regulator_range
+0240a0ff  __bpf_trace_regulator_value
+0240a11b  __bpf_trace_rpm_internal
+0240a134  __bpf_trace_rpm_return_int
+0240a14f  __bpf_trace_rpm_status
+0240a166  __bpf_trace_rss_stat
+0240a17b  __bpf_trace_rtc_alarm_irq_enable
+0240a19c  __bpf_trace_rtc_irq_set_freq
+0240a1b9  __bpf_trace_rtc_irq_set_state
+0240a1d7  __bpf_trace_rtc_offset_class
+0240a1f4  __bpf_trace_rtc_time_alarm_class
+0240a215  __bpf_trace_rtc_timer_class
+0240a231  __bpf_trace_rwmmio_post_read
+0240a24e  __bpf_trace_rwmmio_post_write
+0240a26c  __bpf_trace_rwmmio_read
+0240a284  __bpf_trace_rwmmio_write
+0240a29d  __bpf_trace_sched_blocked_reason
+0240a2be  __bpf_trace_sched_cpu_capacity_tp
+0240a2e0  __bpf_trace_sched_kthread_stop
+0240a2ff  __bpf_trace_sched_kthread_stop_ret
+0240a322  __bpf_trace_sched_kthread_work_execute_end
+0240a34d  __bpf_trace_sched_kthread_work_execute_start
+0240a37a  __bpf_trace_sched_kthread_work_queue_work
+0240a3a4  __bpf_trace_sched_migrate_task
+0240a3c3  __bpf_trace_sched_move_numa
+0240a3ef  __bpf_trace_sched_numa_pair_template
+0240a414  __bpf_trace_sched_overutilized_tp
+0240a43e  __bpf_trace_sched_pi_setprio
+0240a45b  __bpf_trace_sched_process_exec
+0240a47a  __bpf_trace_sched_process_fork
+0240a499  __bpf_trace_sched_process_hang
+0240a4b8  __bpf_trace_sched_process_template
+0240a4db  __bpf_trace_sched_process_wait
+0240a4fa  __bpf_trace_sched_stat_runtime
+0240a519  __bpf_trace_sched_stat_template
+0240a539  __bpf_trace_sched_switch
+0240a552  __bpf_trace_sched_update_nr_running_tp
+0240a579  __bpf_trace_sched_util_est_cfs_tp
+0240a59b  __bpf_trace_sched_util_est_se_tp
+0240a5bc  __bpf_trace_sched_wake_idle_without_ipi
+0240a5e4  __bpf_trace_sched_wakeup_template
+0240a606  __bpf_trace_scmi_rx_done
+0240a61f  __bpf_trace_scmi_xfer_begin
+0240a63b  __bpf_trace_scmi_xfer_end
+0240a655  __bpf_trace_scsi_cmd_done_timeout_template
+0240a680  __bpf_trace_scsi_dispatch_cmd_error
+0240a6a4  __bpf_trace_scsi_dispatch_cmd_start
+0240a6c8  __bpf_trace_scsi_eh_wakeup
+0240a6e7  __bpf_trace_selinux_audited
+0240a703  __bpf_trace_session_only_evt
+0240a720  __bpf_trace_session_pkt_discard_evt
+0240a744  __bpf_trace_session_seqnum_evt
+0240a763  __bpf_trace_signal_deliver
+0240a77e  __bpf_trace_signal_generate
+0240a79a  __bpf_trace_skb_copy_datagram_iovec
+0240a7be  __bpf_trace_skip_task_reaping
+0240a7dc  __bpf_trace_smbus_read
+0240a7f3  __bpf_trace_smbus_reply
+0240a80b  __bpf_trace_smbus_result
+0240a824  __bpf_trace_smbus_write
+0240a83c  __bpf_trace_snd_soc_card
+0240a855  __bpf_trace_snd_soc_dapm_basic
+0240a874  __bpf_trace_snd_soc_dapm_connected
+0240a897  __bpf_trace_snd_soc_dapm_path
+0240a8b5  __bpf_trace_snd_soc_dapm_walk_done
+0240a8d8  __bpf_trace_snd_soc_dapm_widget
+0240a8f8  __bpf_trace_snd_soc_jack_irq
+0240a915  __bpf_trace_snd_soc_jack_notify
+0240a935  __bpf_trace_snd_soc_jack_report
+0240a955  __bpf_trace_sock_exceed_buf_limit
+0240a977  __bpf_trace_sock_rcvqueue_full
+0240a99d  __bpf_trace_softirq
+0240a9b1  __bpf_trace_spi_controller
+0240a9cc  __bpf_trace_spi_message
+0240a9e4  __bpf_trace_spi_message_done
+0240aa01  __bpf_trace_spi_set_cs
+0240aa18  __bpf_trace_spi_setup
+0240aa2e  __bpf_trace_spi_transfer
+0240aa47  __bpf_trace_spmi_cmd
+0240aa5c  __bpf_trace_spmi_read_begin
+0240aa78  __bpf_trace_spmi_read_end
+0240aa92  __bpf_trace_spmi_write_begin
+0240aaaf  __bpf_trace_spmi_write_end
+0240aaca  __bpf_trace_start_task_reaping
+0240aae9  __bpf_trace_suspend_resume
+0240ab04  __bpf_trace_swiotlb_bounced
+0240ab20  __bpf_trace_sys_enter
+0240ab36  __bpf_trace_sys_exit
+0240ab4b  __bpf_trace_task_newtask
+0240ab64  __bpf_trace_task_rename
+0240ab7c  __bpf_trace_tasklet
+0240ab90  __bpf_trace_tcp_event_sk
+0240aba9  __bpf_trace_tcp_event_sk_skb
+0240abc6  __bpf_trace_tcp_event_skb
+0240abe0  __bpf_trace_tcp_probe
+0240abf6  __bpf_trace_tcp_retransmit_synack
+0240ac18  __bpf_trace_test_pages_isolated
+0240ac38  __bpf_trace_thermal_power_allocator
+0240ac5c  __bpf_trace_thermal_power_allocator_pid
+0240ac84  __bpf_trace_thermal_power_cpu_get_power
+0240acac  __bpf_trace_thermal_power_cpu_limit
+0240acd0  __bpf_trace_thermal_power_devfreq_get_power
+0240acfc  __bpf_trace_thermal_power_devfreq_limit
+0240ad24  __bpf_trace_thermal_temperature
+0240ad44  __bpf_trace_thermal_zone_trip
+0240ad62  __bpf_trace_tick_stop
+0240ad78  __bpf_trace_timer_class
+0240ad90  __bpf_trace_timer_expire_entry
+0240adaf  __bpf_trace_timer_start
+0240adc7  __bpf_trace_tipc_fsm_class
+0240ade2  __bpf_trace_tipc_l2_device_event
+0240ae0b  __bpf_trace_tipc_link_class
+0240ae27  __bpf_trace_tipc_link_transmq_class
+0240ae4b  __bpf_trace_tipc_list_class
+0240ae67  __bpf_trace_tipc_node_class
+0240ae83  __bpf_trace_tipc_sk_class
+0240ae9d  __bpf_trace_tipc_skb_class
+0240aeb8  __bpf_trace_track_foreign_dirty
+0240aed8  __bpf_trace_trap_reg
+0240aeed  __bpf_trace_tunnel_only_evt
+0240af09  __bpf_trace_ucsi_log_command
+0240af26  __bpf_trace_ucsi_log_connector_status
+0240af4c  __bpf_trace_ucsi_log_register_altmode
+0240af72  __bpf_trace_udc_log_ep
+0240af89  __bpf_trace_udc_log_gadget
+0240afa4  __bpf_trace_udc_log_req
+0240afbc  __bpf_trace_udp_fail_queue_rcv_skb
+0240afdf  __bpf_trace_ufshcd_auto_bkops_state
+0240b003  __bpf_trace_ufshcd_clk_gating
+0240b021  __bpf_trace_ufshcd_clk_scaling
+0240b040  __bpf_trace_ufshcd_command
+0240b05b  __bpf_trace_ufshcd_exception_event
+0240b07e  __bpf_trace_ufshcd_profiling_template
+0240b0a4  __bpf_trace_ufshcd_template
+0240b0c0  __bpf_trace_ufshcd_uic_command
+0240b0df  __bpf_trace_ufshcd_upiu
+0240b0f7  __bpf_trace_unmap
+0240b109  __bpf_trace_v4l2_event_class
+0240b126  __bpf_trace_vb2_event_class
+0240b142  __bpf_trace_vb2_v4l2_event_class
+0240b163  __bpf_trace_vgic_update_irq_pending
+0240b187  __bpf_trace_virtio_transport_alloc_pkt
+0240b1ae  __bpf_trace_virtio_transport_recv_pkt
+0240b1d4  __bpf_trace_vm_unmapped_area
+0240b1f1  __bpf_trace_wake_reaper
+0240b209  __bpf_trace_wakeup_source
+0240b223  __bpf_trace_wbc_class
+0240b239  __bpf_trace_workqueue_activate_work
+0240b25d  __bpf_trace_workqueue_execute_end
+0240b27f  __bpf_trace_workqueue_execute_start
+0240b2a7  __bpf_trace_workqueue_queue_work
+0240b2c8  __bpf_trace_wpan_phy_only_evt
+0240b2e6  __bpf_trace_writeback_bdi_register
+0240b309  __bpf_trace_writeback_class
+0240b325  __bpf_trace_writeback_congest_waited_template
+0240b353  __bpf_trace_writeback_dirty_inode_template
+0240b37e  __bpf_trace_writeback_inode_template
+0240b3a3  __bpf_trace_writeback_page_template
+0240b3c7  __bpf_trace_writeback_pages_written
+0240b3fa  __bpf_trace_writeback_queue_io
+0240b419  __bpf_trace_writeback_sb_inodes_requeue
+0240b441  __bpf_trace_writeback_single_inode_template
+0240b46d  __bpf_trace_writeback_work_class
+0240b48e  __bpf_trace_writeback_write_inode_template
+0240b4b9  __bpf_trace_xdp_bulk_tx
+0240b4d1  __bpf_trace_xdp_cpumap_enqueue
+0240b4fa  __bpf_trace_xdp_cpumap_kthread
+0240b529  __bpf_trace_xdp_devmap_xmit
+0240b545  __bpf_trace_xdp_exception
+0240b55f  __bpf_trace_xdp_redirect_template
+0240b581  __bpf_trace_xhci_dbc_log_request
+0240b5ab  __bpf_trace_xhci_log_ctrl_ctx
+0240b5c9  __bpf_trace_xhci_log_ctx
+0240b5e2  __bpf_trace_xhci_log_doorbell
+0240b600  __bpf_trace_xhci_log_ep_ctx
+0240b61c  __bpf_trace_xhci_log_free_virt_dev
+0240b643  __bpf_trace_xhci_log_msg
+0240b65c  __bpf_trace_xhci_log_portsc
+0240b678  __bpf_trace_xhci_log_ring
+0240b692  __bpf_trace_xhci_log_slot_ctx
+0240b6b0  __bpf_trace_xhci_log_trb
+0240b6c9  __bpf_trace_xhci_log_urb
+0240b6e2  __bpf_trace_xhci_log_virt_dev
+0240b700  __bpf_tramp_enter
+0240b712  __bpf_tramp_exit
+0240b723  __bpf_tramp_image_put_deferred
+0240b742  __bpf_tramp_image_put_rcu
+0240b75c  __bpf_tramp_image_put_rcu_tasks
+0240b77c  __bpf_tramp_image_release
+0240bbd8  __cgroup_bpf_attach
+0240bbf2  __cgroup_bpf_check_dev_permission
+0240bc14  __cgroup_bpf_detach
+0240bc2e  __cgroup_bpf_query
+0240bc4c  __cgroup_bpf_run_filter_getsockopt
+0240bc6f  __cgroup_bpf_run_filter_getsockopt_kern
+0240bca5  __cgroup_bpf_run_filter_setsockopt
+0240bd4b  __cgroup_bpf_run_filter_sysctl
+0240c408  __cls_bpf_delete
+0240c419  __cls_bpf_delete_prog
+0240cc03  __debugfs_create_file
+0240d510  __disable_kprobe
+024101c8  __initstub__kmod_act_bpf__666_450_bpf_init_module6
+02410f82  __initstub__kmod_bpf_sk_storage__693_955_bpf_sk_storage_map_iter_init7
+02410fc9  __initstub__kmod_bpf_trace__719_2016_send_signal_irq_work_init4
+02411009  __initstub__kmod_bpf_trace__724_2069_bpf_event_init5
+024119c2  __initstub__kmod_cls_bpf__685_714_cls_bpf_init_mod6
+02411aec  __initstub__kmod_cma_debug__292_200_cma_debugfs_init7
+02411cd9  __initstub__kmod_core__410_1244_pwm_debugfs_init4
+02411d65  __initstub__kmod_core__465_694_kfence_debugfs_init7
+02411dcc  __initstub__kmod_core__515_840_bpf_jit_charge_init0
+024125d2  __initstub__kmod_debug_monitors__364_63_create_debug_debugfs_entry5
+02412654  __initstub__kmod_debugfs__302_256_opp_debug_init1
+02412686  __initstub__kmod_debugfs__384_886_debugfs_init1
+02413e89  __initstub__kmod_gpiolib__491_4510_gpiolib_debugfs_init4
+024148de  __initstub__kmod_huge_memory__505_3174_split_huge_pages_debugfs7
+02414d59  __initstub__kmod_inode__540_839_bpf_init5
+02415651  __initstub__kmod_kallsyms__505_895_kallsyms_init6
+02415783  __initstub__kmod_kprobes__457_2538_init_kprobesearly
+024157b8  __initstub__kmod_kprobes__474_2847_debugfs_kprobe_init7
+02415fe2  __initstub__kmod_main__460_460_pm_debugfs_init7
+0241603a  __initstub__kmod_map_iter__503_195_bpf_map_iter_init7
+02416129  __initstub__kmod_memblock__407_2156_memblock_init_debugfs6
+0241620b  __initstub__kmod_memory__494_4424_fault_around_debugfs7
+0241670b  __initstub__kmod_net_namespace__522_566_netns_bpf_init4
+02417a31  __initstub__kmod_panic__386_749_register_warn_debugfs6
+0241876b  __initstub__kmod_prog_iter__503_107_bpf_prog_iter_init7
+02419b2d  __initstub__kmod_slub__543_6250_slab_debugfs_init6
+02419e38  __initstub__kmod_sock_map__808_1629_bpf_sockmap_iter_init7
+0241a321  __initstub__kmod_swiotlb__410_762_swiotlb_create_default_debugfs7
+0241a682  __initstub__kmod_tcp_bpf__763_640_tcp_bpf_v4_build_proto7
+0241ab4b  __initstub__kmod_trace_kprobe__422_1954_init_kprobe_trace_early1
+0241ab8c  __initstub__kmod_trace_kprobe__424_1984_init_kprobe_trace5
+0241b03b  __initstub__kmod_udp_bpf__758_140_udp_bpf_v4_build_proto7
+0241bbcd  __initstub__kmod_wakeup__519_1266_wakeup_sources_debugfs_init2
+0241c2e4  __initstub__kmod_xt_bpf__521_152_bpf_mt_init6
+024208e9  __register_trace_kprobe
+02422423  __sys_bpf
+02422c3f  __trace_kprobe_create
+02429712  __traceiter_bpf_test_finish
+0242972e  __traceiter_bpf_trace_printk
+0243137b  __unregister_kprobe_top
+0243275c  _bpf_getsockopt
+0243276c  _bpf_setsockopt
+02436bb5  alloc_trace_kprobe
+024378a4  arch_arm_kprobe
+02437a94  arch_disarm_kprobe
+02437cc5  arch_init_kprobes
+02437d41  arch_kprobe_get_kallsym
+02437d59  arch_kprobe_on_func_entry
+02437e1a  arch_populate_kprobe_blacklist
+02437e90  arch_prepare_bpf_dispatcher
+02437ec7  arch_prepare_bpf_trampoline
+02437ee3  arch_prepare_kprobe
+02437f6e  arch_remove_kprobe
+0243855d  arch_trampoline_kprobe
+024386e5  arch_within_kprobe_blacklist
+02438789  arm64_bpf_fixup_exception
+02438a9c  arm_kprobe
+02438aab  arm_kprobe_decode_insn
+0243c158  bpf_arg
+0243f99a  blk_mq_debugfs_open
+0243f9ae  blk_mq_debugfs_register
+0243f9c6  blk_mq_debugfs_register_hctx
+0243f9e3  blk_mq_debugfs_register_hctxs
+0243fa01  blk_mq_debugfs_register_rqos
+0243fa1e  blk_mq_debugfs_register_sched
+0243fa3c  blk_mq_debugfs_register_sched_hctx
+0243fa5f  blk_mq_debugfs_release
+0243fa8d  blk_mq_debugfs_show
+0243faa1  blk_mq_debugfs_tags_show
+0243faba  blk_mq_debugfs_unregister
+0243fad4  blk_mq_debugfs_unregister_hctx
+0243faf3  blk_mq_debugfs_unregister_hctxs
+0243fb13  blk_mq_debugfs_unregister_queue_rqos
+0243fb38  blk_mq_debugfs_unregister_rqos
+0243fb57  blk_mq_debugfs_unregister_sched
+0243fb77  blk_mq_debugfs_unregister_sched_hctx
+0243fb9c  blk_mq_debugfs_write
+02441850  bpf_adj_branches
+02441866  bpf_arch_poke_desc_update
+02441880  bpf_arch_text_poke
+02441893  bpf_array_map_seq_next
+024418aa  bpf_array_map_seq_show
+024418c1  bpf_array_map_seq_start
+024418d9  bpf_array_map_seq_stop
+024418f0  bpf_audit_prog
+024418ff  bpf_base_func_proto
+0244192a  bpf_bprintf_cleanup
+02441947  bpf_bprintf_prepare
+02441975  bpf_btf_get_fd_by_id
+0244198a  bpf_btf_load
+02441997  bpf_btf_show_fdinfo
+024419ab  bpf_cgroup_link_dealloc
+024419c3  bpf_cgroup_link_detach
+024419da  bpf_cgroup_link_fill_link_info
+024419f9  bpf_cgroup_link_release
+02441a11  bpf_cgroup_link_show_fdinfo
+02441a2d  bpf_cgroup_storage_alloc
+02441a4b  bpf_cgroup_storage_assign
+02441a65  bpf_cgroup_storage_free
+02441a7d  bpf_cgroup_storage_link
+02441a95  bpf_cgroup_storage_unlink
+02441aaf  bpf_cgroup_storages_link
+02441ac8  bpf_check
+02441adb  bpf_check_attach_target
+02441b0d  bpf_check_uarg_tail_zero
+02441b26  bpf_cleanup_module
+02441b39  bpf_clear_redirect_map
+02441b63  bpf_convert_ctx_access
+02441b8f  bpf_convert_filter
+02441ba2  bpf_convert_shinfo_access
+02441c09  bpf_ctx_finish
+02441c18  bpf_ctx_init
+02441c4e  bpf_d_path_allowed
+02441c61  bpf_disable_instrumentation
+02441c7d  bpf_dispatcher_change_prog
+02441c98  bpf_dispatcher_nop_func
+02441ccc  bpf_dummy_read
+02441cdb  bpf_dummy_write
+02441ceb  bpf_enable_instrumentation
+02441d06  bpf_enable_stats
+02441d17  bpf_event_notify
+02441d4b  bpf_event_output_data
+02441d6a  bpf_exit_net
+02441d77  bpf_fd_array_map_lookup_elem
+02441d94  bpf_fd_array_map_update_elem
+02441db1  bpf_fd_htab_map_lookup_elem
+02441dcd  bpf_fd_htab_map_update_elem
+02441de9  bpf_fd_reuseport_array_lookup_elem
+02441e0c  bpf_fd_reuseport_array_update_elem
+02441e2f  bpf_fd_sk_storage_delete_elem
+02441e4d  bpf_fd_sk_storage_lookup_elem
+02441e6b  bpf_fd_sk_storage_update_elem
+02441e89  bpf_fentry_test1
+02441e9a  bpf_fentry_test2
+02441eab  bpf_fentry_test3
+02441ebc  bpf_fentry_test4
+02441ecd  bpf_fentry_test5
+02441ede  bpf_fentry_test6
+02441eef  bpf_fentry_test7
+02441f00  bpf_fentry_test8
+02441f11  bpf_fill_super
+02441f20  bpf_flow_dissect
+02441f31  bpf_flow_dissector_load_bytes
+02441f4f  bpf_for_each_array_elem
+02441f67  bpf_for_each_hash_elem
+02441f94  bpf_free_fc
+02441fa0  bpf_free_inode
+02441faf  bpf_gen_ld_abs
+02441fc5  bpf_get_attach_cookie_pe
+02441fde  bpf_get_attach_cookie_trace
+02441ffa  bpf_get_btf_vmlinux
+024420dd  bpf_get_file_flag
+024420ef  bpf_get_func_ip_kprobe
+02442106  bpf_get_func_ip_tracing
+02442132  bpf_get_kallsym
+02442157  bpf_get_kprobe_info
+02442197  bpf_get_netns_cookie_sk_msg
+024421b3  bpf_get_netns_cookie_sock
+024421cd  bpf_get_netns_cookie_sock_addr
+024421ec  bpf_get_netns_cookie_sock_ops
+0244220a  bpf_get_netns_cookie_sockopt
+02442258  bpf_get_perf_event_info
+0244228a  bpf_get_raw_cpu_id
+0244229d  bpf_get_raw_tracepoint
+024422f7  bpf_get_socket_cookie_sock
+02442312  bpf_get_socket_cookie_sock_addr
+02442332  bpf_get_socket_cookie_sock_ops
+02442351  bpf_get_socket_ptr_cookie
+0244238c  bpf_get_stack_pe
+0244239d  bpf_get_stack_raw_tp
+024423b2  bpf_get_stack_tp
+024423d3  bpf_get_stackid_pe
+024423e6  bpf_get_stackid_raw_tp
+024423fd  bpf_get_stackid_tp
+0244243e  bpf_get_tree
+0244244b  bpf_get_uprobe_info
+0244245f  bpf_hash_map_seq_next
+02442475  bpf_hash_map_seq_show
+0244248b  bpf_hash_map_seq_start
+024424a2  bpf_hash_map_seq_stop
+024424b8  bpf_helper_changes_pkt_data
+024424d4  bpf_image_ksym_add
+024424e7  bpf_image_ksym_del
+024424fa  bpf_init
+02442503  bpf_init_fs_context
+02442517  bpf_init_net
+02442524  bpf_insn_prepare_dump
+0244253a  bpf_int_jit_compile
+0244254e  bpf_internal_load_pointer_neg_helper
+02442573  bpf_ipv4_fib_lookup
+02442587  bpf_ipv6_fib_lookup
+0244259b  bpf_iter_attach_map
+024425af  bpf_iter_bpf_map
+024425c0  bpf_iter_bpf_map_elem
+024425d6  bpf_iter_bpf_prog
+024425e8  bpf_iter_bpf_sk_storage_map
+02442604  bpf_iter_create
+02442614  bpf_iter_detach_map
+02442628  bpf_iter_fini_array_map
+02442640  bpf_iter_fini_hash_map
+02442657  bpf_iter_fini_seq_net
+0244266d  bpf_iter_fini_sk_storage_map
+0244268a  bpf_iter_fini_tcp
+0244269c  bpf_iter_fini_udp
+024426ae  bpf_iter_get_func_proto
+024426ce  bpf_iter_get_info
+024426e0  bpf_iter_init_array_map
+024426f8  bpf_iter_init_hash_map
+0244270f  bpf_iter_init_seq_net
+02442725  bpf_iter_init_sk_storage_map
+02442742  bpf_iter_init_tcp
+02442754  bpf_iter_init_udp
+02442766  bpf_iter_ipv6_route
+0244277a  bpf_iter_link_attach
+0244278f  bpf_iter_link_dealloc
+024427a5  bpf_iter_link_fill_link_info
+024427c2  bpf_iter_link_release
+024427e1  bpf_iter_link_replace
+024427f7  bpf_iter_link_show_fdinfo
+02442811  bpf_iter_map_fill_link_info
+0244282d  bpf_iter_map_show_fdinfo
+02442846  bpf_iter_netlink
+02442857  bpf_iter_new_fd
+02442867  bpf_iter_prog_supported
+0244287f  bpf_iter_reg_target
+02442893  bpf_iter_register
+024428a5  bpf_iter_run_prog
+024428b7  bpf_iter_sockmap
+024428c8  bpf_iter_task
+024428d6  bpf_iter_task_file
+024428e9  bpf_iter_task_vma
+024428fb  bpf_iter_tcp
+02442908  bpf_iter_tcp_batch
+0244291b  bpf_iter_tcp_get_func_proto
+02442937  bpf_iter_tcp_seq_next
+0244294d  bpf_iter_tcp_seq_show
+02442963  bpf_iter_tcp_seq_start
+0244297a  bpf_iter_tcp_seq_stop
+02442990  bpf_iter_udp
+0244299d  bpf_iter_udp_seq_show
+024429b3  bpf_iter_udp_seq_stop
+024429c9  bpf_iter_unix
+024429d7  bpf_iter_unix_seq_show
+024429ee  bpf_iter_unix_seq_stop
+02442a05  bpf_iter_unreg_target
+02442a29  bpf_jit_add_poke_descriptor
+02442a45  bpf_jit_alloc_exec
+02442a58  bpf_jit_alloc_exec_limit
+02442a71  bpf_jit_alloc_exec_page
+02442a9b  bpf_fill_ill_insns
+02442aae  bpf_jit_binary_alloc
+02442ac3  bpf_jit_binary_free
+02442ad7  bpf_jit_binary_lock_ro
+02442aee  bpf_jit_blind_constants
+02442b06  bpf_jit_charge_modmem
+02442b1c  bpf_jit_compile
+02442b2c  bpf_jit_find_kfunc_model
+02442b45  bpf_jit_free
+02442b52  bpf_jit_free_exec
+02442b89  bpf_jit_get_func_addr
+02442b9f  bpf_jit_needs_zext
+02442bbb  bpf_jit_prog_release_other
+02442bd6  bpf_jit_supports_kfunc_call
+02442bf2  bpf_jit_uncharge_modmem
+02442c0a  bpf_kfunc_call_test1
+02442c1f  bpf_kfunc_call_test2
+02442c34  bpf_kfunc_call_test3
+02442c49  bpf_ksym_add
+02442c56  bpf_ksym_del
+02442cca  bpf_link_by_id
+02442ce0  bpf_link_cleanup
+02442cf1  bpf_link_free
+02442cff  bpf_link_get_fd_by_id
+02442d15  bpf_link_get_from_fd
+02442d2a  bpf_link_inc
+02442d37  bpf_link_init
+02442d45  bpf_link_is_iter
+02442d56  bpf_link_new_fd
+02442d66  bpf_link_prime
+02442d75  bpf_link_put
+02442d82  bpf_link_put_deferred
+02442d98  bpf_link_release
+02442da9  bpf_link_settle
+02442db9  bpf_link_show_fdinfo
+02442dda  bpf_local_storage_alloc
+02442df2  bpf_local_storage_cache_idx_free
+02442e13  bpf_local_storage_cache_idx_get
+02442e42  bpf_local_storage_lookup
+02442e5b  bpf_local_storage_map_alloc
+02442e77  bpf_local_storage_map_alloc_check
+02442e99  bpf_local_storage_map_check_btf
+02442ec6  bpf_local_storage_map_free
+02442ee1  bpf_local_storage_update
+02442efa  bpf_log
+02442f02  bpf_lookup
+02442f0d  bpf_lru_destroy
+02442f1d  bpf_lru_init
+02442f2a  bpf_lru_pop_free
+02442f50  bpf_lru_populate
+02442f61  bpf_lru_push_free
+02442f73  bpf_lwt_in_push_encap
+02442f89  bpf_lwt_xmit_push_encap
+02442fa1  bpf_map_alloc_id
+02442fb2  bpf_map_alloc_percpu
+02442fc7  bpf_map_area_alloc
+02442fda  bpf_map_area_free
+02442fec  bpf_map_area_mmapable_alloc
+02443008  bpf_map_copy_value
+0244302f  bpf_map_direct_read
+02443043  bpf_map_do_batch
+02443054  bpf_map_fd_get_ptr
+02443067  bpf_map_fd_put_ptr
+0244307a  bpf_map_fd_sys_lookup_elem
+02443095  bpf_map_free_deferred
+024430b7  bpf_map_free_id
+024430c7  bpf_map_get
+024430d3  bpf_map_get_curr_or_next
+024430ec  bpf_map_get_fd_by_id
+02443101  bpf_map_get_with_uref
+0244314e  bpf_map_init_from_attr
+02443165  bpf_map_is_rdonly
+02443177  bpf_map_iter_init
+02443189  bpf_map_kmalloc_node
+0244319e  bpf_map_kzalloc
+024431d0  bpf_map_meta_alloc
+024431e3  bpf_map_meta_equal
+024431ff  bpf_map_meta_free
+02443211  bpf_map_mmap
+0244321e  bpf_map_mmap_close
+02443231  bpf_map_mmap_open
+02443243  bpf_map_new_fd
+02443252  bpf_map_offload_delete_elem
+0244326e  bpf_map_offload_get_next_key
+0244328b  bpf_map_offload_info_fill
+024432a5  bpf_map_offload_info_fill_ns
+024432c2  bpf_map_offload_lookup_elem
+024432de  bpf_map_offload_map_alloc
+024432f8  bpf_map_offload_map_free
+02443311  bpf_map_offload_update_elem
+0244333f  bpf_map_poll
+0244337b  bpf_map_put_with_uref
+02443391  bpf_map_release
+024433a1  bpf_map_seq_next
+024433b2  bpf_map_seq_show
+024433c3  bpf_map_seq_start
+024433d5  bpf_map_seq_stop
+024433e6  bpf_map_show_fdinfo
+0244340e  bpf_map_update_value
+02443423  bpf_map_write_active
+02443438  bpf_mkdir
+02443442  bpf_mklink
+0244344d  bpf_mkmap
+0244345c  bpf_mkobj_ops
+0244346a  bpf_mkprog
+02443475  bpf_modify_return_test
+02443513  bpf_mt
+0244351a  bpf_mt_check
+02443527  bpf_mt_check_v1
+02443537  bpf_mt_destroy
+02443546  bpf_mt_destroy_v1
+02443558  bpf_mt_exit
+02443564  bpf_mt_v1
+0244356e  bpf_netns_link_dealloc
+02443585  bpf_netns_link_detach
+0244359b  bpf_netns_link_fill_info
+024435b4  bpf_netns_link_release
+024435cb  bpf_netns_link_show_fdinfo
+024435e6  bpf_netns_link_update_prog
+0244360e  bpf_noop_prologue
+02443620  bpf_obj_get
+0244362c  bpf_obj_get_info_by_fd
+02443643  bpf_obj_get_next_id
+02443657  bpf_obj_get_user
+02443668  bpf_obj_name_cpy
+02443679  bpf_obj_pin
+02443685  bpf_obj_pin_user
+02443732  bpf_offload_prog_map_match
+0244374d  bpf_opcode_in_insntable
+02443765  bpf_overflow_handler
+0244377a  bpf_parse_param
+0244378a  bpf_patch_insn_data
+0244379e  bpf_patch_insn_single
+024437c4  bpf_percpu_array_copy
+024437da  bpf_percpu_array_update
+024437f2  bpf_percpu_cgroup_storage_copy
+02443811  bpf_percpu_cgroup_storage_update
+02443832  bpf_percpu_hash_copy
+02443847  bpf_percpu_hash_update
+02443874  bpf_perf_event_output_raw_tp
+02443891  bpf_perf_event_output_tp
+024438d8  bpf_perf_link_attach
+024438ed  bpf_perf_link_dealloc
+02443903  bpf_perf_link_release
+02443932  bpf_pid_task_storage_delete_elem
+02443953  bpf_pid_task_storage_lookup_elem
+02443974  bpf_pid_task_storage_update_elem
+02443995  bpf_prepare_filter
+024439a8  bpf_probe_read_compat
+024439be  bpf_probe_read_compat_str
+02443a34  bpf_probe_register
+02443a47  bpf_probe_unregister
+02443a9d  bpf_prog_alloc_id
+02443aaf  bpf_prog_alloc_jited_linfo
+02443aca  bpf_prog_alloc_no_stats
+02443ae2  bpf_prog_array_alloc
+02443af7  bpf_prog_array_compatible
+02443b3f  bpf_prog_array_copy
+02443b5f  bpf_prog_array_copy_info
+02443b78  bpf_prog_array_copy_to_user
+02443b94  bpf_prog_array_delete_safe
+02443baf  bpf_prog_array_delete_safe_at
+02443bcd  bpf_prog_array_free
+02443be1  bpf_prog_array_is_empty
+02443bf9  bpf_prog_array_length
+02443c0f  bpf_prog_array_update_at
+02443c28  bpf_prog_attach
+02443c38  bpf_prog_bind_map
+02443c4a  bpf_prog_by_id
+02443c59  bpf_prog_calc_tag
+02443c75  bpf_prog_change_xdp
+02443cd2  bpf_prog_detach
+02443cf2  bpf_prog_fill_jited_linfo
+02443d1a  bpf_prog_free_deferred
+02443d31  bpf_prog_free_id
+02443d42  bpf_prog_get
+02443d4f  bpf_prog_get_curr_or_next
+02443d69  bpf_prog_get_fd_by_id
+02443d8a  bpf_prog_get_ok
+02443d9a  bpf_prog_get_target_btf
+02443ddf  bpf_prog_has_kfunc_call
+02443e1a  bpf_prog_jit_attempt_done
+02443e34  bpf_prog_kallsyms_add
+02443e4a  bpf_prog_kallsyms_del
+02443e60  bpf_prog_kallsyms_del_all
+02443e7a  bpf_prog_load
+02443e88  bpf_prog_load_check_attach
+02443ea3  bpf_prog_new_fd
+02443eb3  bpf_prog_offload_compile
+02443ecc  bpf_prog_offload_destroy
+02443ee5  bpf_prog_offload_finalize
+02443eff  bpf_prog_offload_info_fill
+02443f1a  bpf_prog_offload_info_fill_ns
+02443f38  bpf_prog_offload_init
+02443f4e  bpf_prog_offload_remove_insns
+02443f6c  bpf_prog_offload_replace_insn
+02443f8a  bpf_prog_offload_verifier_prep
+02443fa9  bpf_prog_offload_verify_insn
+02443fd3  bpf_prog_put_deferred
+02443fe9  bpf_prog_query
+02443fff  bpf_prog_realloc
+02444010  bpf_prog_release
+02444021  bpf_prog_run
+0244402e  bpf_prog_run_generic_xdp
+02444047  bpf_prog_run_pin_on_cpu
+02444077  bpf_prog_seq_next
+02444089  bpf_prog_seq_show
+0244409b  bpf_prog_seq_start
+024440ae  bpf_prog_seq_stop
+024440c0  bpf_prog_show_fdinfo
+024440eb  bpf_prog_test_check_kfunc_call
+0244410a  bpf_prog_test_run
+0244411c  bpf_prog_test_run_flow_dissector
+0244413d  bpf_prog_test_run_raw_tp
+02444156  bpf_prog_test_run_sk_lookup
+02444172  bpf_prog_test_run_skb
+02444188  bpf_prog_test_run_syscall
+024441a2  bpf_prog_test_run_tracing
+024441bc  bpf_prog_test_run_xdp
+024441d2  bpf_prog_type_fuse_show
+024441ea  bpf_prog_warn_on_exec
+02444200  bpf_put_raw_tracepoint
+02444217  bpf_raw_tp_link_dealloc
+0244422f  bpf_raw_tp_link_fill_link_info
+0244424e  bpf_raw_tp_link_release
+02444266  bpf_raw_tp_link_show_fdinfo
+02444282  bpf_raw_tracepoint_open
+02444314  bpf_remove_insns
+0244432d  bpf_ringbuf_alloc
+02444353  bpf_ringbuf_notify
+024443b2  bpf_run_sk_reuseport
+024443d2  bpf_selem_alloc
+024443e8  bpf_selem_link_map
+024443fb  bpf_selem_link_storage_nolock
+02444419  bpf_selem_unlink
+0244442a  bpf_selem_unlink_map
+0244444c  bpf_selem_unlink_storage_nolock
+0244447c  bpf_send_signal_common
+02444509  bpf_show_options
+02444542  bpf_sk_base_func_proto
+0244457a  bpf_sk_getsockopt
+0244458c  bpf_sk_lookup_assign
+024445fd  bpf_sk_reuseport_detach
+02444615  bpf_sk_setsockopt
+02444627  bpf_sk_storage_charge
+02444643  bpf_sk_storage_clone
+0244466e  bpf_sk_storage_delete_tracing
+024446fd  bpf_sk_storage_free
+02444724  bpf_sk_storage_get_tracing
+0244473f  bpf_sk_storage_map_alloc
+02444758  bpf_sk_storage_map_free
+02444770  bpf_sk_storage_map_seq_next
+0244478c  bpf_sk_storage_map_seq_show
+024447a8  bpf_sk_storage_map_seq_start
+024447c5  bpf_sk_storage_map_seq_stop
+024447e1  bpf_sk_storage_ptr
+024447f4  bpf_sk_storage_tracing_allowed
+02444813  bpf_sk_storage_uncharge
+024448bd  bpf_skb_check_mtu
+024448d8  bpf_skb_copy
+024448f8  bpf_skb_event_output
+0244490d  bpf_skb_fib_lookup
+02444920  bpf_skb_get_nlattr
+02444933  bpf_skb_get_nlattr_nest
+0244494b  bpf_skb_get_pay_offset
+024449d6  bpf_skb_load_helper_16
+024449ed  bpf_skb_load_helper_16_no_cache
+02444a0d  bpf_skb_load_helper_32
+02444a24  bpf_skb_load_helper_32_no_cache
+02444a44  bpf_skb_load_helper_8
+02444a5a  bpf_skb_load_helper_8_no_cache
+02444a79  bpf_skb_net_hdr_pop
+02444bc1  bpf_sock_addr_getsockopt
+02444bda  bpf_sock_addr_setsockopt
+02444bf3  bpf_sock_addr_sk_lookup_tcp
+02444c0f  bpf_sock_addr_sk_lookup_udp
+02444c2b  bpf_sock_addr_skc_lookup_tcp
+02444c48  bpf_sock_common_is_valid_access
+02444c68  bpf_sock_convert_ctx_access
+02444cac  bpf_sock_is_valid_access
+02444cf3  bpf_sock_ops_get_syn
+02444d08  bpf_sock_ops_getsockopt
+02444d20  bpf_sock_ops_load_hdr_opt
+02444d3a  bpf_sock_ops_reserve_hdr_opt
+02444d57  bpf_sock_ops_setsockopt
+02444d6f  bpf_sock_ops_store_hdr_opt
+02444d9a  bpf_stackmap_copy
+02444dac  bpf_stats_handler
+02444dbe  bpf_stats_release
+02444de7  bpf_struct_ops_find
+02444e01  bpf_struct_ops_get
+02444e14  bpf_struct_ops_init
+02444e28  bpf_struct_ops_map_alloc
+02444e41  bpf_struct_ops_map_alloc_check
+02444e60  bpf_struct_ops_map_delete_elem
+02444e7f  bpf_struct_ops_map_free
+02444e97  bpf_struct_ops_map_get_next_key
+02444eb7  bpf_struct_ops_map_lookup_elem
+02444edd  bpf_struct_ops_map_put_progs
+02444efa  bpf_struct_ops_map_seq_show_elem
+02444f1b  bpf_struct_ops_map_sys_lookup_elem
+02444f3e  bpf_struct_ops_map_update_elem
+02444f5d  bpf_struct_ops_put
+02444f70  bpf_struct_ops_put_rcu
+02444f87  bpf_symlink
+02445010  bpf_task_fd_query
+02445022  bpf_task_fd_query_copy
+02445062  bpf_task_storage_free
+0244508d  bpf_task_storage_trylock
+024450a6  bpf_tc_sk_lookup_tcp
+024450bb  bpf_tc_sk_lookup_udp
+024450d0  bpf_tc_skc_lookup_tcp
+024450f2  bpf_tcp_ca_btf_struct_access
+0244511c  bpf_tcp_ca_check_kfunc_call
+02445138  bpf_tcp_ca_check_member
+02445150  bpf_tcp_ca_get_func_proto
+0244516a  bpf_tcp_ca_init
+02445180  bpf_tcp_ca_init_member
+02445197  bpf_tcp_ca_is_valid_access
+024451b2  bpf_tcp_ca_reg
+024451c1  bpf_tcp_ca_unreg
+0244521e  bpf_tcp_sock_convert_ctx_access
+0244523e  bpf_tcp_sock_is_valid_access
+02445274  bpf_test_init
+0244528f  bpf_test_timer_continue
+024452a7  bpf_test_timer_enter
+024452bc  bpf_test_timer_leave
+024452f3  bpf_timer_cancel_and_free
+0244530d  bpf_timer_cb
+02445438  bpf_tracing_func_proto
+0244544f  bpf_tracing_link_dealloc
+02445468  bpf_tracing_link_fill_link_info
+02445488  bpf_tracing_link_release
+024454a1  bpf_tracing_link_show_fdinfo
+024454ca  bpf_tracing_prog_attach
+024454e2  bpf_trampoline_get
+024454f5  bpf_trampoline_link_prog
+0244550e  bpf_trampoline_put
+02445521  bpf_trampoline_unlink_prog
+0244553c  bpf_trampoline_update
+02445552  bpf_tree_comp
+02445560  bpf_tree_less
+0244556e  bpf_unpriv_handler
+02445581  bpf_user_rnd_init_once
+02445598  bpf_user_rnd_u32
+024455c0  bpf_verifier_vlog
+024455da  bpf_vlog_reset
+02445641  bpf_xdp_check_mtu
+0244565c  bpf_xdp_copy
+02445669  bpf_xdp_event_output
+0244567e  bpf_xdp_fib_lookup
+02445691  bpf_xdp_link_attach
+024456a5  bpf_xdp_link_dealloc
+024456ba  bpf_xdp_link_detach
+024456ce  bpf_xdp_link_fill_link_info
+024456ea  bpf_xdp_link_release
+024456ff  bpf_xdp_link_show_fdinfo
+02445718  bpf_xdp_link_update
+0244572c  bpf_xdp_redirect
+0244573d  bpf_xdp_redirect_map
+02445752  bpf_xdp_sk_lookup_tcp
+02445768  bpf_xdp_sk_lookup_udp
+0244577e  bpf_xdp_skc_lookup_tcp
+02445795  bpf_xdp_sock_convert_ctx_access
+024457b5  bpf_xdp_sock_is_valid_access
+024457d2  bpffs_map_open
+024457e1  bpffs_map_release
+024457f3  bpffs_obj_open
+024483b7  ebpf_from_cbpf
+0244a57d  cgroup_bpf_attach
+0244a58f  cgroup_bpf_detach
+0244a5a1  cgroup_bpf_inherit
+0244a5b4  cgroup_bpf_link_attach
+0244a5cb  cgroup_bpf_offline
+0244a5de  cgroup_bpf_prog_attach
+0244a5f5  cgroup_bpf_prog_detach
+0244a60c  cgroup_bpf_prog_query
+0244a622  cgroup_bpf_query
+0244a633  cgroup_bpf_release
+0244a646  cgroup_bpf_release_fn
+0244a65c  cgroup_bpf_replace
+0244bb0d  check_bpf_snprintf_call
+0244bdfc  bpf_size
+0244e10e  cls_bpf_bind_class
+0244e121  cls_bpf_change
+0244e130  cls_bpf_classify
+0244e141  cls_bpf_delete
+0244e150  cls_bpf_delete_prog_work
+0244e169  cls_bpf_destroy
+0244e179  cls_bpf_dump
+0244e186  cls_bpf_exit_mod
+0244e197  cls_bpf_free_parms
+0244e1aa  cls_bpf_get
+0244e1b6  cls_bpf_init
+0244e1c3  cls_bpf_offload
+0244e1d3  cls_bpf_offload_cmd
+0244e1e7  cls_bpf_prog_from_efd
+0244e1fd  cls_bpf_prog_from_ops
+0244e213  cls_bpf_reoffload
+0244e225  cls_bpf_walk
+0244e368  cma_debugfs_fops_open
+0244e37e  cma_debugfs_get
+0244e38e  cma_debugfs_init
+02450438  convert_bpf_ld_abs
+0245069c  copy_from_bpfptr
+024506ad  copy_from_bpfptr_offset
+02450acd  copy_to_bpfptr_offset
+024536dd  create_local_trace_kprobe
+024537ed  create_or_delete_trace_kprobe
+02458178  debugfs_atomic_t_get
+0245818d  debugfs_atomic_t_set
+024581e1  debugfs_attr_write_xsigned
+024581fc  debugfs_automount
+02458314  debugfs_create_str
+02458402  debugfs_devm_entry_open
+0245843c  debugfs_free_inode
+02458463  debugfs_kernel
+02458472  debugfs_kprobe_init
+024584af  debugfs_open_regset32
+024584c5  debugfs_parse_options
+02458507  debugfs_read_file_str
+0245852f  debugfs_release_dentry
+02458546  debugfs_remount
+0245857d  debugfs_setattr
+0245858d  debugfs_show_options
+024585a2  debugfs_show_regset32
+024585b8  debugfs_size_t_get
+024585cb  debugfs_size_t_set
+024585de  debugfs_slab_release
+024585f3  debugfs_u16_get
+02458603  debugfs_u16_set
+02458613  debugfs_u32_get
+02458623  debugfs_u32_set
+02458633  debugfs_u64_get
+02458643  debugfs_u64_set
+02458653  debugfs_u8_get
+02458662  debugfs_u8_set
+02458671  debugfs_ulong_get
+02458683  debugfs_ulong_set
+024586ad  debugfs_write_file_str
+02459369  destroy_local_trace_kprobe
+0245ad3f  bpf_op
+02462d0a  dma_atomic_pool_debugfs_init
+02463f55  dmaengine_debugfs_init
+024642c0  do_bpf_send_signal
+024664a6  drm_atomic_debugfs_init
+02467500  drm_client_debugfs_init
+02467518  drm_client_debugfs_internal_clients
+02468194  drm_debugfs_cleanup
+024681a8  drm_debugfs_connector_add
+024681c2  drm_debugfs_connector_remove
+024681f8  drm_debugfs_crtc_add
+0246820d  drm_debugfs_crtc_crc_add
+02468226  drm_debugfs_crtc_remove
+02468247  drm_debugfs_init
+02468258  drm_debugfs_open
+02469d33  drm_framebuffer_debugfs_init
+0246e10b  dump_kprobe
+0246eb90  dwc3_debugfs_create_endpoint_dir
+0246ebb1  dwc3_debugfs_exit
+0246ebc3  dwc3_debugfs_init
+0246ebd5  dwc3_debugfs_remove_endpoint_dir
+024714a9  efi_debugfs_init
+02471fb0  ei_debugfs_init
+024727f6  enable_boot_kprobe_events
+024729e6  enable_trace_kprobe
+024803b1  find_kallsyms_symbol
+02480e80  flow_dissector_bpf_prog_attach_check
+02484a05  fuse_bpf_aio_cleanup_handler
+02484a22  fuse_bpf_aio_rw_complete
+02484a3b  fuse_bpf_cleanup
+02484a4c  fuse_bpf_init
+02484a5e  fuse_bpf_run
+02484a6b  fuse_bpf_show
+02484a79  bpf_args
+02484a82  fuse_bpf_simple_request
+024856c8  fuse_handle_bpf_prog
+02488a71  get_bpf_raw_tp_regs
+0248915c  get_kprobe
+0248d64f  hci_debugfs_create_bredr
+0248d668  hci_debugfs_create_common
+0248d682  hci_debugfs_create_conn
+0248d69a  hci_debugfs_create_le
+0249758f  init_kprobe_trace
+024975a1  init_kprobe_trace_early
+024975b9  init_kprobes
+0249fce2  is_bpf_text_address
+024a2362  kallsyms_lookup
+024a237d  kallsyms_lookup_buildid
+024a2395  kallsyms_lookup_name
+024a23aa  kallsyms_lookup_size_offset
+024a23c6  kallsyms_on_each_symbol
+024a23de  kallsyms_open
+024a23ec  kallsyms_show_value
+024a4ee5  kprobe_add_area_blacklist
+024a4eff  kprobe_add_ksym_blacklist
+024a4f19  kprobe_blacklist_open
+024a4f2f  kprobe_blacklist_seq_next
+024a4f49  kprobe_blacklist_seq_show
+024a4f63  kprobe_blacklist_seq_start
+024a4f7e  kprobe_blacklist_seq_stop
+024a4f98  kprobe_breakpoint_handler
+024a4fb2  kprobe_breakpoint_ss_handler
+024a4fcf  kprobe_busy_begin
+024a4fe1  kprobe_busy_end
+024a4ff1  kprobe_cache_get_kallsym
+024a500a  kprobe_dispatcher
+024a5032  kprobe_event_define_fields
+024a5061  kprobe_exceptions_notify
+024a507e  kprobe_fault_handler
+024a5093  kprobe_flush_task
+024a50a5  kprobe_free_init_mem
+024a50ba  kprobe_get_kallsym
+024a50cd  kprobe_lookup_name
+024a50e0  kprobe_on_func_entry
+024a50f5  kprobe_perf_func
+024a5106  kprobe_prog_func_proto
+024a511d  kprobe_prog_is_valid_access
+024a5139  kprobe_register
+024a5149  kprobe_seq_next
+024a5159  kprobe_seq_start
+024a516a  kprobe_seq_stop
+024a517a  kprobe_trace_func
+024a518c  kprobes_inc_nmissed_count
+024a51a6  kprobes_module_callback
+024a51be  kprobes_open
+024a6886  kvm_arch_create_vm_debugfs
+024a7521  kvm_debugfs_release
+024a754c  kvm_destroy_vm_debugfs
+024a9ab0  l2cap_debugfs_open
+024a9ac3  l2cap_debugfs_show
+024ab629  lirc_bpf_free
+024ab637  lirc_bpf_run
+024b10e4  memblock_init_debugfs
+024b3894  mmc_add_card_debugfs
+024b38b6  mmc_add_host_debugfs
+024b48dd  mmc_remove_card_debugfs
+024b4905  mmc_remove_host_debugfs
+024b59a4  module_kallsyms_lookup_name
+024b59c0  module_kallsyms_on_each_symbol
+024b9fcb  netns_bpf_link_create
+024b9fe1  netns_bpf_pernet_init
+024b9ff7  netns_bpf_pernet_pre_exit
+024ba011  netns_bpf_prog_attach
+024ba027  netns_bpf_prog_detach
+024ba03d  netns_bpf_prog_query
+024c8b1d  perf_event_attach_bpf_prog
+024c8b5e  perf_event_bpf_event
+024c8b73  perf_event_bpf_output
+024c8c1f  perf_event_detach_bpf_prog
+024c8d64  perf_event_free_bpf_prog
+024c9077  perf_event_set_bpf_prog
+024c92b4  perf_kprobe_destroy
+024c92c8  perf_kprobe_event_init
+024c92eb  perf_kprobe_init
+024ca0ae  perf_trace_bpf_test_finish
+024ca0c9  perf_trace_bpf_trace_printk
+024d0837  pinconf_init_device_debugfs
+024d133e  pinmux_init_device_debugfs
+024d55a3  print_bpf_insn
+024d5706  print_kprobe_event
+024d60b1  proc_dointvec_minmax_bpf_enable
+024d60d1  proc_dointvec_minmax_bpf_restricted
+024d618b  proc_dolongvec_minmax_bpf_restricted
+024d940b  pwm_debugfs_open
+024dbafe  ras_debugfs_init
+024dc3bc  rbtree_debugfs_init
+024dd5be  rdev_init_debugfs
+024ded92  register_trace_kprobe
+024df0aa  regmap_debugfs_exit
+024df0be  regmap_debugfs_get_dump_start
+024df0dc  regmap_debugfs_init
+024df0f0  regmap_debugfs_initcall
+024dfb30  regmap_read_debugfs
+024e285a  rfcomm_dlc_debugfs_open
+024e2872  rfcomm_dlc_debugfs_show
+024e2b27  rfcomm_sock_debugfs_open
+024e2b40  rfcomm_sock_debugfs_show
+024e4bd3  rproc_exit_debugfs
+024e9d13  sco_debugfs_open
+024e9d24  sco_debugfs_show
+024ec54e  search_bpf_extables
+024eca11  security_bpf
+024eca1e  security_bpf_map
+024eca2f  security_bpf_map_alloc
+024eca46  security_bpf_map_free
+024eca5c  security_bpf_prog
+024eca6e  security_bpf_prog_alloc
+024eca86  security_bpf_prog_free
+024eeb13  selinux_bpf
+024eeb1f  selinux_bpf_map
+024eeb2f  selinux_bpf_map_alloc
+024eeb45  selinux_bpf_map_free
+024eeb5a  selinux_bpf_prog
+024eeb6b  selinux_bpf_prog_alloc
+024eeb82  selinux_bpf_prog_free
+024f1ad1  set_kprobe_boot_events
+024f2607  setup_boot_kprobe_events
+024f3cda  show_kprobe_addr
+024f4fa6  sk_attach_bpf
+024f54b1  sk_reuseport_attach_bpf
+024f641a  slab_debugfs_init
+024f642c  slab_debugfs_next
+024f643e  slab_debugfs_show
+024f6450  slab_debugfs_start
+024f6463  slab_debugfs_stop
+024fae5e  snd_soc_dapm_debugfs_init
+024fd872  soc_dpcm_debugfs_add
+0250374a  swiotlb_create_default_debugfs
+02505bd3  tcf_bpf_act
+02505bdf  tcf_bpf_cfg_cleanup
+02505bf3  tcf_bpf_cleanup
+02505c03  tcf_bpf_dump
+02505c10  tcf_bpf_init
+02505c1d  tcf_bpf_init_from_efd
+02505c33  tcf_bpf_init_from_ops
+02505c49  tcf_bpf_search
+02505c58  tcf_bpf_walker
+02506500  tcp_bpf_clone
+02506517  tcp_bpf_push
+02506524  tcp_bpf_recvmsg
+02506534  tcp_bpf_recvmsg_parser
+0250654b  tcp_bpf_send_verdict
+02506560  tcp_bpf_sendmsg
+02506586  tcp_bpf_sendpage
+02508392  tcpm_debugfs_exit
+025083a4  tcpm_debugfs_init
+0250d5c2  trace_call_bpf
+0250e501  trace_event_raw_event_bpf_test_finish
+0250e527  trace_event_raw_event_bpf_trace_printk
+02514bb0  trace_kprobe_create
+02514bc4  trace_kprobe_error_injectable
+02514be2  trace_kprobe_is_busy
+02514bf7  trace_kprobe_match
+02514c0a  trace_kprobe_module_callback
+02514c27  trace_kprobe_on_func_entry
+02514c42  trace_kprobe_release
+02514c57  trace_kprobe_run_command
+02514c70  trace_kprobe_show
+02515d17  trace_raw_output_bpf_test_finish
+02515d38  trace_raw_output_bpf_trace_printk
+0251bc94  tracing_bpf_link_attach
+0251dc93  ttm_pool_debugfs_globals_open
+0251dcb1  ttm_pool_debugfs_globals_show
+0251dccf  ttm_pool_debugfs_header
+0251dce7  ttm_pool_debugfs_shrink_open
+0251dd04  ttm_pool_debugfs_shrink_show
+0251df5e  ttm_tt_debugfs_shrink_open
+0251df79  ttm_tt_debugfs_shrink_show
+0251f07c  tun_set_ebpf
+02520afc  udp_bpf_recvmsg
+02521529  ufs_debugfs_exit
+0252153a  ufs_debugfs_hba_exit
+0252154f  ufs_debugfs_hba_init
+02521564  ufs_debugfs_init
+02521575  ufs_debugfs_restart_ee
+0252158c  ufs_debugfs_stats_open
+025215a3  ufs_debugfs_stats_show
+0252319f  unix_bpf_build_proto
+025231b4  unix_bpf_recvmsg
+0252321d  unix_dgram_bpf_update_proto
+025234cf  unix_stream_bpf_update_proto
+02523931  unpriv_ebpf_notify
+0252465b  update_sched_domain_debugfs
+02528350  uvc_debugfs_cleanup
+02528364  uvc_debugfs_cleanup_stream
+0252837f  uvc_debugfs_init
+02528390  uvc_debugfs_init_stream
+025283a8  uvc_debugfs_stats_open
+025283bf  uvc_debugfs_stats_read
+025283d6  uvc_debugfs_stats_release
+0252ceaa  verify_user_bpf_flow_keys
+025348ca  within_kprobe_blacklist
+025374b5  xhci_debugfs_create_endpoint
+025374d2  xhci_debugfs_create_root
+025374eb  xhci_debugfs_create_slot
+02537504  xhci_debugfs_create_stream_files
+02537525  xhci_debugfs_exit
+02537547  xhci_debugfs_extcap_regset
+02537562  xhci_debugfs_init
+02537574  xhci_debugfs_regset
+02537588  xhci_debugfs_remove_endpoint
+025375a5  xhci_debugfs_remove_root
+025375be  xhci_debugfs_remove_slot
+02893e60  bpf_dispatcher_xdp
+028a0c50  bpf_dummy
+# (2935 unique)
+
+====================================================================================================
+## H. 厂商/ROM 标记（Lenovo/ZUI/qcom）
+====================================================================================================
+01b4e301  Lenovo-ThinkStation-P620-Rear
+01b53425  Lenovo OneLinkDock Gigabit LAN
+01b5e3cd  Lenovo
+01b64ad9  Lenovo Legion Controller for Windows
+01b8bdb7  Motorola
+01b8deaa  Lenovo-ThinkStation-P620-Main
+# (6 unique)
+
+====================================================================================================
+## I. A17 独有字符串（原厂 5.15.123 内核中不存在）
+====================================================================================================
+# A17 有 296434 条字符串 / 原厂有 213197 条 / A17 独有 106871 条
+0175f160  ksu_vfsmnt
+01844748  Tksu_h
+01844850  Tksu_h
+01844861  Tksu_h
+01844876  Tksu_h
+01844885  Tksu_h
+0184489e  Tksu_h
+0184491b  Tksu_h
+0184494e  tksu_w
+01844958  llseek+tksu_w
+0184498b  tksu_w
+01844997  'tksu_w
+018449c0  tksu_w
+018449cb  e&tksu_w
+018449f4  tksu_w
+01844a03  *tksu_w
+01844a2f  tksu_w
+01844a3d  )tksu_w
+01844a68  tksu_w
+01844a75  l)tksu_w
+01844aa1  tksu_w
+01844aae  e(tksu_w
+01844ad9  tksu_w
+01844aea  d-tksu_w
+01844b1a  tksu_w
+01844b26  l(tksu_w
+01844b51  tksu_w
+01844b61  ctl.tksu_w
+01844b94  tksu_w
+01844ba3  ctl-tksu_w
+01844bd5  tksu_w
+01844be1  p(tksu_w
+01844c0c  tksu_w
+01844c19  h)tksu_w
+01844c45  tksu_w
+01844c52  e(tksu_w
+01844c7d  tksu_w
+01844c87  fsync*tksu_w
+01844cb8  tksu_w
+01844cc4  ync*tksu_w
+01844cf3  tksu_w
+01844cfe  k'tksu_w
+01844d28  tksu_w
+01844d37  e*tksu_w
+01844d64  tksu_w
+01844d77  a/tksu_w
+01844da9  tksu_w
+01844db5  k(tksu_w
+01844de0  tksu_w
+01844df0  e+tksu_w
+01844e1e  tksu_w
+01844e2f  ,tksu_w
+01844e5d  tksu_w
+01844e6b  e)tksu_w
+01844e97  tksu_w
+01844ea5  e)tksu_w
+01844ed1  tksu_w
+01844edf  fo+tksu_w
+01844f0e  tksu_w
+01844f1f  ge-tksu_w
+01844f50  tksu_w
+01844f61  ge-tksu_w
+01844f92  tksu_w
+01844fa0  e)tksu_w
+01844fcc  tksu_w
+01844fd8  'tksu_w
+01845001  tksu_w
+0184500f  e)tksu_w
+0184503b  tksu_w
+0184504a  *tksu_w
+0184514f  Tksu_obs
+0184515c  tksu_h
+0184516b  t(tksu_h
+01845237  Tksu_u+
+018453b0  Tksu_h
+018453cd  Tksu_h
+018453dc  Tksu_h
+018453fd  Tksu_h
+01845843  l$tksu
+01845875  e%tksu
+0184589d  Tksu_h
+01845e4d  c-tksu_
+01876490  ksum.fb
+0188697b  ksum.581e71
+018d0c74  .tksu_w
+018de98d  ,tksu_w
+018f8a78  +tksu_w
+018fc4a0  *tksu_w
+01902669  .tksu_w
+0190b404  (tksu_w
+0190b470  )tksu_w
+0191fae4  tksu_&
+0191fb05  tksu_ksu
+019202b8  .tksu_w
+01920364  )tksu_w
+019218c1  )tksu_w
+01930eb9  *tksu_w
+01931867  +tksu_w
+01941976  +tksu_w
+01941a0d  *tksu_w
+01944a94  *tksu_w
+01945a9f  -tksu_w
+0194e887  ksum.581e71
+0194e8b3  ksum.fb
+0195d394  )tksu_w
+01963db4  *tksu_w
+01966050  .tksu_w
+019669ca  /tksu_w
+01967e07  ,tksu_w
+01968493  *tksu_w
+01976137  )tksu_h
+0197d4d8  0tksu_w
+0197fcaf  .tksu_
+01989e40  ,tksu_w
+01990eb8  *tksu_w
+01990ffe  +tksu_w
+01995462  'tksu_w
+019a525e  )tksu_w
+019a7a13  (tksu_w
+019b32b8  tksu_k
+019b3fd1  tksu_obs
+019b7138  (tksu_w
+019bf332  +tksu_w
+019f9159  dksu_h
+019f9168  ksud.app
+019f9176  dksu_h
+019f9185  ksud.sys
+019f9194  Dksu_r
+01ac439d  Tksu_k
+01ac43e0  Tksu_&
+01ac441c  Tksu_ksu
+01acb452  Tksu_k
+01acb48b  Tksu_obs
+01acb499  Tksu_&
+01acb4c3  Tksu_ksu
+01ae6c05  Dksu_boo
+01b146b3  dksu_k
+01b14726  Dksu_i
+01b1473a  Dksu_i
+01b34457  Bksu_?
+01b34565  bksu_rc
+01b345b8  6$bksu
+01b39055  susfs_sus_kstat_spoof_generic_fillattr
+01b3907d  6susfs:[%u][%d][%s] set spoofed release: '%s', version: '%s'
+01b390bc  6susfs:[%u][%d][%s] CMD_SUSFS_SET_UNAME -> ret: %d
+01b390f1  6susfs:[%u][%d][%s] CMD_SUSFS_ENABLE_LOG -> ret: %d
+01b39127  6susfs:[%u][%d][%s] CMD_SUSFS_SET_CMDLINE_OR_BOOTCONFIG -> ret: %d
+01b3f08e  6KernelSU: Stop searching
+01b3f0aa  6KernelSU: save allow list, name: %s uid :%d, allow: %d
+01b3f0e4  6KernelSU: KEY_VOLUMEDOWN val: %d
+01b3f108  6KernelSU: ksu_init_rc_hook is disabled
+01b3f132  6KernelSU: read_proxy: orig read finished, start append rc
+01b3f16f  6KernelSU: read_proxy: append static %zu
+01b3f19a  6KernelSU: adding POLICYDB_CONFIG_ANDROID_NETLINK_GETNEIGH
+01b3f1d7  6KernelSU: attribute %s does not exist
+01b3f210  3KernelSU: check_safemode: copy_to_user failed
+01b3f241  6KernelSU: do_nuke_ext4_sysfs: %s
+01b41db9  susfs_add_sus_path_loop
+01b41dd2  6susfs:[%u][%d][%s] spoof path '%s' to '%s'
+01b41e00  6susfs:[%u][%d][%s] CMD_SUSFS_SHOW_VARIANT -> ret: %d
+01b41e38  6susfs:[%u][%d][%s] '%s' detected, mask: 0x%x
+01b469b4  6KernelSU: %s: unmounting: %s flags: 0x%x
+01b469ed  6KernelSU: susfs: mark no sucompat checks for pid: '%d', exec: '%s'
+01b46a33  3KernelSU: Unexpected v1 signature scheme found!
+01b46a73  3KernelSU: %s: open /data/system/packages.list failed: %ld
+01b46ab0  3KernelSU: save_allow_list write version failed.
+01b46ae3  4KernelSU: feature: no set_handler for feature %u
+01b46b17  6KernelSU: read_iter_proxy: append error, totally appended %ld
+01b46b58  6KernelSU: custom rc is disabled
+01b46b8d  4KernelSU: ksu ioctl: permission denied for cmd=0x%x uid=%d
+01b46bda  6KernelSU: allow root for: %d
+01b46bfa  4KernelSU: install fd add task_work failed
+01b4964e  6susfs:[%u][%d][%s] flagged AS_FLAGS_SUS_PATH on pathname: '%s', ino: '%lu', inode->i_mapping->flags: 0x%lx
+01b496bc  6susfs:[%u][%d][%s] CMD_SUSFS_ADD_SUS_MAP -> ret: %d
+01b496f2  susfs_init
+01b496fd  susfs_sdcard_cleanup_fn
+01b49716  3susfs:[%u][%d][%s]wd->inode is NULL
+01b4e1ad  3KernelSU: file_wrapper: initialize anon_inode_mnt failed, got NULL
+01b4e20b  6KernelSU: ksu_input_hook is disabled
+01b4e241  4KernelSU: target type %s does not exist
+01b509b0  3susfs:[%u][%d][%s]failed opening file '%s'
+01b509de  3susfs:[%u][%d][%s]inode || inode->i_mapping is NULL
+01b55ac5  3KernelSU: !argv_user_ptr || IS_ERR(argv_user_ptr)
+01b55b10  3KernelSU: feature: get_handler for %u failed: %d
+01b55b44  6KernelSU: adding rc len: %lld -> %lld (static=%zu module=%zu)
+01b55b84  6KernelSU: read_iter_proxy: orig read finished, start append rc
+01b55bce  6KernelSU: Cached su SID: %u
+01b55bed  3KernelSU: add_type: alloc type_datum failed.
+01b55c2b  3KernelSU: set_feature: failed for feature %u: %d
+01b5849d  6susfs:[%u][%d][%s] updating target_ino from '%lu' to '%lu' for pathname: '%s' in SUS_KSTAT_HLIST
+01b58500  CONFIG_KSU_SUSFS_SUS_KSTAT
+01b5851d  6susfs:[%u][%d][%s] start monitoring path '%s' using fsnotify
+01b5856a  susfs_run_sus_path_loop
+01b58583  6susfs:[%u][%d][%s] re-flag AS_FLAGS_SUS_PATH on path '%s', inode->i_ino: '%lu', inode->i_mapping->flags: 0x%lx
+01b5e0e6  6KernelSU: ksu_handle_stat: su->sh!
+01b5e134  6KernelSU: ksu_show_allow_list
+01b5e155  4KernelSU: Failed to setgroups, invalid gid: %d
+01b5e187  4KernelSU: Failed to cache init SID: %d
+01b5e1c2  3KernelSU: sepol: %d failed.
+01b5e1e1  3KernelSU: add_filename_trans: hashtab_insert failed: %d
+01b5e21c  6KernelSU:   %-18s = 0x%08x
+01b5e23a  3KernelSU: get_feature: failed for feature %u: %d
+01b5e273  3KernelSU: unaligned envp array!
+01b5e296  3KernelSU: truncated envp array!
+01b5e2b9  3KernelSU: selinux_hide: fake status is not initialized after post-fs-data!
+01b610b0  3susfs:[%u][%d][%s]duplicated '%s' cannot be removed/added because it is used for reversed lookup only
+01b61119  6susfs:[%u][%d][%s] target_pathname: '%s', redirected_pathname: '%s', target_i_ino: '%lu', redirected_i_ino: '%lu', target_s_dev: '%lu', redirected_s_dev: '%lu', uid_scheme: '%d', reversed_lookup_only: %d, spoofed_mnt_id: %d, is successfully added to OPEN_REDIRECT_HLIST
+01b61229  CONFIG_KSU_SUSFS_OPEN_REDIRECT
+01b61260  6susfs:[%u][%d][%s] watching %s
+01b665f1  3KernelSU: escape_with_root_profile() failed: %d
+01b66624  6KernelSU: packages.list detected: %d
+01b6664c  6KernelSU: Found new base.apk at path: %s, is_manager: %d
+01b66688  3KernelSU: ksu_set_app_profile alloc failed
+01b666b6  3KernelSU: load_allow_list open file failed: %ld
+01b666e9  3KernelSU: invalid allowlist version: %d
+01b66714  6KernelSU: boot not completed, skip prune
+01b66740  6KernelSU: prune uid: %d, package: %s
+01b66768  3KernelSU: feature: set_handler for %u failed: %d
+01b667a9  6KernelSU: read init.rc, comm: %s, rc_count: %zu, module_rc: %zu
+01b667ec  6KernelSU: read_proxy: module append error, totally appended %zd
+01b6682f  3KernelSU: alloc policy len %ld
+01b66851  3KernelSU: get_wrapper_fd: copy_from_user failed
+01b66884  3KernelSU: manage_mark: copy_to_user failed
+01b668b2  6KernelSU: cmd_add_try_umount: %s is already here!
+01b694cd  6susfs:[%u][%d][%s] spoofing kstat for target_ino: %lu, target_dev: %u
+01b69516  6susfs: enable logging to kernel
+01b69537  susfs_handle_sdcard_inode_event
+01b6e45a  3KernelSU: Failed to register kernel_umount feature handler
+01b6e4a5  3KernelSU: Failed to open directory: %s, err: %ld
+01b6e4d9  3KernelSU: update_uid: uid parse err
+01b6e50a  3KernelSU: setup ksu cred failed.
+01b6e52e  4KernelSU: Failed to cache ksu_file SID: %d
+01b6e55c  3KernelSU: tsec == NULL!
+01b6e577  6KernelSU: sid '%u' is set for secctx_name '%s'
+01b6e5bd  drivers/kernelsu/supercall/dispatch.c
+01b6e5f3  3KernelSU: set_feature: copy_from_user failed
+01b715ae  3susfs:[%u][%d][%s]target_pathname cannot be empty
+01b715e3  6susfs:[%u][%d][%s] CMD_SUSFS_HIDE_SUS_MNTS_FOR_NON_SU_PROCS -> ret: %d
+01b7162d  3susfs:[%u][%d][%s]failed opening target file '%s'
+01b71662  6susfs:[%u][%d][%s] CMD_SUSFS_ADD_OPEN_REDIRECT -> ret: %d
+01b7169f  6susfs:[%u][%d][%s] susfs is initialized! version: v2.2.0 
+01b716dc  6susfs:[%u][%d][%s] flagged AS_FLAGS_SUS_KSTAT on pathname: '%s', is_fuse: %d, fi->inode.i_sb->s_dev: %u, fi->nodeid: %llu, fi->inode.i_ino: %lu, fi->inode.i_mapping->flags: 0x%lx
+01b76378  3KernelSU: save_allow_list create file failed: %ld
+01b763ad  3KernelSU: feature: invalid feature_id %u
+01b763d9  6KernelSU: read_proxy: static append done
+01b76405  6KernelSU: read_proxy: append module %zu
+01b76430  6KernelSU: read_iter_proxy: module append error, appended %zd
+01b7648a  6KernelSU: module mounted!
+01b764a7  3KernelSU: uid_granted_root: copy_to_user failed
+01b764da  6KernelSU: [%d] install ksu fd: %d
+01b7904e  6susfs:[%u][%d][%s] spoofing kstat for path: %s, target_ino: %lu, target_dev: %u
+01b790a1  3susfs:[%u][%d][%s]invalid uid scheme: %d
+01b7e499  4KernelSU: failed to get task_struct for PID 1
+01b7e4ca  4KernelSU: failed get path for init mount namespace: %ld
+01b7e505  3KernelSU: Add mark failed for %s (%d)
+01b7e52e  6KernelSU: %s: dir: %s got magic! 0x%lx
+01b7e558  3KernelSU: module rc: read failed: %zd
+01b7e591  3KernelSU: get_allow_list: copy_to_user count failed
+01b7e5c8  3KernelSU: get_sulog_fd: unsupported flags 0x%x
+01b7e5fa  6KernelSU: adb_root: set to %d
+01b7e61b  4KernelSU: selinux_hide: fake status need late initialization
+01b80d1a  susfs_update_sus_kstat
+01b80d32  3susfs:[%u][%d][%s]failed to create thread susfs_sdcard_monitor
+01b85a66  /data/adb/ksud
+01b85a76  6KernelSU: ksu_core_exit
+01b85a91  3KernelSU: failed to make root private, err: %d
+01b85ac3  6KernelSU: sha256 error
+01b85add  3KernelSU: save_allow_list write magic failed.
+01b85b0e  6KernelSU: feature: feature management initialized
+01b85b43  6KernelSU: target type %s does not exist
+01b88784  susfs_add_sus_kstat
+01b88799  6susfs:[%u][%d][%s] spoof kstatfs for redirected path: '%s'
+01b8dc98  6KernelSU: hook_manager: escape to root for init executing ksud: %d
+01b8dcde  6KernelSU: set root profile, key: %s, uid: %d, gid: %d, context: %s
+01b8dd24  6KernelSU: stat init.rc
+01b8dd3d  6KernelSU: read_iter_proxy: static append done
+01b8dd6e  6KernelSU: Cached init SID: %u
+01b8dd8f  3KernelSU: add_type: alloc key failed.
+01b8ddb8  6KernelSU: sulog: fd released
+01b8ddd8  4KernelSU: safemode enabled!
+01b8ddf7  3KernelSU: get_app_profile: copy_from_user failed
+01b9060a  susfs_add_sus_path
+01b9061e  3susfs:[%u][%d][%s]failed opening redirected file '%s'
+01b90657  3susfs:[%u][%d][%s]copy_to_user() failed
+01b90681  CONFIG_KSU_SUSFS_SUS_MAP
+01b9069c  6susfs:[%u][%d][%s] path not ready: %s (%d)
+01b9558d  6KernelSU: sulog: set to %d
+01b955ab  3KernelSU: Failed to register su_compat feature handler
+01b955f7  4KernelSU: pid: %d ,unknown mount namespace mode: %d
+01b9562e  6KernelSU: observer exit done
+01b9564e  3KernelSU: invalid groups_count in app_profile: %s
+01b9568c  3KernelSU: Failed to prepare adbd's creds!
+01b956b9  3KernelSU: sepol: unknown cmd: %d
+01b956dd  3KernelSU: alloc xperms failed
+01b956fe  3KernelSU: manage_mark: copy_from_user failed
+01b9572e  3KernelSU: Failed to register adb_root feature handler
+01b95767  6KernelSU: selinux_hide: set to %d
+01b9578c  6KernelSU: selinux_hide: init selinux hide
+01b985de  susfs_sus_kstat_spoof_show_map_vma
+01b98601  susfs_set_avc_log_spoofing
+01b9861d  6susfs:[%u][%d][%s] CMD_SUSFS_ENABLE_AVC_LOG_SPOOFING -> ret: %d
+01b98660  3susfs:[%u][%d][%s]failed to prepare creds!
+01b9d389  6KernelSU: ksu_handle_execveat_sucompat: su found
+01b9d3bd  6KernelSU: su_compat: set to %d
+01b9d3df  3KernelSU: invalid app_profile key
+01b9d404  3KernelSU: sepol: cmd #%u failed, cmd=%u subcmd=%u.
+01b9d43a  3KernelSU: sepol: %s cannot be ALL.
+01b9d460  3KernelSU: sepolicy: dup old pol
+01b9d483  4KernelSU: Type %s already exists
+01b9d4a7  3KernelSU: add_type: insert symtab failed.
+01b9d4d4  6KernelSU: type %s is an attribute
+01b9d505  6KernelSU: ksu fd released
+01ba0200  CONFIG_KSU_SUSFS_HIDE_KSU_SUSFS_SYMBOLS
+01ba5147  4KernelSU: absolute pwd longer than: %d, skip restore pwd!!
+01ba5185  6KernelSU: can't alloc sdesc
+01ba51a6  3KernelSU: check_argv failed
+01ba51c5  4KernelSU: module rc: %s is not a regular file
+01ba51f6  3KernelSU: failed setting sid for '%s', err: %d
+01ba5228  3KernelSU: failed to create backup sepolicy: %ld
+01ba5268  3KernelSU: add_filename_trans: alloc filename_trans_key failed
+01ba52a9  3KernelSU: uid_should_umount: copy_to_user failed
+01ba81b4  6susfs:[%u][%d][%s] spoof maps ino/dev/name for redirected path: '%s'
+01ba81fc  6susfs:[%u][%d][%s] pathname: '%s', is flagged as AS_FLAGS_SUS_MAP
+01ba8241  6susfs:[%u][%d][%s] /sdcard is forcibly set decrypted
+01ba8279  3susfs:[%u][%d][%s]bufsize is not big enough to hold the string.
+01bad95a  3KernelSU: adb root failed: %d
+01bad97b  3KernelSU: ksu_handle_execveat_sucompat: su found but NOT allowed! Because current process is running in chrooted environment
+01bad9fb  3KernelSU: ksu_handle_faccessat: su found but NOT allowed! Because current process is running in chrooted environment
+01bada73  6KernelSU: ksu_handle_faccessat: su->sh!
+01bada9e  6KernelSU: Unsupported profile version: %d
+01badacb  4KernelSU: TIF_KSU_DISABLE_ESCAPE_WITH_ROOT found, don't escape!
+01badb0e  6KernelSU: on_post_fs_data!
+01badb2c  3KernelSU: nuke path err: %d
+01badb4b  6KernelSU: Cached ksu_file SID: %u
+01badb70  3KernelSU: failed getting sid from secctx_name: %s, err: %d
+01badbae  6KernelSU: security_secctx_to_secid %s -> sid: %d, error: %d
+01badbed  3KernelSU: failed to load isids for backup sepolicy: %d!
+01badc36  3KernelSU: sepolicy: policydb_write: %d
+01badc60  3KernelSU: add_type: alloc val_to_name failed
+01badcbb  3KernelSU: cmd_add_try_umount: invalid operation %u
+01badcf1  6KernelSU: escape to root for adb
+01bb0882  6susfs:[%u][%d][%s] hiding path with ino '%lu'
+01bb08b3  6susfs:[%u][%d][%s] CMD_SUSFS_ADD_SUS_KSTAT -> ret: %d
+01bb08ec  3susfs:[%u][%d][%s]buflen not big enough
+01bb0917  3susfs:[%u][%d][%s]out_spoofed_name cannot be NULL and *out_spoofed_name has to be NULL
+01bb0970  CONFIG_KSU_SUSFS_SUS_MOUNT
+01bb5aaa  6KernelSU: Crowning manager: %s(uid=%d)
+01bb5ad3  /data/adb/ksu/.allowlist
+01bb5aec  drivers/kernelsu/policy/feature.c
+01bb5b0f  6KernelSU: nuke but module aren't mounted
+01bb5b3b  3KernelSU: transive domain failed.
+01bb5b69  4KernelSU: add_xperm_rule_raw cannot found node!
+01bb5b9c  6KernelSU: sulog: fd installed %d for pid %d
+01bb5bdc  3KernelSU: get_version: copy_to_user failed
+01bb5c0a  3KernelSU: ksu_install_fd: failed to get unused fd
+01bb5c3f  3KernelSU: copy new env failed: %ld
+01bb853a  3susfs:[%u][%d][%s]domain is not ksu, exiting the thread
+01bb8575  6susfs:[%u][%d][%s] ret: %d
+01bb8593  6susfs:[%u][%d][%s] cleaning up fsnotify sdcard watch
+01bbd121  6KernelSU: install fd for manager: %d
+01bbd149  4KernelSU: call ksys_unshare failed: %ld
+01bbd174  6KernelSU: observer init done
+01bbd194  4KernelSU: save_allow_list add task_work failed
+01bbd1c6  6KernelSU: load_allow_list read err: %zd
+01bbd1f1  3KernelSU: feature: no handler provided for feature %u
+01bbd22a  3KernelSU: feature: feature %u not registered
+01bbd25a  6KernelSU: on_boot_completed!
+01bbd27a  3KernelSU: module rc: alloc %zu failed
+01bbd2a2  /metadata/ksu/modules.rc
+01bbd2bc  6KernelSU: Cached zygote SID: %u
+01bbd2df  6KernelSU: SELinux permissive or disabled when handle policy!
+01bbd31f  3KernelSU: add_type: alloc type_attr_map_array failed
+01bbd356  [ksu_sulog]
+01bbd372  3KernelSU: get_manager_appid: copy_to_user failed
+01bbd3a6  3KernelSU: get_feature: copy_from_user failed
+01bbd3d6  3KernelSU: Failed to register selinux_hide feature handler
+01bbd413  6KernelSU: selinux_hide: ksu_selinux_hide_enabled: %d, ksu_selinux_hide_running: %d
+01bc03d0  6susfs:[%u][%d][%s] Initializing susfs_extra_works
+01bc5168  6KernelSU: umount %s failed: %d
+01bc5190  6KernelSU: path not ready: %s (%d)
+01bc51b5  4KernelSU: Failed to setgroups, too large group: %d!
+01bc51ec  6KernelSU: volumedown_pressed_count: %d
+01bc5216  6KernelSU: read_proxy: module append done
+01bc5251  6KernelSU: type %s does not exist
+01bc5275  6KernelSU: perm %s does not exist in class %s
+01bc52a5  3KernelSU: no backup sepolicy available, please save feature and reboot to retry!
+01bc8186  susfs_set_uname
+01bc819a  susfs_show_variant
+01bc81ae  3susfs:[%u][%d][%s]add mark failed for %s (%d)
+01bcd22e  3KernelSU: update_uid: package or uid is NULL!
+01bcd25f  6KernelSU: Searching manager...
+01bcd281  4KernelSU: ksu_set_app_profile: key changed: uid=%d orig=%s new=%s
+01bcd2c6  6KernelSU: exec zygote, /data prepared, second_stage: %d
+01bcd300  drivers/kernelsu/runtime/ksud_integration.c
+01bcd32d  4KernelSU: Failed to cache zygote SID: %d
+01bcd358  u:object_r:ksu_file:s0
+01bcd370  3KernelSU: secctx_name is NULL
+01bcd3a3  6KernelSU: is_exec_adbd() => filename: %s
+01bd03bf  susfs_set_hide_sus_mnts_for_non_su_procs
+01bd03e9  6susfs:[%u][%d][%s] is_fuse: %d, is_statically: '%d', target_ino: '%lu', target_pathname: '%s', spoofed_ino: '%lu', spoofed_dev: '%lu', spoofed_nlink: '%u', spoofed_size: '%u', spoofed_atime_tv_sec: '%ld', spoofed_mtime_tv_sec: '%ld', spoofed_ctime_tv_sec: '%ld', spoofed_atime_tv_nsec: '%ld', spoofe
+01bd05a6  6susfs:[%u][%d][%s] fake_cmdline_or_bootconfig is set
+01bd05dd  susfs_open_redirect_spoof_vfs_statfs
+01bd0603  6susfs:[%u][%d][%s] enabling susfs_avc_log_spoofing
+01bd0638  u:r:ksu:s0
+01bd5150  3KernelSU: Failed to register sulog feature handler
+01bd5186  3KernelSU: file_wrapper: initialize anon_inode_mnt failed, can't get file: %ld
+01bd51d7  4KernelSU: call setns failed: %ld
+01bd51fb  3KernelSU: Unexpected v3 signature scheme found!
+01bd522e  3KernelSU: allowlist read version: %d failed
+01bd525d  6KernelSU: read_iter_proxy: module append done
+01bd528d  ksu_file
+01bd5297  3KernelSU: sepol: invalid cmd header #%u.
+01bd52c3  6KernelSU: source type %s does not exist
+01bd52ee  6KernelSU: KernelSU IOCTL Commands:
+01bd5326  3KernelSU: manage_mark: invalid operation %u
+01bd7ddb  6susfs:[%u][%d][%s] redirect path '%s' to '%s', uid_scheme: %d
+01bd7e1c  6susfs:[%u][%d][%s] disabling susfs_avc_log_spoofing
+01bdcb19  [ksu_fdwrapper]
+01bdcb2a  6KernelSU: %s: skip: %s magic: 0x%lx expected: 0x%lx
+01bdcb61  3KernelSU: save_allow_list find init task err
+01bdcb91  4KernelSU: feature: no handler registered for %u
+01bdcbc4  6KernelSU: read_iter_proxy: append static %zu
+01bdcbfe  3KernelSU: sepol: failed to read cmd header #%u.
+01bdcc31  3KernelSU: sepol: failed to read cmd #%u arg #%u.
+01bdcc65  6KernelSU: old config: %u
+01bdcc81  6KernelSU: adding POLICYDB_CONFIG_ANDROID_NETLINK_ROUTE
+01bdccbb  3KernelSU: add_filename_trans: kstrdup name failed
+01bdccf0  4KernelSU: ksu ioctl: unsupported command 0x%x
+01bdcd2e  3KernelSU: ksu_install_fd: failed to create anon inode file
+01bdcd6c  6KernelSU: ksu fd installed: %d for pid %d
+01bdcd99  3KernelSU: libadbroot.so not exists, skip adb root. Please run `ksud install`
+01bdfd48  3susfs:[%u][%d][%s]inode->i_mapping is NULL
+01bdfd76  6susfs:[%u][%d][%s] CMD_SUSFS_UPDATE_SUS_KSTAT -> ret: %d
+01be4d97  3KernelSU: Failed to allocate memory for %s
+01be4dc4  drivers/kernelsu/policy/allowlist.c
+01be4df3  4KernelSU: Failed to setgroups, ENOMEM for: %d
+01be4e24  4KernelSU: prepare_creds failed!
+01be4e47  3KernelSU: feature: register handler is NULL
+01be4e90  3KernelSU: sepolicy: policydb_read: %d
+01be4eb9  6KernelSU: type %s is not an attribute 
+01be4ef3  3KernelSU: get_app_profile: copy_to_user failed
+01be4f25  4KernelSU: write ld_preload when adb_root_handle_execve failed: %ld
+01be7634  3susfs:[%u][%d][%s]fi || fi->inode.i_mapping is NULL
+01be766b  6susfs:[%u][%d][%s] CMD_SUSFS_ADD_SUS_PATH -> ret: %d
+01be76a3  3susfs:[%u][%d][%s]empty target_pathname
+01be76ce  3susfs:[%u][%d][%s]redirected_inode || redirected_inode->i_mapping is NULL
+01be771a  susfs_mark_inode_sus_kstat
+01becef8  3KernelSU: open %s error.
+01becf19  6KernelSU: manager pkg: %s
+01becf36  3KernelSU: save_allow_list alloc cb err
+01becf60  6KernelSU: load_allow_uid, name: %s, uid: %d, allow: %d
+01becf99  /metadata/watchdog/ksu/modules.rc
+01becfbc  3KernelSU: failed to dup selinux_policy: %ld
+01becfeb  6KernelSU: class %s does not exist
+01bed010  4KernelSU: default type %s does not exist
+01bed056  3KernelSU: get_feature: copy_to_user failed
+01befdb2  3susfs:[%u][%d][%s]FUSE fs is not supported for open_redirect feature
+01befdf9  susfs_sdcard_monitor
+01bf47d1  4KernelSU: restore pwd failed: %d, path: %s
+01bf47ff  6KernelSU: can't alloc alg %s
+01bf481f  3KernelSU: Invalid context
+01bf483c  3KernelSU: too many app profile
+01bf485e  6KernelSU: migrated domain of profile: %s
+01bf488a  4KernelSU: failed to alloc fake task_struct
+01bf48b8  6KernelSU: feature: registered handler for %s (id=%u)
+01bf48f0  3KernelSU: new_get_allow_list: copy_to_user count failed
+01bf492b  3KernelSU: nuke ext4 mnt path too long
+01bf4954  4KernelSU: Access envp when adb_root_handle_execve failed: %ld
+01bf71d2  6susfs:[%u][%d][%s] CMD_SUSFS_ADD_SUS_PATH_LOOP -> ret: %d
+01bf720e  susfs_set_cmdline_or_bootconfig
+01bf722e  susfs_get_enabled_features
+01bfc1e6  4KernelSU: failed to find pid_struct for PID 1
+01bfc217  4KernelSU: failed to get an unused fd: %d
+01bfc243  6KernelSU: error: cannot find eocd
+01bfc268  3KernelSU: Failed to prepare init's creds!
+01bfc295  3KernelSU: feature: invalid parameters
+01bfc2be  6KernelSU: feature: feature management cleaned up
+01bfc2f2  6KernelSU: module rc: open %s failed: %ld
+01bfc31e  4KernelSU: module rc: skip empty module rc
+01bfc34b  6KernelSU: module rc: loaded %zu bytes from %s
+01bfc37c  4KernelSU: source type %s does not exist
+01bfc3a7  6KernelSU: boot_complete triggered
+01bfc3cc  6KernelSU: wipe_umount_list: removing entry: %s
+01bfc3fe  3KernelSU: install ksu fd reply err
+01bfc424  6KernelSU: initialize_fake_status initialized: sequence=%d, policyload=%d, enforcing=%d
+01bfeca4  6susfs:[%u][%d][%s] CMD_SUSFS_ADD_SUS_KSTAT_STATICALLY -> ret: %d
+01bfece7  susfs_open_redirect_spoof_do_sys_openat
+01bfed0f  susfs_add_sus_map
+01bfed21  CONFIG_KSU_SUSFS_SPOOF_UNAME
+01bfed3f  CONFIG_KSU_SUSFS_SPOOF_CMDLINE_OR_BOOTCONFIG
+01bfed6d  susfs_sdcard_monitor_fn
+01bfed86  6susfs:[%u][%d][%s] re-flag AS_FLAGS_SUS_PATH on path '%s', fi->inode.i_ino: '%lu', fi->inode.i_mapping->flags: 0x%lx
+01c03ada  1KernelSU: shell is allowed at init!
+01c03b00  3KernelSU: prepare cred failed!
+01c03b22  6KernelSU: kernel_umount: set to %d
+01c03b5a  6KernelSU: sha256: %s, expected: %s
+01c03b80  6KernelSU: manager is uninstalled, invalidate it!
+01c03bd0  4KernelSU: Failed to cache kernel su domain SID: %d
+01c03c06  3KernelSU: failed to alloc backup sidtab
+01c03c35  3KernelSU: sepol: unknown subcmd: %d
+01c03c5c  6KernelSU: new config: %u
+01c03c78  4KernelSU: class %s does not exist
+01c03c9d  3KernelSU: add_filename_trans: alloc filename_trans_datum failed
+01c03ce0  6KernelSU: default type %s does not exist
+01c03d1e  3KernelSU: new_get_allow_list: copy_to_user uids failed
+01c03d58  3KernelSU: initialize_fake_status: failed to allocate page
+01c0512c  drivers/kernelsu/infra/file_wrapper.c
+01c06aa4  susfs_add_open_redirect
+01c0c0f2  4KernelSU: no mem for pwd buffer, skip restore pwd!!
+01c0c129  6KernelSU: allowlist version: %d
+01c0c14c  4KernelSU: initialize_fake_status: skip not enforcing
+01c0ef71  6susfs:[%u][%d][%s] flagged AS_FLAGS_SUS_PATH on pathname: '%s', fi->nodeid: %llu, fi->inode.i_ino: %lu, fi->inode.i_mapping->flags: 0x%lx
+01c0effe  6susfs:[%u][%d][%s] target_pathname: '%s', is successfully added to LH_SUS_PATH_LOOP
+01c0f055  6susfs:[%u][%d][%s] CMD_SUSFS_SHOW_ENABLED_FEATURES -> ret: %d
+01c0f096  6susfs:[%u][%d][%s] /sdcard is decrypted
+01c13d7c  3KernelSU: escape_to_root_for_init() failed: %d
+01c13dae  3KernelSU: ksu_handle_stat: su found but NOT allowed! Because current process is running in chrooted environment
+01c13e21  3KernelSU: Failed to allocate apk_path_hash for %s
+01c13e56  6KernelSU: Search manager finished
+01c13e7b  3KernelSU: Failed to get package name from apk path: %s
+01c13eb5  6KernelSU: uid :%d, allow: %d
+01c13ed5  3KernelSU: allowlist file invalid: %d!
+01c13efe  4KernelSU: feature: no get_handler for feature %u
+01c13f49  3KernelSU: ksu_dup_sepolicy err: %d
+01c13f9b  3KernelSU: access libadbroot.so failed: %ld, skip adb root
+01c16835  6susfs:[%u][%d][%s] susfs_is_hide_sus_mnts_for_non_su_procs_enabled: %d
+01c1687e  susfs_enable_log
+01c16890  3susfs:[%u][%d][%s]target_inode || target_inode->i_mapping is NULL
+01c168d4  CONFIG_KSU_SUSFS_SUS_PATH
+01c168ef  CONFIG_KSU_SUSFS_ENABLE_LOG
+01c1690d  6susfs:[%u][%d][%s] CMD_SUSFS_SHOW_VERSION -> ret: %d
+01c16944  susfs_start_sdcard_monitor_fn
+01c16963  6susfs:[%u][%d][%s] flagged AS_FLAGS_SUS_KSTAT on pathname: '%s', is_fuse: %d, inode->i_sb->s_dev: %u,  inode->i_ino: %lu, inode->i_mapping->flags: 0x%lx
+01c1b857  6KernelSU: handle umount for uid: %d, pid: %d
+01c1b887  4KernelSU: failed open file for init mount namespace: %ld
+01c1b8e6  3KernelSU: Path too long: %s/%.*s
+01c1b90a  6KernelSU: set app profile, key: %s, uid: %d, umount modules: %d
+01c1b94d  3KernelSU: invalid selinux_domain in app_profile: %s
+01c1b984  6KernelSU: on_module_mounted!
+01c1b9b3  6KernelSU: Could not set bit in permissive map
+01c1b9e4  6KernelSU: No class is specified, cannot add perm [%s] 
+01c1ba1e  3KernelSU: set_app_profile: copy_from_user failed
+01c1ba52  6KernelSU: cmd_add_try_umount: entry removed: %s
+01c1ba85  3KernelSU: alloc tmp env failed
+01c1baa7  6KernelSU: selinux_hide is not enabled - drop backup_sepolicy
+01c1e7b6  6susfs: disable logging to kernel
+01c1e7d8  susfs_open_redirect_spoof_show_map_vma_srcu
+01c23429  6KernelSU: KEY_VOLUMEDOWN pressed max times, safe mode detected!
+01c2346c  6KernelSU: read_proxy: append error, totally appended %ld
+01c234a8  6KernelSU: SELinux permissive or disabled, apply rules!
+01c234e2  6KernelSU: backup sepolicy success! latest_granting=%d
+01c2351b  3KernelSU: add_type: alloc type_val_to_struct failed
+01c2355f  3KernelSU: nuke ext4 copy mnt failed: %ld
+01c2358b  3KernelSU: get_sulog_fd: copy_from_user failed
+01c25f53  susfs_is_inode_sus_path
+01c25f6b  susfs_open_redirect_spoof_vfs_readlink
+01c25f92  susfs_open_redirect_spoof_do_proc_readlink
+01c25fbe  6susfs:[%u][%d][%s] deferring cleanup for 5 seconds
+01c2ad77  4KernelSU: get absolute pwd failed: %ld
+01c2ada1  6KernelSU: watching %s
+01c2adc2  4KernelSU: feature: handler for %u already registered, overwriting
+01c2ae07  6KernelSU: feature: unregistered handler for id=%u
+01c2ae4a  6KernelSU: post-fs-data triggered
+01c2ae6e  6KernelSU: cmd_add_try_umount: %s added!
+01c2ae99  4KernelSU: write ld_library_path when adb_root_handle_execve failed: %ld
+01c2d776  susfs_show_version
+01c32b3e  ksu_handle_umount
+01c32b51  3KernelSU: ksu_fdwrapper: getfile failed: %ld
+01c32b81  6KernelSU: Skipping directory: %.*s
+01c32ba7  3KernelSU: Failed to set app profile: invalid profile!
+01c32be0  6KernelSU: on_post_fs_data already done
+01c32c0a  6KernelSU: /system/bin/init second_stage executed
+01c32c3e  6KernelSU: read_iter_proxy: append module %zu
+01c32c6e  3KernelSU: get_allow_list: copy_to_user uids failed
+01c32ca3  [ksu_driver]
+01c32cb1  4KernelSU: initialize_fake_status: status_page not exist
+01e0db68  kernelsu.allow_shell
+01e0db7d  kernelsu.norc
+01e0e670      exec u:r:ksu:s0 root -- /data/adb/ksud post-fs-data
+01e0e6b9      exec u:r:ksu:s0 root -- /data/adb/ksud services
+01e0e721      exec u:r:ksu:s0 root -- /data/adb/ksud services
+01e0e777      exec u:r:ksu:s0 root -- /data/adb/ksud boot-completed
+01e0f048  /data/adb/ksu/lib/libadbroot.so
+01e0f068  LD_PRELOAD=/data/adb/ksu/lib/libadbroot.so
+01e0f093  LD_LIBRARY_PATH=/data/adb/ksu/lib
+0233bec3  st_susfs_uname
+0233bf53  st_susfs_sus_path
+0233bf75  st_susfs_hide_sus_mnts_for_non_su_procs
+0233bf9d  st_susfs_sus_kstat
+0233c09c  st_susfs_sus_kstat_hlist
+0233c0c8  st_susfs_log
+0233c0d5  st_susfs_spoof_cmdline_or_bootconfig
+0233c115  st_susfs_open_redirect
+0233c14b  st_susfs_open_redirect_hlist
+0233c1ba  st_susfs_sus_map
+0233c1cb  st_susfs_avc_log_spoofing
+0233c1e5  st_susfs_enabled_features
+0233c210  st_susfs_variant
+0233c221  susfs_variant
+0233c22f  st_susfs_version
+0233c240  susfs_version
+0233c336  st_susfs_sus_path_list
+0234ee7d  Opt_compress_chksum
+023b67e5  ksu_feature_handler
+023b681c  ksu_feature_get_t
+023b682e  ksu_feature_set_t
+023b6840  ksu_feature_id
+023b68e6  ksu_event_queue
+023b698f  ksu_sulog_pending_event
+023b69a7  ksu_file_wrapper
+023b69b8  ksu_event_queue_node
+023b69cd  ksu_event_record_hdr
+023b69e8  ksu_event_queue_dropped_info
+023b6bab  ksu_sulog_event_type
+023b6c16  ksu_sulog_event
+023b6c3c  ksu_sulog_identity
+023b6c4f  ksu_ioctl_cmd_map
+023b6c6c  ksu_ioctl_handler_t
+023b6c80  ksu_perm_check_t
+023b6c91  ksu_new_get_allow_list_cmd
+023b6cb1  ksu_get_info_cmd
+023b6ccf  ksu_get_info_legacy_cmd
+023b6ce7  ksu_report_event_cmd
+023b6cfc  ksu_set_sepolicy_cmd
+023b6d11  ksu_check_safemode_cmd
+023b6d35  ksu_uid_granted_root_cmd
+023b6d56  ksu_uid_should_umount_cmd
+023b6d7e  ksu_get_manager_appid_cmd
+023b6d9e  ksu_set_app_profile_cmd
+023b6db6  ksu_get_feature_cmd
+023b6dca  ksu_set_feature_cmd
+023b6dde  ksu_get_wrapper_fd_cmd
+023b6df5  ksu_manage_mark_cmd
+023b6e13  ksu_nuke_ext4_sysfs_cmd
+023b6e2b  ksu_add_try_umount_cmd
+023b6e42  ksu_get_sulog_fd_cmd
+023b6e57  ksu_install_fd_tw
+023f8f4b  susfs_srcu_open_redirect_srcu_data
+023f8f6e  susfs_srcu_sus_path_loop_srcu_data
+023faa92  __UNIQUE_ID_asus_hides_ac97_lpc788
+023faab5  __UNIQUE_ID_asus_hides_ac97_lpc790
+023faad8  __UNIQUE_ID_asus_hides_smbus_hostbridge706
+023fab03  __UNIQUE_ID_asus_hides_smbus_hostbridge708
+023fab2e  __UNIQUE_ID_asus_hides_smbus_hostbridge710
+023fab59  __UNIQUE_ID_asus_hides_smbus_hostbridge712
+023fab84  __UNIQUE_ID_asus_hides_smbus_hostbridge714
+023fabaf  __UNIQUE_ID_asus_hides_smbus_hostbridge716
+023fabda  __UNIQUE_ID_asus_hides_smbus_hostbridge718
+023fac05  __UNIQUE_ID_asus_hides_smbus_hostbridge720
+023fac30  __UNIQUE_ID_asus_hides_smbus_hostbridge722
+023fac5b  __UNIQUE_ID_asus_hides_smbus_hostbridge724
+023fac86  __UNIQUE_ID_asus_hides_smbus_hostbridge726
+023facb1  __UNIQUE_ID_asus_hides_smbus_hostbridge728
+023facdc  __UNIQUE_ID_asus_hides_smbus_hostbridge730
+023fad07  __UNIQUE_ID_asus_hides_smbus_lpc732
+023fad2b  __UNIQUE_ID_asus_hides_smbus_lpc734
+023fad4f  __UNIQUE_ID_asus_hides_smbus_lpc736
+023fad73  __UNIQUE_ID_asus_hides_smbus_lpc738
+023fad97  __UNIQUE_ID_asus_hides_smbus_lpc740
+023fadbb  __UNIQUE_ID_asus_hides_smbus_lpc742
+023faddf  __UNIQUE_ID_asus_hides_smbus_lpc744
+023fae03  __UNIQUE_ID_asus_hides_smbus_lpc746
+023fae27  __UNIQUE_ID_asus_hides_smbus_lpc748
+023fae4b  __UNIQUE_ID_asus_hides_smbus_lpc750
+023fae6f  __UNIQUE_ID_asus_hides_smbus_lpc752
+023fae93  __UNIQUE_ID_asus_hides_smbus_lpc754
+023faeb7  __UNIQUE_ID_asus_hides_smbus_lpc756
+023faedb  __UNIQUE_ID_asus_hides_smbus_lpc758
+023faeff  __UNIQUE_ID_asus_hides_smbus_lpc_ich6760
+023faf28  __UNIQUE_ID_asus_hides_smbus_lpc_ich6_resume764
+023faf58  __UNIQUE_ID_asus_hides_smbus_lpc_ich6_resume_early766
+023faf8e  __UNIQUE_ID_asus_hides_smbus_lpc_ich6_suspend762
+024156e1  __initstub__kmod_kernelsu__295_158_kernelsu_init6
+0241dd59  __ksu_is_allow_uid
+0241dd6c  __ksu_is_allow_uid_for_current
+0243723a  anon_ksu_ioctl
+02437249  anon_ksu_release
+024375b8  apply_kernelsu_rules
+0249fe62  is_ksu_domain
+024a009f  is_task_ksu_domain
+024a2c8a  kernelsu_exit
+024a2c98  kernelsu_init
+024a54c4  ksu_adb_root_exit
+024a54e4  ksu_adb_root_handle_execve
+024a54ff  ksu_adb_root_init
+024a5511  ksu_allow
+024a551b  ksu_allowlist_exit
+024a552e  ksu_allowlist_init
+024a5541  ksu_allowxperm
+024a5550  ksu_attribute
+024a555e  ksu_auditallow
+024a556d  ksu_auditallowxperm
+024a5581  ksu_create_file_wrapper
+024a5599  ksu_deny
+024a55a2  ksu_destroy_sepolicy
+024a55b7  ksu_dontaudit
+024a55c5  ksu_dontauditxperm
+024a55e0  ksu_dup_sepolicy
+024a55f1  ksu_enforce
+024a55fd  ksu_event_queue_close
+024a5613  ksu_event_queue_destroy
+024a562b  ksu_event_queue_drop
+024a5640  ksu_event_queue_has_data
+024a5659  ksu_event_queue_init
+024a566e  ksu_event_queue_poll
+024a5683  ksu_event_queue_push
+024a5698  ksu_event_queue_read
+024a56ad  ksu_exists
+024a56b8  ksu_feature_exit
+024a56c9  ksu_feature_init
+024a56da  ksu_file_wrapper_init
+024a56f0  ksu_genfscon
+024a5712  ksu_get_allow_list
+024a5725  ksu_get_app_profile
+024a5739  ksu_get_feature
+024a5749  ksu_get_root_profile
+024a576b  ksu_handle_execveat
+024a5793  ksu_handle_execveat_init
+024a57ac  ksu_handle_execveat_ksud
+024a57d7  ksu_handle_execveat_sucompat
+024a5811  ksu_handle_faccessat
+024a5826  ksu_handle_inode_event
+024a583d  ksu_handle_input_handle_event
+024a585b  ksu_handle_setresuid
+024a5870  ksu_handle_stat
+024a588a  ksu_handle_sys_read
+024a58ac  ksu_handle_sys_reboot
+024a58d2  ksu_handle_umount
+024a58f3  ksu_handle_vfs_fstat
+024a5908  ksu_install_fd
+024a5917  ksu_install_fd_tw_func
+024a592e  ksu_install_file_wrapper
+024a5947  ksu_install_sulog_fd
+024a595c  ksu_is_safe_mode
+024a596d  ksu_kernel_umount_exit
+024a5984  ksu_kernel_umount_init
+024a599b  ksu_ksud_exit
+024a59a9  ksu_ksud_init
+024a59b7  ksu_load_allow_list
+024a59cb  ksu_observer_exit
+024a59dd  ksu_observer_init
+024a59ef  ksu_permissive
+024a59fe  ksu_persistent_allow_list
+024a5a25  ksu_prune_allowlist
+024a5a39  ksu_put_app_profile
+024a5a4d  ksu_put_root_profile
+024a5a62  ksu_register_feature_handler
+024a5a7f  ksu_seccomp_allow_cache
+024a5a97  ksu_seccomp_clear_cache
+024a5aaf  ksu_selinux_hide_drop_backup_if_unused
+024a5ad6  ksu_selinux_hide_exit
+024a5aec  ksu_selinux_hide_handle_post_fs_data
+024a5b11  ksu_selinux_hide_handle_second_stage
+024a5b36  ksu_selinux_hide_init
+024a5b4c  ksu_set_app_profile
+024a5b60  ksu_set_feature
+024a5b70  ksu_setuid_hook_exit
+024a5b85  ksu_setuid_hook_init
+024a5b9a  ksu_sha256
+024a5ba5  ksu_show_allow_list
+024a5bb9  ksu_sucompat_exit
+024a5bcb  ksu_sucompat_init
+024a5bdd  ksu_sulog_capture
+024a5bef  ksu_sulog_capture_sucompat
+024a5c0a  ksu_sulog_emit_grant_root
+024a5c24  ksu_sulog_emit_pending
+024a5c3b  ksu_sulog_events_exit
+024a5c51  ksu_sulog_events_init
+024a5c67  ksu_sulog_exit
+024a5c76  ksu_sulog_fd_exit
+024a5c88  ksu_sulog_fd_init
+024a5c9a  ksu_sulog_get_queue
+024a5cae  ksu_sulog_init
+024a5cbd  ksu_sulog_is_enabled
+024a5cd2  ksu_sulog_poll
+024a5ce1  ksu_sulog_read
+024a5cf0  ksu_sulog_release
+024a5d02  ksu_supercall_cleanup_state
+024a5d1e  ksu_supercall_dump_commands
+024a5d3a  ksu_supercall_handle_ioctl
+024a5d55  ksu_supercall_reboot_handler
+024a5d72  ksu_supercalls_exit
+024a5d86  ksu_supercalls_init
+024a5d9a  ksu_throne_tracker_exit
+024a5db2  ksu_throne_tracker_init
+024a5dca  ksu_type
+024a5dd3  ksu_type_change
+024a5de3  ksu_type_member
+024a5df3  ksu_type_transition
+024a5e07  ksu_typeattribute
+024a5e19  ksu_uid_should_umount
+024a5e2f  ksu_unregister_feature_handler
+024a5e4e  ksu_wrapper_compat_ioctl
+024a5e67  ksu_wrapper_copy_file_range
+024a5e83  ksu_wrapper_d_dname
+024a5e97  ksu_wrapper_d_release
+024a5eb7  ksu_wrapper_fadvise
+024a5ecb  ksu_wrapper_fallocate
+024a5ee1  ksu_wrapper_fasync
+024a5ef4  ksu_wrapper_flock
+024a5f06  ksu_wrapper_flush
+024a5f18  ksu_wrapper_fsync
+024a5f2a  ksu_wrapper_get_unmapped_area
+024a5f48  ksu_wrapper_iopoll
+024a5f5b  ksu_wrapper_iterate
+024a5f6f  ksu_wrapper_iterate_shared
+024a5f8a  ksu_wrapper_llseek
+024a5f9d  ksu_wrapper_lock
+024a5fae  ksu_wrapper_mmap
+024a5fbf  ksu_wrapper_open
+024a5fd0  ksu_wrapper_poll
+024a5fe1  ksu_wrapper_read
+024a5ff7  ksu_wrapper_read_iter
+024a600d  ksu_wrapper_release
+024a6021  ksu_wrapper_remap_file_range
+024a603e  ksu_wrapper_sendpage
+024a6053  ksu_wrapper_setlease
+024a6068  ksu_wrapper_show_fdinfo
+024a6084  ksu_wrapper_splice_read
+024a609c  ksu_wrapper_splice_write
+024a60b5  ksu_wrapper_unlocked_ioctl
+024a60d0  ksu_wrapper_write
+024a60e2  ksu_wrapper_write_iter
+024f270e  setup_ksu_cred
+02502b61  susfs_add_open_redirect
+02502b79  susfs_add_sus_kstat
+02502b8d  susfs_add_sus_map
+02502b9f  susfs_add_sus_path
+02502bb2  susfs_add_sus_path_loop
+02502bca  susfs_alloc_non_unshare_ksu_vfsmnt
+02502bed  susfs_enable_log
+02502bfe  susfs_get_current_sid
+02502c14  susfs_get_data_path
+02502c28  susfs_get_enabled_features
+02502c4c  susfs_get_non_sus_mnt_id_from_mnt
+02502c75  susfs_get_non_sus_vfsmnt_from_vfsmnt
+02502ca6  susfs_get_sid_from_name
+02502cbe  susfs_handle_sdcard_inode_event
+02502cde  susfs_init
+02502ce9  susfs_is_current_init_domain
+02502d06  susfs_is_current_ksu_domain
+02502d22  susfs_is_current_zygote_domain
+02502d41  susfs_is_inode_sus_path
+02502d5e  susfs_is_sid_equal
+02502d71  susfs_mark_inode_sus_kstat
+02502d8c  susfs_open_redirect_spoof_do_proc_readlink
+02502db7  susfs_open_redirect_spoof_do_sys_openat
+02502df2  susfs_open_redirect_spoof_seq_show
+02502e2e  susfs_open_redirect_spoof_show_map_vma_srcu
+02502e5a  susfs_open_redirect_spoof_vfs_readlink
+02502e81  susfs_open_redirect_spoof_vfs_statfs
+02502ea6  susfs_run_extra_works
+02502ebc  susfs_sdcard_cleanup_fn
+02502ed4  susfs_sdcard_monitor_fn
+02502eec  susfs_set_avc_log_spoofing
+02502f07  susfs_set_batch_sid
+02502f1b  susfs_set_cmdline_or_bootconfig
+02502f3b  susfs_set_hide_sus_mnts_for_non_su_procs
+02502f64  susfs_set_uname
+02502f74  susfs_show_mountinfo
+02502f89  susfs_show_variant
+02502f9c  susfs_show_version
+02502faf  susfs_show_vfsmnt
+02502fc1  susfs_show_vfsstat
+02502fd4  susfs_spoof_cmdline_or_bootconfig
+02502ff6  susfs_spoof_uname
+02503008  susfs_start_sdcard_monitor_fn
+02503026  susfs_sus_kstat_spoof_generic_fillattr
+0250304d  susfs_sus_kstat_spoof_show_map_vma
+02503070  susfs_update_sus_kstat
+# 以上为 A17 独有的 KSU/SUSFS 相关字符串（原厂内核完全没有）

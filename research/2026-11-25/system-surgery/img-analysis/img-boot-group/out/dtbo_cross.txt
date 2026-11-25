@@ -1,0 +1,76 @@
+base dtb: nodes=1940 props=7830 __symbols__=829
+ 0 Qualcomm Technologies, Inc. Khaje ATP                nodes=307  syms=72  fix=85  missing=0 panels=15 touches=3
+ 1 Qualcomm Technologies, Inc. Khaje ATP                nodes=222  syms=48  fix=73  missing=0 panels=0 touches=1
+ 2 Qualcomm Technologies, Inc. KHAJE IDP nopmi          nodes=315  syms=67  fix=115 missing=0 panels=15 touches=6
+ 3 Qualcomm Technologies, Inc. KHAJE IDP nopmi          nodes=208  syms=43  fix=102 missing=0 panels=0 touches=2
+ 4 Qualcomm Technologies, Inc. Khaje IDP                nodes=455  syms=85  fix=117 missing=0 panels=15 touches=6
+ 5 Qualcomm Technologies, Inc. Khaje IDP with PM8010    nodes=145  syms=25  fix=85  missing=0 panels=0 touches=2
+ 6 Qualcomm Technologies, Inc. KHAJE IDP USBC Audio     nodes=352  syms=61  fix=98  missing=0 panels=0 touches=2
+ 7 Qualcomm Technologies, Inc. KHAJE IDP USBC Audio     nodes=329  syms=54  fix=83  missing=0 panels=0 touches=2
+ 8 Qualcomm Technologies, Inc. KHAJE IDPS + 90Hz        nodes=481  syms=85  fix=111 missing=0 panels=15 touches=6
+ 9 Qualcomm Technologies, Inc. KHAJE IDPS + 90Hz        nodes=458  syms=85  fix=111 missing=0 panels=15 touches=6
+10 Qualcomm Technologies, Inc. Khaje QRD HVDCP3P5       nodes=509  syms=104 fix=129 missing=0 panels=15 touches=3
+11 Qualcomm Technologies, Inc. KHAJE QRD nopmi overlay  nodes=294  syms=76  fix=124 missing=0 panels=15 touches=5
+12 Qualcomm Technologies, Inc. KHAJE QRD nopmi overlay  nodes=203  syms=52  fix=112 missing=0 panels=0 touches=3
+13 Qualcomm Technologies, Inc. Khaje QRD NOWCD9375      nodes=509  syms=104 fix=129 missing=0 panels=15 touches=3
+14 Qualcomm Technologies, Inc. Khaje QRD NOWCD9375      nodes=393  syms=70  fix=88  missing=0 panels=0 touches=1
+15 Qualcomm Technologies, Inc. Khaje QRD                nodes=508  syms=103 fix=129 missing=0 panels=15 touches=3
+16 Qualcomm Technologies, Inc. Khajeg ATP               nodes=172  syms=27  fix=41  missing=0 panels=0 touches=1
+17 Qualcomm Technologies, Inc. Khajeg IDP nopmi         nodes=81   syms=4   fix=46  missing=0 panels=0 touches=2
+18 Qualcomm Technologies, Inc. Khajeg IDP               nodes=471  syms=96  fix=96  missing=0 panels=15 touches=6
+19 Qualcomm Technologies, Inc. Khajeg IDP with PM8010   nodes=97   syms=4   fix=54  missing=0 panels=0 touches=2
+20 Qualcomm Technologies, Inc. Khajeg IDP USBC Audio    nodes=279  syms=33  fix=52  missing=0 panels=0 touches=2
+21 Qualcomm Technologies, Inc. Khajeg IDPS + 90Hz       nodes=435  syms=78  fix=96  missing=0 panels=15 touches=6
+22 Qualcomm Technologies, Inc. Khajeg QRD HVDCP3P5      nodes=520  syms=112 fix=94  missing=0 panels=15 touches=3
+23 Qualcomm Technologies, Inc. Khajeg QRD nopmi overlay nodes=171  syms=42  fix=77  missing=0 panels=0 touches=3
+24 Qualcomm Technologies, Inc. Khajeg QRD NOWCD9375     nodes=342  syms=49  fix=51  missing=0 panels=0 touches=1
+25 Qualcomm Technologies, Inc. Khajeg QRD               nodes=519  syms=111 fix=94  missing=0 panels=15 touches=3
+26 Qualcomm Technologies, Inc. Khajep ATP               nodes=172  syms=27  fix=41  missing=0 panels=0 touches=1
+27 Qualcomm Technologies, Inc. KHAJEP IDP nopmi         nodes=81   syms=4   fix=46  missing=0 panels=0 touches=2
+28 Qualcomm Technologies, Inc. Khaje IDP                nodes=279  syms=33  fix=52  missing=0 panels=0 touches=2
+29 Qualcomm Technologies, Inc. Khajep IDP with PM8010   nodes=97   syms=4   fix=54  missing=0 panels=0 touches=2
+30 Qualcomm Technologies, Inc. KHAJEP IDP USBC Audio    nodes=279  syms=33  fix=52  missing=0 panels=0 touches=2
+31 Qualcomm Technologies, Inc. KHAJEP IDPS + 90Hz       nodes=281  syms=33  fix=52  missing=0 panels=0 touches=2
+32 Qualcomm Technologies, Inc. Khajep QRD HVDCP3P5      nodes=342  syms=49  fix=51  missing=0 panels=0 touches=1
+33 Qualcomm Technologies, Inc. KHAJEP QRD nopmi overlay nodes=121  syms=21  fix=46  missing=0 panels=0 touches=3
+34 Qualcomm Technologies, Inc. Khajep QRD NOWCD9375     nodes=342  syms=49  fix=51  missing=0 panels=0 touches=1
+35 Qualcomm Technologies, Inc. Khajeq ATP               nodes=172  syms=27  fix=41  missing=0 panels=0 touches=1
+36 Qualcomm Technologies, Inc. KHAJEQ IDP nopmi         nodes=81   syms=4   fix=46  missing=0 panels=0 touches=2
+37 Qualcomm Technologies, Inc. Khaje IDP                nodes=279  syms=33  fix=52  missing=0 panels=0 touches=2
+38 Qualcomm Technologies, Inc. Khajeq IDP with PM8010   nodes=97   syms=4   fix=54  missing=0 panels=0 touches=2
+39 Qualcomm Technologies, Inc. KHAJEQ IDP USBC Audio    nodes=279  syms=33  fix=52  missing=0 panels=0 touches=2
+40 Qualcomm Technologies, Inc. KHAJEQ IDPS + 90Hz       nodes=281  syms=33  fix=52  missing=0 panels=0 touches=2
+41 Qualcomm Technologies, Inc. Khajeq QRD HVDCP3P5      nodes=342  syms=49  fix=51  missing=0 panels=0 touches=1
+42 Qualcomm Technologies, Inc. KHAJEQ QRD nopmi overlay nodes=121  syms=21  fix=46  missing=0 panels=0 touches=3
+43 Qualcomm Technologies, Inc. Khajeq QRD NOWCD9375     nodes=342  syms=49  fix=51  missing=0 panels=0 touches=1
+44 Qualcomm Technologies, Inc. Khajeq QRD               nodes=341  syms=48  fix=51  missing=0 panels=0 touches=1
+
+distinct fixup symbols needed by any overlay: 143
+fixup symbols NOT defined in base __symbols__: []
+base symbols unused by any overlay: 686
+
+=== panel node names (distinct) ===
+  dsi_panel_pwr_supply_no_labibb
+  dsi_pll_codes
+  qcom,dsi-display-primary
+  qcom,mdss-dsi-display-timings
+  qcom,mdss_dsi_ctrl0@5e94000
+  qcom,mdss_dsi_nt36672e_fhd_plus_120hz_video
+  qcom,mdss_dsi_nt36672e_fhd_plus_90hz_video
+  qcom,mdss_dsi_panel_p255_csot_fhd_video
+  qcom,mdss_dsi_panel_p255_hx83102j_fhd_video
+  qcom,mdss_dsi_panel_p255_inx_fhd_video
+  qcom,mdss_dsi_phy0@5e94400
+  qcom,mdss_dsi_sim_video
+  qcom,mdss_dsi_td4330_truly_v2_cmd
+  qcom,mdss_dsi_td4330_truly_v2_video
+  qcom,panel-supply-entry@0
+
+=== touch node names (distinct) ===
+  focaltech@38
+  novatek-mp-criteria-6072@0
+  novatek@62
+  qcom,mdss_dsi_nt36672e_fhd_plus_120hz_video
+  qcom,mdss_dsi_nt36672e_fhd_plus_90hz_video
+  synaptics_tcm@20
+  touch@0

@@ -1,0 +1,19 @@
+ROOT=E:\
+    0.015 GiB        245 f  $RECYCLE.BIN
+    0.018 GiB         12 f  .hmcl
+    0.074 GiB      10951 f  .pnpm-store
+    0.049 GiB         15 f  _patch
+    0.032 GiB       1117 f  _xjar
+    0.006 GiB          1 f  adb
+    1.455 GiB       1918 f  archive-2026-11-22T170135+0800
+    1.096 GiB          1 f  archive-2026-11-22T170135+0800.zip
+    0.501 GiB      34851 f  AstrBot
+    0.092 GiB          3 f  b1img
+    0.081 GiB        114 f  Bin
+    0.001 GiB        121 f  blockbench-mcp-project-main
+    0.024 GiB          1 f  BNZ.6aeeccd1f0bc8a
+    0.000 GiB          1 f  BNZ.6af72e7f2bb3531
+    5.444 GiB          1 f  BNZ.6af959d2b347050
+    0.603 GiB         23 f  build_kami
+    0.127 GiB       1905 f  Cache
+    LINK    chongci-android

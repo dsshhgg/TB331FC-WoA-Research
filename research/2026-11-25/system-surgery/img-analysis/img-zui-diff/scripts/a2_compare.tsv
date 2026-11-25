@@ -1,0 +1,32 @@
+分区	Z16文件	Z16大小	Z17文件	Z17大小	size_delta	file_sha_equal	dev_mode	dev_size	Z16==dev	Z17==dev	h4k相等
+xbl_a	xbl.elf	3226752	xbl.img	3227648	+896	DIFF	FULL	3670016	YES	no	SAME
+xbl_config_a	xbl_config.elf	43056	xbl_config.img	45056	+2000	DIFF	FULL	131072	YES	no	SAME
+abl_a	abl.elf	274432	abl.img	274432	+0	SAME	FULL	1048576	YES	YES	SAME
+tz_a	tz.mbn	3514087	tz.img	3514368	+281	DIFF	FULL	4194304	YES	no	SAME
+keymaster_a	keymint.mbn	342462	keymaster.img	344064	+1602	DIFF	FULL	524288	YES	no	SAME
+hyp_a	hyp.mbn	393224	hyp.img	397312	+4088	DIFF	FULL	524288	YES	no	SAME
+devcfg_a	devcfg.mbn	42748	devcfg.img	45056	+2308	DIFF	FULL	131072	YES	no	SAME
+rpm_a	rpm.mbn	225512	rpm.img	229376	+3864	DIFF	FULL	524288	YES	no	SAME
+featenabler_a	featenabler.mbn	90673	featenabler.img	94208	+3535	DIFF	FULL	131072	YES	YES	SAME
+uefisecapp_a	uefi_sec.mbn	168661	uefisecapp.img	172032	+3371	DIFF	FULL	2097152	YES	no	SAME
+imagefv_a	imagefv.elf	36864	imagefv.img	36864	+0	DIFF	FULL	2097152	YES	no	SAME
+multiimgoem_a	multi_image.mbn	13512	multiimgoem.img	16384	+2872	DIFF	FULL	32768	YES	no	SAME
+qupfw_a	qupv3fw.elf	57269	qupfw.img	57344	+75	DIFF	FULL	65536	YES	no	SAME
+bluetooth_a	BTFM.bin	1028096	bluetooth.img	1028096	+0	DIFF	FULL	1048576	YES	no	SAME
+boot_a	boot.img	100663296	boot.img	100663296	+0	DIFF	HEAD64M	100663296	no	no	DIFF
+init_boot_a	init_boot.img	8388608	init_boot.img	8388608	+0	DIFF	FULL	8388608	YES	no	DIFF
+vendor_boot_a	vendor_boot.img	100663296	vendor_boot.img	100663296	+0	DIFF	HEAD64M	100663296	YES	no	DIFF
+dtbo_a	dtbo.img	8388608	dtbo.img	8388608	+0	DIFF	FULL	25165824	YES	no	DIFF
+vbmeta_a	vbmeta.img	8192	vbmeta.img	8192	+0	DIFF	FULL	65536	YES	no	DIFF
+vbmeta_system_a	vbmeta_system.img	4096	vbmeta_system.img	4096	+0	DIFF	FULL	65536	no	no	DIFF
+recovery_a	recovery.img	100663296	recovery.img	100663296	+0	DIFF	HEAD64M	104857600	YES	no	DIFF
+modem_a	NON-HLOS.bin	40980480	modem.img	40980480	+0	DIFF	HEAD64M	188743680	YES	no	SAME
+dsp_a	dspso.bin	33554432	dsp.img	33554432	+0	SAME	FULL	33554432	YES	YES	SAME
+storsec	storsec.mbn	36076	-	-		-	FULL	131072	YES	no	-
+apdp	apdp.mbn	13508	-	-		-	FULL	262144	YES	no	-
+logfs	logfs_ufs_8mb.bin	16384	-	-		-	FULL	8388608	YES	no	-
+super_5/system_dlkm	super_5.img	438272	system_dlkm.img	438272	+0	DIFF	-	-			DIFF
+super_8/vendor_dlkm	super_8.img	58933248	vendor_dlkm.img	59342848	+409600	DIFF	-	-			DIFF
+?/odm	-	-	odm.img	1495040		-	-	-			-
+
+=== 机上未出现在映射里的分区（信息）===

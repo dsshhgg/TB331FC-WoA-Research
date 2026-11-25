@@ -1,0 +1,5 @@
+    0.015 GiB        245 f      0.0s  $RECYCLE.BIN
+    0.032 GiB       1117 f      0.0s  _xjar
+    0.501 GiB      34851 f      0.5s  AstrBot
+    0.024 GiB          1 f      0.0s  BNZ.6aeeccd1f0bc8a
+    0.127 GiB       1905 f      0.1s  Cache

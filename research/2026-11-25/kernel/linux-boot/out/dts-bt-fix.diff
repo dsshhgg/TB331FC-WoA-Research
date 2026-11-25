@@ -1,0 +1,39 @@
+--- sm6225-lenovo-tb331fc.dts.orig-bt	2026-11-25 12:25:06.579911785 +0800
++++ sm6225-lenovo-tb331fc.dts	2026-11-25 12:27:50.674490626 +0800
+@@ -15,7 +15,14 @@
+ 		linux,initrd-start = <0x00 0x44986000>;
+ 		linux,initrd-end = <0x00 0x456fe3fc>;
+ 		kaslr-seed = <0x00 0x00>;
+-		bootargs = "root=/dev/sda18 rw rootwait noinitrd init=/sbin/init console=tty0 PMOS_NOSPLASH";
++		/* Fallback only: ABL rewrites /chosen/bootargs from the vendor_boot
++		 * header cmdline on every boot (proven on this device - the
++		 * reference port booted with the stock string below still
++		 * present). Kept benign on purpose: "noinitrd" would make the
++		 * kernel ignore the initramfs, "root=/dev/sda18" would make it
++		 * wait for a rootfs we do not ship.
++		 */
++		bootargs = "console=tty0 keep_bootcon loglevel=8 rdinit=/init clk_ignore_unused pd_ignore_unused";
+ 		#address-cells = <0x02>;
+ 		#size-cells = <0x02>;
+ 		ranges;
+@@ -1993,12 +2000,19 @@
+ 				status = "okay";
+ 
+ 				bluetooth {
+-					compatible = "qcom,wcn3988-bt";
++					/* BTFM partition carries crbtfw21.tlv + crnv21.bin
++					 * (WCN3990 naming). Do NOT use wcn3988-bt here:
++					 * that path asks for apbtfw21.tlv/apnv21.bin and
++					 * uses a different rom_ver shift.
++					 */
++					compatible = "qcom,wcn3990-bt";
+ 					vddio-supply = <0x4c>;
+ 					vddxo-supply = <0x59>;
+ 					vddrf-supply = <0xa8>;
+ 					vddch0-supply = <0xa9>;
+ 					max-speed = <0x30d400>;
++					/* GPIO 87 is the WCN3990 SW_CTRL *status* line -
++					 * hci_qca requests it GPIOD_IN, so no output flag. */
+ 					swctrl-gpios = <0x28 0x57 0x00>;
+ 				};
+ 			};

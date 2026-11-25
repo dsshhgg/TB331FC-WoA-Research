@@ -1,0 +1,33 @@
+# dry-run 验证记录 2026-11-25T10:49:25Z
+device: 5e367954  HyperOS4 OS4.0.5.0.XPZCNXM  A17/sdk37  boot_completed=1
+
+## uid 解析（block-installer.sh 用的就是这两条）
+  cmd package list packages -U | grep package:com.miui.packageinstaller  ->  uid:10124
+  /data/data/com.miui.packageinstaller owner = 10124:10124, shared_prefs/common.xml 存在
+
+## iptables 能力（真机实测，加完立刻删）
+  iptables  -I OUTPUT 1 -m owner --uid-owner 10124 -j REJECT --reject-with icmp-port-unreachable   -> OK
+  ip6tables -I OUTPUT 1 -m owner --uid-owner 10124 -j REJECT --reject-with icmp6-port-unreachable  -> OK
+  -C / -D 同样 OK（幂等与回滚可用）
+
+## 安装器开关当前值（改之前）
+  system.virus_scan_install            = (未设置 -> 默认 true)
+  secure.miui_safe_mode                = 1
+  secure.miui_security_mode_style      = normal
+  secure.installer_full_safe_version   = 1
+  secure.packageinstaller_forbidden_app_list_version = 5
+  prefs secure_verify_enable           = true
+  prefs ads_enable                     = false
+  prefs app_store_recommend            = true
+  prefs installerCloseSafetyModel      = false
+
+## 安装器身份
+  image  : /product/priv-app/MIUIPackageInstallerVariants/MIUIPackageInstallerVariants.apk
+           versionCode 54512 / 5.4.5.1.2-20260618P / 9822143 B / sha256 25d66a04…
+  running: /data/app/~~6rHvQg9hAEyUNP6neh5Xtw==/…/base.apk
+           versionCode 55402 / 5.5.4.0.2-20260720P / 12308669 B / sha256 c2bebd4b…
+  signer : CN=MIUI,O=Xiaomi  sha256 C9:00:9D:01:EB:F9:F5:D0:30:2B:C7:1B:2F:E9:AA:9A:47:A4:32:BB:A1:73:08:A3:11:1B:75:D7:B2:14:90:25
+  PMS    : signatures:[6c02dd51] —— 与 android / Settings / SecurityCenter 同签（平台签名）
+
+## 未做的改动
+  - 没有刷机；没有改任何镜像；没有在设备上留 iptables 规则；settings 未修改

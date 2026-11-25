@@ -1,0 +1,84 @@
+机上分区	槽位基名	大小	模式	ZUI16匹配	ZUI17匹配	判定
+abl_a	abl	1048576	FULL	YES	YES	两版相同
+abl_b	abl	1048576	FULL	YES	YES	两版相同
+apdp	apdp	262144	FULL	YES	no	= ZUI16
+bluetooth_a	bluetooth	1048576	FULL	YES	no	= ZUI16
+bluetooth_b	bluetooth	1048576	FULL	YES	no	= ZUI16
+boot_a	boot	100663296	HEAD64M	no	no	都不是（被改过/第三来源）
+boot_b	boot	100663296	HEAD64M	no	no	都不是（被改过/第三来源）
+devcfg_a	devcfg	131072	FULL	YES	no	= ZUI16
+devcfg_b	devcfg	131072	FULL	YES	no	= ZUI16
+dsp_a	dsp	33554432	FULL	YES	YES	两版相同
+dsp_b	dsp	33554432	FULL	YES	YES	两版相同
+dtbo_a	dtbo	25165824	FULL	YES	no	= ZUI16
+dtbo_b	dtbo	25165824	FULL	YES	no	= ZUI16
+featenabler_a	featenabler	131072	FULL	YES	YES	两版相同
+featenabler_b	featenabler	131072	FULL	YES	YES	两版相同
+hyp_a	hyp	524288	FULL	YES	no	= ZUI16
+hyp_b	hyp	524288	FULL	YES	no	= ZUI16
+imagefv_a	imagefv	2097152	FULL	YES	no	= ZUI16
+imagefv_b	imagefv	2097152	FULL	YES	no	= ZUI16
+init_boot_a	init_boot	8388608	FULL	YES	no	= ZUI16
+init_boot_b	init_boot	8388608	FULL	no	YES	= ZUI17
+keymaster_a	keymaster	524288	FULL	YES	no	= ZUI16
+keymaster_b	keymaster	524288	FULL	YES	no	= ZUI16
+logfs	logfs	8388608	FULL	YES	no	= ZUI16
+modem_a	modem	188743680	HEAD64M	YES	no	= ZUI16
+modem_b	modem	188743680	HEAD64M	YES	no	= ZUI16
+multiimgoem_a	multiimgoem	32768	FULL	YES	no	= ZUI16
+multiimgoem_b	multiimgoem	32768	FULL	YES	no	= ZUI16
+qupfw_a	qupfw	65536	FULL	YES	no	= ZUI16
+qupfw_b	qupfw	65536	FULL	YES	no	= ZUI16
+recovery_a	recovery	104857600	HEAD64M	YES	no	= ZUI16
+recovery_b	recovery	104857600	HEAD64M	no	YES	= ZUI17
+rpm_a	rpm	524288	FULL	YES	no	= ZUI16
+rpm_b	rpm	524288	FULL	YES	no	= ZUI16
+storsec	storsec	131072	FULL	YES	no	= ZUI16
+tz_a	tz	4194304	FULL	YES	no	= ZUI16
+tz_b	tz	4194304	FULL	YES	no	= ZUI16
+uefisecapp_a	uefisecapp	2097152	FULL	YES	no	= ZUI16
+uefisecapp_b	uefisecapp	2097152	FULL	YES	no	= ZUI16
+vbmeta_a	vbmeta	65536	FULL	YES	no	= ZUI16
+vbmeta_b	vbmeta	65536	FULL	YES	no	= ZUI16
+vbmeta_system_a	vbmeta_system	65536	FULL	no	no	都不是（被改过/第三来源）
+vbmeta_system_b	vbmeta_system	65536	FULL	YES	no	= ZUI16
+vendor_boot_a	vendor_boot	100663296	HEAD64M	YES	no	= ZUI16
+vendor_boot_b	vendor_boot	100663296	HEAD64M	no	YES	= ZUI17
+xbl_a	xbl	3670016	FULL	YES	no	= ZUI16
+xbl_b	xbl	3670016	FULL	YES	no	= ZUI16
+xbl_config_a	xbl_config	131072	FULL	YES	no	= ZUI16
+xbl_config_b	xbl_config	131072	FULL	YES	no	= ZUI16
+
+=== 摘要 ===
+  = ZUI16                  37
+  两版相同                     6
+  都不是（被改过/第三来源）            3
+  = ZUI17                  3
+
+=== 逐基名结论（合并 a/b）===
+  abl            abl_a=两版相同  abl_b=两版相同
+  apdp           apdp== ZUI16
+  bluetooth      bluetooth_a== ZUI16  bluetooth_b== ZUI16
+  boot           boot_a=都不是（被改过/第三来源）  boot_b=都不是（被改过/第三来源）
+  devcfg         devcfg_a== ZUI16  devcfg_b== ZUI16
+  dsp            dsp_a=两版相同  dsp_b=两版相同
+  dtbo           dtbo_a== ZUI16  dtbo_b== ZUI16
+  featenabler    featenabler_a=两版相同  featenabler_b=两版相同
+  hyp            hyp_a== ZUI16  hyp_b== ZUI16
+  imagefv        imagefv_a== ZUI16  imagefv_b== ZUI16
+  init_boot      init_boot_a== ZUI16  init_boot_b== ZUI17
+  keymaster      keymaster_a== ZUI16  keymaster_b== ZUI16
+  logfs          logfs== ZUI16
+  modem          modem_a== ZUI16  modem_b== ZUI16
+  multiimgoem    multiimgoem_a== ZUI16  multiimgoem_b== ZUI16
+  qupfw          qupfw_a== ZUI16  qupfw_b== ZUI16
+  recovery       recovery_a== ZUI16  recovery_b== ZUI17
+  rpm            rpm_a== ZUI16  rpm_b== ZUI16
+  storsec        storsec== ZUI16
+  tz             tz_a== ZUI16  tz_b== ZUI16
+  uefisecapp     uefisecapp_a== ZUI16  uefisecapp_b== ZUI16
+  vbmeta         vbmeta_a== ZUI16  vbmeta_b== ZUI16
+  vbmeta_system  vbmeta_system_a=都不是（被改过/第三来源）  vbmeta_system_b== ZUI16
+  vendor_boot    vendor_boot_a== ZUI16  vendor_boot_b== ZUI17
+  xbl            xbl_a== ZUI16  xbl_b== ZUI16
+  xbl_config     xbl_config_a== ZUI16  xbl_config_b== ZUI16

@@ -1,0 +1,10 @@
+[12:34:45] ==========================================================
+[12:34:46] v9 three-colour sentinel  (shim RED / shim GREEN / SEC BLUE)
+[12:34:46] ==========================================================
+[12:34:46] log file : E:\rom\work\woa\sentinel\run_sentinel_20261125_123445.log
+[12:34:46] rollback dump : E:\rom\work\a17dump\boot_a.img
+[12:34:46]   size        : 100663296 bytes
+[12:34:46]   sha256      : 2510b098380a573a40ee6600aa9124ced06a047c14c21e6bf7cd596fbbc3c14b
+[12:34:46] ABORT: rollback dump sha256 does not match the expected value.
+[12:34:46]   expected : 0000000000000000000000000000000000000000000000000000000000000000
+[12:34:46]   Refusing to touch boot_a: without a trusted rollback the device stays bricked.

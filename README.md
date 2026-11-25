@@ -7,8 +7,9 @@
 | **[docs/PANORAMA.md](docs/PANORAMA.md)** | **全景机制文档**：硬件 → 分区全表 → 启动链（PBL→XBL→ABL→Linux）→ 各镜像职责 → 三条目标线现状与阻塞 → 已证伪清单 → 待验证清单。**每条结论都标出处（报告 + 地址/偏移）** | 想一次搞清这台机器怎么起来的、现在卡在哪 |
 | [docs/CORRECTIONS.md](docs/CORRECTIONS.md) | **43 条旧结论的更正**：「旧说法 → 现证据 → 正确结论」。含 SEC 栈踩 XBL、FD 基址覆盖致命、cmnlib 全零、900E=9008、ABL 用 recovery_a、devinfo 解锁位、misc+2048 槽元数据、fastboot erase misc 被 critical 拦 等 | 动手前先查这里，避免重复已证伪的路 |
 | [docs/OPEN-QUESTIONS.md](docs/OPEN-QUESTIONS.md) | **43 条未解问题 + 每条的具体验证命令/实验设计**（只读 → 单变量 → 写分区 → 需外部条件 → 报告缺口），附「先做什么」顺序表 | 想推进但不知道下一步做什么 |
+| **[research/2026-11-25/README.md](research/2026-11-25/README.md)** | **今晚这 17 份研究报告的索引**：boot-chain（ABL 上限精算 / 木马内核判决 / 三色哨兵 / paint proof）、kernel（超频不可行 / 真 mainline 调研 / 原厂 5.15 逆向 / mainline 启动包）、recovery（原厂骨架+OF 用户态定案 / 卡 logo 定位 / zstd 瘦身 13.26 MB / 最小 TWRP 重编）、system-surgery（安装器去联网 / 固件链 / 启动镜像组 / ZUI16⟷17 对比）、housekeeping（磁盘 / 根目录）。每条一句话结论 + 对应文件 | 想知道「某个方向为什么被否掉了」、或要复现某份取证 |
 
-> 三份文档的结论都**只读整合自本仓库与本地研究报告**，未刷机、未连设备（2026-11-25）。
+> 四份文档的结论都**只读整合自本仓库与本地研究报告**，未刷机、未连设备（2026-11-25）。
 
 ## 这台机器是什么
 
@@ -53,6 +54,7 @@
 | `patches/otg/` | OTG 供电驱动（SC89601D + FSA4480 + RT1711H，三颗芯片三条 I2C） |
 | `patches/kernel/` | mainline Linux 的 `.config` 与 DTS 改动 |
 | `probe/` | 三个探针：MMU-off 涂屏、看门狗复位、BDS EFI 应用 |
+| `research/2026-11-25/` | **当轮原始研究报告存档**（17 个主题目录 + 索引，含脚本与小型证据；镜像一律不入库） |
 
 ## 复现前提（重要）
 

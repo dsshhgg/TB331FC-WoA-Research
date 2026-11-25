@@ -1,0 +1,124 @@
+#!/bin/sh
+# ---------------------------------------------------------------------------
+# TB331FC (khaje / SM6225) mainline Linux - minimal initramfs /init
+#
+# Design goals
+#   * work with nothing but /bin/busybox present (static aarch64)
+#   * put every kernel message on the panel via the framebuffer console
+#   * optional second console over USB (CDC-ACM /dev/ttyGS0)
+#   * if cmdline has root=/dev/xxx and that block device shows up, mount it
+#     and switch_root; otherwise stay in the initramfs and give a shell
+# ---------------------------------------------------------------------------
+BB=/bin/busybox
+export PATH=/sbin:/bin:/usr/sbin:/usr/bin
+
+# --- very first thing: get /dev up, then let busybox install its applets ----
+$BB mount -t devtmpfs devtmpfs /dev 2>/dev/null
+mkdir -p /proc /sys /tmp /run /newroot /bin /sbin /lib
+$BB --install -s /bin 2>/dev/null
+$BB --install -s /sbin 2>/dev/null
+
+mount -t proc     proc   /proc 2>/dev/null
+mount -t sysfs    sysfs  /sys  2>/dev/null
+[ -c /dev/console ] || mknod -m 600 /dev/console c 5 1
+mkdir -p /dev/pts && mount -t devpts devpts /dev/pts 2>/dev/null
+mount -t tmpfs    tmpfs  /tmp  2>/dev/null
+mount -t tmpfs    tmpfs  /run  2>/dev/null
+
+# fbcon: show everything, including KERN_DEBUG
+dmesg -n 8 2>/dev/null
+
+# --- from here on, talk to the panel -------------------------------------
+exec 0</dev/console 1>/dev/console 2>&1
+
+line() { echo "------------------------------------------------------------------"; }
+
+echo
+line
+echo " TB331FC  mainline initramfs   kernel: $(uname -r)  $(uname -m)"
+line
+echo " cmdline: $(cat /proc/cmdline)"
+echo " uptime : $(cat /proc/uptime)"
+line
+
+# --- optional USB serial console (CDC-ACM -> /dev/ttyGS0) ----------------
+if [ -x /bin/gadget.sh ]; then
+    /bin/gadget.sh &
+fi
+
+# --- helper the user can call from the shell -----------------------------
+cat > /sbin/diag <<'EOF'
+#!/bin/sh
+echo "===== diag ====="
+echo "--- cmdline";      cat /proc/cmdline
+echo "--- uptime";       cat /proc/uptime
+echo "--- block devs";   ls -l /dev/sd* /dev/mmcblk* /dev/disk/* 2>/dev/null
+echo "--- mounts";       cat /proc/mounts
+echo "--- remoteproc";   for r in /sys/class/remoteproc/*; do [ -e "$r" ] && echo "$r: $(cat $r/state 2>/dev/null)"; done
+echo "--- backlight";    ls /sys/class/backlight 2>/dev/null
+echo "--- input";        cat /proc/bus/input/devices 2>/dev/null | grep -E 'Name|Handlers'
+echo "--- dmesg tail";   dmesg | tail -40
+echo "================"
+EOF
+chmod +x /sbin/diag
+
+# --- try the persistent root from cmdline --------------------------------
+ROOT=""
+for w in $(cat /proc/cmdline); do
+    case "$w" in root=*) ROOT="${w#root=}" ;; esac
+done
+
+if [ -n "$ROOT" ] && [ "$ROOT" != "/dev/ram0" ] && [ "$ROOT" != "/dev/root" ]; then
+    echo "[init] waiting for root device $ROOT"
+    n=0
+    while [ ! -b "$ROOT" ] && [ $n -lt 20 ]; do
+        sleep 1
+        n=$((n+1))
+    done
+    if [ -b "$ROOT" ]; then
+        echo "[init] $ROOT present, mounting"
+        if mount -t ext4 -o rw "$ROOT" /newroot 2>/dev/null || \
+           mount -o rw "$ROOT" /newroot 2>/dev/null; then
+            echo "[init] mounted, switching root"
+            mkdir -p /newroot/dev /newroot/proc /newroot/sys /newroot/run
+            mount --move /dev  /newroot/dev  2>/dev/null
+            mount --move /proc /newroot/proc 2>/dev/null
+            mount --move /sys  /newroot/sys  2>/dev/null
+            mount --move /run  /newroot/run  2>/dev/null
+            exec switch_root /newroot /sbin/init
+        else
+            echo "[init] mount of $ROOT FAILED - staying in initramfs"
+        fi
+    else
+        echo "[init] $ROOT never appeared - staying in initramfs"
+    fi
+fi
+
+# --- fallback: console only ----------------------------------------------
+echo
+echo " Staying in initramfs.  Console shell below."
+echo "   diag      - dump the useful bits (cmdline, block devs, dmesg tail)"
+echo "   poweroff -f / reboot -f"
+echo " If the panel is blank, plug USB in: a CDC-ACM port shows up as COMx"
+echo " and the same shell is started on /dev/ttyGS0."
+echo
+
+( # heartbeat + late ttyGS0 shell
+  i=0
+  while true; do
+      i=$((i+1))
+      echo "[init] alive #$i  uptime=$(cut -d' ' -f1 /proc/uptime)s"
+      if [ -c /dev/ttyGS0 ] && [ ! -e /run/gs0.once ]; then
+          : > /run/gs0.once
+          echo "[init] USB console up on /dev/ttyGS0"
+          setsid sh -i </dev/ttyGS0 >/dev/ttyGS0 2>&1 &
+      fi
+      sleep 15
+  done
+) &
+
+while true; do
+    sh -i </dev/console >/dev/console 2>&1
+    echo "[init] shell exited, respawning in 2s"
+    sleep 2
+done

@@ -1,0 +1,78 @@
+image       : boot_a-paint-proof.img
+size        : 43100672 bytes
+sha256      : ad4e7cd6f74cb33f0d162ebb8e7a3dfd70f03179c65e524b7adde53b6d6e7cdb
+boot header : magic=b'ANDROID!' header_version=4 header_size=1584 page=4096
+              kernel_size=43096576 (0x2919a00)  ramdisk_size=0  signature_size=0
+kernel      : file offset 0x1000, 0x2919a00 bytes loaded
+arm64 hdr   : code0=0xfa405a4d text_offset=0x0 image_size=0x29c0000 magic=b'ARMd'
+stub        : 168 bytes sha256=92f62b91767d949471fbe26337afe5a9e5b2017ba5ff5a6dc74594a412dafece
+stub placed : kernel+0x2918a00 = VA 0x42918a00
+
+stock hash  : 2510b098380a573a40ee6600aa9124ced06a047c14c21e6bf7cd596fbbc3c14b
+
+================================================================
+entry point: VA 0x40000000 (kernel+0), first 16 bytes of the built image
+================================================================
+
+_entry.bin:     file format binary
+
+
+Disassembly of section .data:
+
+0000000040000000 <.data>:
+    40000000:	fa405a4d 	ccmp	x18, #0x0, #0xd, pl	// pl = nfrst
+    40000004:	14a4627f 	b	0x42918a00
+	...
+
+================================================================
+appended stub: kernel+0x2918A00 = VA 0x42918A00 (168 bytes)
+================================================================
+
+_stub.bin:     file format binary
+
+
+Disassembly of section .data:
+
+0000000042918a00 <.data>:
+    42918a00:	d5384249 	mrs	x9, currentel
+    42918a04:	d3420d29 	ubfx	x9, x9, #2, #2
+    42918a08:	f100093f 	cmp	x9, #0x2
+    42918a0c:	540000a0 	b.eq	0x42918a20  // b.none
+    42918a10:	f1000d3f 	cmp	x9, #0x3
+    42918a14:	540000a0 	b.eq	0x42918a28  // b.none
+    42918a18:	d538100a 	mrs	x10, sctlr_el1
+    42918a1c:	14000004 	b	0x42918a2c
+    42918a20:	d53c100a 	mrs	x10, sctlr_el2
+    42918a24:	14000002 	b	0x42918a2c
+    42918a28:	d53e100a 	mrs	x10, sctlr_el3
+    42918a2c:	927ff94b 	and	x11, x10, #0xfffffffffffffffe
+    42918a30:	927df96b 	and	x11, x11, #0xfffffffffffffffb
+    42918a34:	f100093f 	cmp	x9, #0x2
+    42918a38:	540000a0 	b.eq	0x42918a4c  // b.none
+    42918a3c:	f1000d3f 	cmp	x9, #0x3
+    42918a40:	540000a0 	b.eq	0x42918a54  // b.none
+    42918a44:	d518100b 	msr	sctlr_el1, x11
+    42918a48:	14000004 	b	0x42918a58
+    42918a4c:	d51c100b 	msr	sctlr_el2, x11
+    42918a50:	14000002 	b	0x42918a58
+    42918a54:	d51e100b 	msr	sctlr_el3, x11
+    42918a58:	d5033fdf 	isb
+    42918a5c:	d2ab800d 	mov	x13, #0x5c000000            	// #1543503872
+    42918a60:	d2bfffec 	mov	x12, #0xffff0000            	// #4294901760
+    42918a64:	f2ffffec 	movk	x12, #0xffff, lsl #48
+    42918a68:	d2a001ee 	mov	x14, #0xf0000               	// #983040
+    42918a6c:	a88131ac 	stp	x12, x12, [x13], #16
+    42918a70:	f10005ce 	subs	x14, x14, #0x1
+    42918a74:	54ffffc1 	b.ne	0x42918a6c  // b.any
+    42918a78:	d5033f9f 	dsb	sy
+    42918a7c:	f100093f 	cmp	x9, #0x2
+    42918a80:	540000a0 	b.eq	0x42918a94  // b.none
+    42918a84:	f1000d3f 	cmp	x9, #0x3
+    42918a88:	540000a0 	b.eq	0x42918a9c  // b.none
+    42918a8c:	d518100a 	msr	sctlr_el1, x10
+    42918a90:	14000004 	b	0x42918aa0
+    42918a94:	d51c100a 	msr	sctlr_el2, x10
+    42918a98:	14000002 	b	0x42918aa0
+    42918a9c:	d51e100a 	msr	sctlr_el3, x10
+    42918aa0:	d5033fdf 	isb
+    42918aa4:	17f0dd57 	b	0x42550000

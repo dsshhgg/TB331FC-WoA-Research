@@ -1,0 +1,4 @@
+    0.074 GiB      10951 f      0.1s  .pnpm-store
+    1.455 GiB       1918 f      0.1s  archive-2026-11-22T170135+0800
+    0.081 GiB        114 f      0.0s  Bin
+    5.444 GiB          1 f      0.0s  BNZ.6af959d2b347050

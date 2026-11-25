@@ -1,0 +1,6 @@
+id=zz_installer_block
+name=Installer Net Block (HyperOS4 A17)
+version=v1.0
+versionCode=1
+author=rom-surgery
+description=按 uid REJECT com.miui.packageinstaller 的出网 + 关病毒扫描/安全模式（零改 APK、零改镜像）。开机自动重放。

@@ -1,0 +1,204 @@
+diff --git a/BootShim/BootShim.S b/BootShim/BootShim.S
+--- a/BootShim/BootShim.S
++++ b/BootShim/BootShim.S
+@@ -16,7 +16,82 @@
+   .long 0               /* Reserved */
+ #endif
+ 
++/*
++ * v9 THREE-COLOUR SENTINEL  (see sentinel/REPORT.md)
++ *
++ * The panel is still scanning out ABL cont_splash_region (0x5C000000,
++ * "splash_region@5c000000" / cont_splash_region in the device DTBO, 15 MiB;
++ * panel qcom,mdss_dsi_panel_p255_hx83102j_fhd_video is DSI video mode, so the
++ * mixer keeps re-reading DDR).  Painting that buffer makes "who died" visible
++ * on the panel itself:
++ *
++ *   0x5C000000 + 0x00000, 64 KiB   RED    -> this _Start ran (shim is alive)
++ *   0x5C000000 + 0x00000, 64 KiB   GREEN  -> FD copied to FD_BASE, jump next
++ *   0x5C000000 + 0x00000, 64 KiB   BLUE   -> painted by SEC (SecPaintEarly)
++ *   0x5C000000 + 0x10000,  4 KiB   WHITE  -> painted by SEC (both bands done)
++ *   0x5C000000 + 0x11000,  4 KiB   YELLOW -> painted by SEC (InitializeMemory)
++ *   0x5C000000 + 0x20000,  4 KiB   CYAN   -> ABL handed over with MMU *on*
++ *
++ * Every band is written with the MMU off, so the store goes straight to DRAM
++ * (no translation, no cache: Device-nGnRnE, strongly ordered) and is followed
++ * by "dsb sy".  No stack is used; x0 (the DT pointer that SEC forwards in a
++ * HOB) is parked in x17 and restored before the jump.
++ */
++#define SENTINEL_FB        0x5C000000
++#define SENTINEL_FB_CYAN   0x5C020000
++#define SENTINEL_PIXELS    0x4000        /* 64 KiB / 4 */
++#define SENTINEL_RED       0xFFFF0000    /* a8r8g8b8.  Alpha is FF on purpose: a   */
++#define SENTINEL_GREEN     0xFF00FF00    /* zero alpha pixel would vanish if the   */
++#define SENTINEL_CYAN      0xFF00FFFF    /* mixer kept per-pixel alpha blending.   */
++
+ _Start:
++  mov   x17, x0         /* keep the DT pointer ABL gave us (SEC forwards it) */
++
++  /* ---- SENTINEL 1/3: force the MMU off, then paint RED -------------------
++   * VA == PA must be guaranteed before touching 0x5C000000 from a stage
++   * whose TTBR0/MAIR we did not author.  SCTLR is read-modify-write so the
++   * RES1 bits survive (a bare "msr sctlr_elN, xzr" is architecturally
++   * unpredictable).
++   */
++  mrs   x9, CurrentEL
++  ubfx  x9, x9, #2, #2            /* x9 = current EL (1 or 2) */
++  cmp   x9, #2
++  b.eq  _SntEl2
++  mrs   x10, sctlr_el1
++  and   x11, x10, #1              /* x11 = "MMU was already on" flag */
++  bic   x10, x10, #1              /* M = 0: MMU off */
++  bic   x10, x10, #4              /* C = 0: data cache off */
++  msr   sctlr_el1, x10
++  b     _SntMmuOff
++_SntEl2:
++  mrs   x10, sctlr_el2
++  and   x11, x10, #1
++  bic   x10, x10, #1
++  bic   x10, x10, #4
++  msr   sctlr_el2, x10
++_SntMmuOff:
++  isb
++
++  ldr   x13, =SENTINEL_FB
++  mov   x14, #SENTINEL_PIXELS
++  ldr   w0,  =SENTINEL_RED
++  bl    _SntPaint
++
++  cbz   x11, _SntRedDone          /* MMU was already off: nothing to report */
++  ldr   x13, =SENTINEL_FB_CYAN
++  mov   x14, #0x400
++  ldr   w0,  =SENTINEL_CYAN
++  bl    _SntPaint
++_SntRedDone:
++
++#if SENTINEL_HALT
++  /* Control image (-DSENTINEL_HALT=1): stop right here, on purpose, without
++   * touching the FD.  Its only job is to prove the framebuffer channel: if this
++   * image shows RED then a blank screen from any other build really means "that
++   * code never ran"; if this one is blank too, a blank screen proves nothing. */
++  b     _Dead
++#endif
++
+   mov   x4, x1
+   ldr   x5, =FD_BASE
+   cmp   x4, x5
+@@ -31,6 +106,12 @@
+   ldr   x5, =FD_BASE
+ 
+ _Entry:
++  /* ---- SENTINEL 2/3: FD is at FD_BASE and the jump is next => GREEN ------ */
++  ldr   x13, =SENTINEL_FB
++  mov   x14, #SENTINEL_PIXELS
++  ldr   w0,  =SENTINEL_GREEN
++  bl    _SntPaint
++
+   /* Publish the copied instructions before executing them. */
+   dsb   sy
+   mrs   x9, ctr_el0
+@@ -51,11 +132,23 @@
+   ic    iallu
+   dsb   sy
+   isb
++  mov   x0, x17         /* hand the DT pointer back to the payload */
+   br    x5
+ 
+ _Dead:
+   b     _Dead
+ 
++/* x13 = base, x14 = pixel count, w0 = colour.  Clobbers x15, x16, x30. */
++_SntPaint:
++  mov   x15, x13
++  mov   x16, x14
++_SntPaintLoop:
++  str   w0, [x15], #4
++  subs  x16, x16, #1
++  b.ne  _SntPaintLoop
++  dsb   sy
++  ret
++
+ .text
+ .ltorg
+ .align 4
+diff --git a/BootShim/Makefile b/BootShim/Makefile
+--- a/BootShim/Makefile
++++ b/BootShim/Makefile
+@@ -2,6 +2,10 @@
+ TARGET            = aarch64-linux-gnu
+ CC                = clang
+ CFLAGS            = --target=$(TARGET)
++# 0 = the real image; 1 = control image that paints RED and stops before the
++# FD copy (see BootShim.S).  Defaults to 0, so an ordinary build is unchanged.
++SENTINEL_HALT    ?= 0
++CFLAGS           += -DSENTINEL_HALT=$(SENTINEL_HALT)
+ OBJCOPY           = llvm-objcopy
+ 
+ all: BootShim.elf BootShim.bin
+diff --git a/Silicon/Silicium/SiliciumPkg/Sec/Sec.c b/Silicon/Silicium/SiliciumPkg/Sec/Sec.c
+--- a/Silicon/Silicium/SiliciumPkg/Sec/Sec.c
++++ b/Silicon/Silicium/SiliciumPkg/Sec/Sec.c
+@@ -94,11 +94,17 @@
+ 
+ //
+ // The ABL hands the panel over still scanning out its 1200x1920x32 splash
+-// buffer at 0x5C000000 ("Display Reserved" in MemoryMapLib). Writing there
+-// needs no library, no stack beyond this frame and no MMU, so SEC paints it as
+-// the very first thing it does: a stall anywhere after the first C statement
+-// then shows up as a colour on the panel instead of a black screen that cannot
+-// be told apart from "SEC never ran".
++// buffer at 0x5C000000 ("Display Reserved" in MemoryMapLib, the device DTBO's
++// splash_region@5c000000). Writing there needs no library, no stack beyond this
++// frame and no MMU, so SEC paints it as the very first thing it does: a stall
++// anywhere after the first C statement then shows up as a colour on the panel
++// instead of a black screen that cannot be told apart from "SEC never ran".
++//
++// Band map (all offsets from 0x5C000000, see sentinel/REPORT.md):
++//   +0x00000 64 KiB  BLUE   SEC's first C statement ran   (BootShim: RED->GREEN)
++//   +0x10000  4 KiB  WHITE  both early bands are on the panel
++//   +0x11000  4 KiB  YELLOW InitializeMemory completed (MMU on)
++//   +0x12000  4 KiB  ORANGE "DXE Heap" located, before MemoryPeim
+ //
+ #define SEC_PAINT_FRAME_BUFFER_BASE  0x5C000000ULL
+ 
+@@ -128,9 +134,10 @@
+ VOID
+ SecPaintEarly (VOID)
+ {
+-  // Magenta = SEC's first C statement ran; white = the 64 KiB loop below it
+-  // completed. Both survive an R/B channel swap, unlike the green/blue bands.
+-  SecPaintBand (0x00FF00FF, 0x00000000, 0x00010000);
++  // BLUE = SEC's first C statement ran (the "SEC is alive" answer to the shim's
++  // RED/GREEN); WHITE = both early bands are on the panel. Palette is shared with
++  // BootShim.S, see sentinel/REPORT.md.
++  SecPaintBand (0xFF0000FF, 0x00000000, 0x00010000);
+   SecPaintBand (0xFFFFFFFF, 0x00010000, 0x00001000);
+ }
+ 
+@@ -156,9 +163,10 @@
+     return EFI_NOT_FOUND;
+   }
+ 
+-  // SEC reached memory setup: green band across the top of the panel (~1 row at
+-  // 1200 px). Painted before MemoryPeim turns the MMU on.
+-  SecPaintBand (0x0000FF00, 0x00000000, 0x00001000);
++  // SEC reached memory setup ("DXE Heap" located): ORANGE band at +0x12000, so it
++  // does not eat into the 64 KiB BLUE band above it. Painted before MemoryPeim
++  // turns the MMU on.
++  SecPaintBand (0xFFFF8000, 0x00012000, 0x00001000);
+ 
+   // Initialize HOB List
+   HobList = HobConstructor ((VOID *)UefiMemoryBase, UefiMemorySize, (VOID *)UefiMemoryBase, (VOID *)(UefiMemoryBase + UefiMemorySize));
+@@ -216,9 +224,9 @@
+     CpuDeadLoop ();
+   }
+ 
+-  // Memory init done: blue band right after the white one, so the panel shows how
+-  // far SEC got. Written with the MMU on (Display Reserved is WRITE_THROUGH_XN).
+-  SecPaintBand (0x00FF0000, 0x00011000, 0x00001000);
++  // Memory init done: YELLOW band at +0x11000, written with the MMU on (Display
++  // Reserved is WRITE_THROUGH_XN).
++  SecPaintBand (0xFFFFFF00, 0x00011000, 0x00001000);
+ 
+   DEBUG ((EFI_D_WARN, "SEC: memory HOBs done\n"));
+ 

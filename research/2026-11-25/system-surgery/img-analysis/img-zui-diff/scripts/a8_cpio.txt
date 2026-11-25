@@ -1,0 +1,150 @@
+
+========== recovery ==========
+  条目数 Z16=472  Z17=472
+  只在 Z16: 0   只在 Z17: 0   同名相同: 467   同名不同: 5
+  --- 只在 Z16 ---
+  --- 只在 Z17 ---
+  --- 同名不同（按大小差排序）---
+    * system/bin/init                                            Z16=2164264    Z17=2168760    +4496
+    * sepolicy                                                   Z16=1095896    Z17=1100055    +4159
+    * prop.default                                               Z16=29349      Z17=31875      +2526
+    * vendor_file_contexts                                       Z16=92814      Z17=91923      -891
+    * vendor_service_contexts                                    Z16=10007      Z17=10491      +484
+
+========== vendor_boot ==========
+  条目数 Z16=249  Z17=252
+  只在 Z16: 0   只在 Z17: 3   同名相同: 9   同名不同: 240
+  --- 只在 Z16 ---
+  --- 只在 Z17 ---
+    + lib/modules/smsc.ko                                          83440
+    + lib/modules/smsc75xx.ko                                      152216
+    + lib/modules/smsc95xx.ko                                      149712
+  --- 同名不同（按大小差排序）---
+    * lib/modules/modules.alias                                  Z16=35918      Z17=37312      +1394
+    * lib/modules/msm_drm.ko                                     Z16=4172384    Z17=4172600    +216
+    * lib/modules/modules.dep                                    Z16=22951      Z17=23025      +74
+    * lib/modules/bcl_pmic5.ko                                   Z16=69000      Z17=69064      +64
+    * lib/modules/cpufreq_userspace.ko                           Z16=42440      Z17=42504      +64
+    * lib/modules/rtc-pm8xxx.ko                                  Z16=78320      Z17=78384      +64
+    * lib/modules/sc8960x_charger.ko                             Z16=212320     Z17=212384     +64
+    * lib/modules/modules.load.recovery                          Z16=3889       Z17=3921       +32
+    * lib/modules/msm_sysstats.ko                                Z16=103552     Z17=103528     -24
+    * lib/modules/sps_drv.ko                                     Z16=536248     Z17=536232     -16
+    * lib/modules/nvmem_qfprom.ko                                Z16=73936      Z17=73928      -8
+    * lib/modules/sdhci-msm.ko                                   Z16=201608     Z17=201600     -8
+    * lib/modules/slim-qcom-ngd-ctrl.ko                          Z16=219760     Z17=219752     -8
+    * lib/modules/slimbus.ko                                     Z16=93832      Z17=93824      -8
+    * lib/modules/usbpd.ko                                       Z16=283784     Z17=283792     +8
+    * lib/modules/altmode-glink.ko                               Z16=66144      Z17=66144      +0
+    * lib/modules/arm_smmu.ko                                    Z16=354896     Z17=354896     +0
+    * lib/modules/aw35615_whole.ko                               Z16=329808     Z17=329808     +0
+    * lib/modules/bam_dma.ko                                     Z16=113880     Z17=113880     +0
+    * lib/modules/bcl_soc.ko                                     Z16=55920      Z17=55920      +0
+    * lib/modules/boot_stats.ko                                  Z16=60312      Z17=60312      +0
+    * lib/modules/bwmon.ko                                       Z16=114712     Z17=114712     +0
+    * lib/modules/cdsp-loader.ko                                 Z16=51080      Z17=51080      +0
+    * lib/modules/cdsprm.ko                                      Z16=107368     Z17=107368     +0
+    * lib/modules/cfg80211.ko                                    Z16=2589944    Z17=2589944    +0
+    * lib/modules/charger-ulog-glink.ko                          Z16=59888      Z17=59888      +0
+    * lib/modules/class-dual-role.ko                             Z16=63912      Z17=63912      +0
+    * lib/modules/clk-dummy.ko                                   Z16=49632      Z17=49632      +0
+    * lib/modules/clk-qcom.ko                                    Z16=507632     Z17=507632     +0
+    * lib/modules/clk-rpm.ko                                     Z16=106624     Z17=106624     +0
+    * lib/modules/clk-smd-rpm.ko                                 Z16=286920     Z17=286920     +0
+    * lib/modules/core_hang_detect.ko                            Z16=57216      Z17=57216      +0
+    * lib/modules/coresight-csr.ko                               Z16=91816      Z17=91816      +0
+    * lib/modules/coresight-cti.ko                               Z16=165336     Z17=165336     +0
+    * lib/modules/coresight-dummy.ko                             Z16=71904      Z17=71904      +0
+    * lib/modules/coresight-funnel.ko                            Z16=87552      Z17=87552      +0
+    * lib/modules/coresight-hwevent.ko                           Z16=74544      Z17=74544      +0
+    * lib/modules/coresight-remote-etm.ko                        Z16=78432      Z17=78432      +0
+    * lib/modules/coresight-replicator.ko                        Z16=87888      Z17=87888      +0
+    * lib/modules/coresight-stm.ko                               Z16=113648     Z17=113648     +0
+    * lib/modules/coresight-tgu.ko                               Z16=75624      Z17=75624      +0
+    * lib/modules/coresight-tmc.ko                               Z16=224816     Z17=224816     +0
+    * lib/modules/coresight-tpda.ko                              Z16=86768      Z17=86768      +0
+    * lib/modules/coresight-tpdm.ko                              Z16=194328     Z17=194328     +0
+    * lib/modules/coresight.ko                                   Z16=214296     Z17=214296     +0
+    * lib/modules/cpu_hotplug.ko                                 Z16=51944      Z17=51944      +0
+    * lib/modules/cpufreq_ondemand.ko                            Z16=58520      Z17=58520      +0
+    * lib/modules/cqhci.ko                                       Z16=106984     Z17=106984     +0
+    * lib/modules/crypto-qti-common.ko                           Z16=47896      Z17=47896      +0
+    * lib/modules/crypto-qti-tz.ko                               Z16=53072      Z17=53072      +0
+    * lib/modules/cx_ipeak.ko                                    Z16=61696      Z17=61696      +0
+    * lib/modules/cx_ipeak_cdev.ko                               Z16=47048      Z17=47048      +0
+    * lib/modules/dcc_v2.ko                                      Z16=118400     Z17=118400     +0
+    * lib/modules/debug-regulator.ko                             Z16=110440     Z17=110440     +0
+    * lib/modules/debugcc-khaje.ko                               Z16=69600      Z17=69600      +0
+    * lib/modules/dispcc-khaje.ko                                Z16=91968      Z17=91968      +0
+    * lib/modules/dwc3-msm.ko                                    Z16=276072     Z17=276072     +0
+    * lib/modules/ehset.ko                                       Z16=45320      Z17=45320      +0
+    * lib/modules/eud.ko                                         Z16=76048      Z17=76048      +0
+    * lib/modules/f_fs_ipc_log.ko                                Z16=131264     Z17=131264     +0
+    * lib/modules/frpc-adsprpc.ko                                Z16=703240     Z17=703240     +0
+    * lib/modules/fsa4480-i2c.ko                                 Z16=76088      Z17=76088      +0
+    * lib/modules/gcc-khaje.ko                                   Z16=236800     Z17=236800     +0
+    * lib/modules/gdsc-regulator.ko                              Z16=109352     Z17=109352     +0
+    * lib/modules/glink_pkt.ko                                   Z16=114288     Z17=114288     +0
+    * lib/modules/glink_probe.ko                                 Z16=54960      Z17=54960      +0
+    * lib/modules/gpucc-khaje.ko                                 Z16=85168      Z17=85168      +0
+    * lib/modules/guestvm_loader.ko                              Z16=49392      Z17=49392      +0
+    * lib/modules/hdcp_qseecom_dlkm.ko                           Z16=56968      Z17=56968      +0
+    * lib/modules/heap_mem_ext_v01.ko                            Z16=37768      Z17=37768      +0
+    * lib/modules/hung_task_enh.ko                               Z16=44464      Z17=44464      +0
+    * lib/modules/i2c-msm-geni.ko                                Z16=161512     Z17=161512     +0
+    * lib/modules/icc-debug.ko                                   Z16=60264      Z17=60264      +0
+    * lib/modules/icc-rpm.ko                                     Z16=46480      Z17=46480      +0
+    * lib/modules/icc-test.ko                                    Z16=44240      Z17=44240      +0
+    * lib/modules/iommu-logger.ko                                Z16=47872      Z17=47872      +0
+    * lib/modules/ipa_fmwk.ko                                    Z16=395272     Z17=395272     +0
+    * lib/modules/ktz8866_leds.ko                                Z16=27832      Z17=27832      +0
+    * lib/modules/leds-aw2016.ko                                 Z16=87304      Z17=87304      +0
+    * lib/modules/leds-qti-flash.ko                              Z16=96296      Z17=96296      +0
+    * lib/modules/leds-qti-tri-led.ko                            Z16=57456      Z17=57456      +0
+    * lib/modules/lmh_cpu_vdd_cdev.ko                            Z16=48024      Z17=48024      +0
+    * lib/modules/mdt_loader.ko                                  Z16=50888      Z17=50888      +0
+    * lib/modules/mem-hooks.ko                                   Z16=64104      Z17=64104      +0
+    * lib/modules/mem-offline.ko                                 Z16=119272     Z17=119272     +0
+    * lib/modules/mem_buf.ko                                     Z16=59520      Z17=59520      +0
+    * lib/modules/mem_buf_dev.ko                                 Z16=143432     Z17=143432     +0
+    * lib/modules/memlat.ko                                      Z16=131800     Z17=131800     +0
+    * lib/modules/memory_dump_v2.ko                              Z16=72472      Z17=72472      +0
+    * lib/modules/minidump.ko                                    Z16=302920     Z17=302920     +0
+    * lib/modules/mm8013c10_battery.ko                           Z16=102256     Z17=102256     +0
+    * lib/modules/msm-mmrm.ko                                    Z16=97544      Z17=97544      +0
+    * lib/modules/msm-poweroff.ko                                Z16=69328      Z17=69328      +0
+    * lib/modules/msm-tsens-driver.ko                            Z16=114000     Z17=114000     +0
+    * lib/modules/msm_dma_iommu_mapping.ko                       Z16=61240      Z17=61240      +0
+    * lib/modules/msm_geni_serial.ko                             Z16=245560     Z17=245560     +0
+    * lib/modules/msm_gpi.ko                                     Z16=155920     Z17=155920     +0
+    * lib/modules/msm_lmh_dcvs.ko                                Z16=77608      Z17=77608      +0
+    * lib/modules/msm_memshare.ko                                Z16=79024      Z17=79024      +0
+    * lib/modules/msm_performance.ko                             Z16=92120      Z17=92120      +0
+    * lib/modules/msm_qmp.ko                                     Z16=84008      Z17=84008      +0
+    * lib/modules/msm_sharedmem.ko                               Z16=48296      Z17=48296      +0
+    * lib/modules/nopmi-chg.ko                                   Z16=231440     Z17=231440     +0
+    * lib/modules/ns.ko                                          Z16=150344     Z17=150344     +0
+    * lib/modules/nvmem_qcom-spmi-sdam.ko                        Z16=45288      Z17=45288      +0
+    * lib/modules/panel_event_notifier.ko                        Z16=40624      Z17=40624      +0
+    * lib/modules/pdr_interface.ko                               Z16=59808      Z17=59808      +0
+    * lib/modules/phy-generic.ko                                 Z16=77504      Z17=77504      +0
+    * lib/modules/phy-msm-snps-hs.ko                             Z16=94704      Z17=94704      +0
+    * lib/modules/phy-msm-ssusb-qmp.ko                           Z16=84016      Z17=84016      +0
+    * lib/modules/phy-qcom-emu.ko                                Z16=48304      Z17=48304      +0
+    * lib/modules/phy-qcom-ufs-qmp-v4-kalama.ko                  Z16=75584      Z17=75584      +0
+    * lib/modules/phy-qcom-ufs-qmp-v4-khaje.ko                   Z16=73464      Z17=73464      +0
+    * lib/modules/phy-qcom-ufs-qmp-v4-kona.ko                    Z16=74184      Z17=74184      +0
+    * lib/modules/phy-qcom-ufs-qmp-v4-lahaina.ko                 Z16=74160      Z17=74160      +0
+    * lib/modules/phy-qcom-ufs-qmp-v4-waipio.ko                  Z16=74160      Z17=74160      +0
+    * lib/modules/phy-qcom-ufs-qmp-v4.ko                         Z16=74872      Z17=74872      +0
+    * lib/modules/phy-qcom-ufs-qrbtc-sdm845.ko                   Z16=68968      Z17=68968      +0
+    * lib/modules/phy-qcom-ufs.ko                                Z16=95264      Z17=95264      +0
+    * lib/modules/phy-xgene.ko                                   Z16=84360      Z17=84360      +0
+
+========== init_boot ==========
+  条目数 Z16=17  Z17=17
+  只在 Z16: 0   只在 Z17: 0   同名相同: 16   同名不同: 1
+  --- 只在 Z16 ---
+  --- 只在 Z17 ---
+  --- 同名不同（按大小差排序）---
+    * system/etc/ramdisk/build.prop                              Z16=1064       Z17=1017       -47

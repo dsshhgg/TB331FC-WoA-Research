@@ -1,0 +1,69 @@
+
+### boot.img  (Z16) vs boot.img (Z17)
+  [BOTH] TB331FC
+  [BOTH] TB331FC_PRC
+  [ONLY-Z16] Linux version 5.15.123-android13-8-00044-g5682afbff3e0-ab11501453 (build-user@build-host) (Android (8508608, based on r450784e) clang version 14.0.7 (https://android.googlesource.com/toolchain/llvm-project 4c603efb0
+  [ONLY-Z16] ZUI_16.0.544_241115_PRC
+  [ONLY-Z17] Linux version 5.15.149-android13-8-00014-gb219e2d2bfe5-ab12114171 (build-user@build-host) (Android (8508608, based on r450784e) clang version 14.0.7 (https://android.googlesource.com/toolchain/llvm-project 4c603efb0
+
+### init_boot.img  (Z16) vs init_boot.img (Z17)
+  [BOTH] TB331FC
+  [BOTH] TB331FC_PRC
+  [ONLY-Z16] ZUI_16.0.544_2411153
+  [ONLY-Z16] ZUI_16.0.544_241115_PRC
+
+### recovery.img  (Z16) vs recovery.img (Z17)
+  [BOTH] TB331FC
+  [BOTH] TB331FC_PRC
+  [ONLY-Z16] ZUI_16.0.544
+  [ONLY-Z16] ZUI_16.0.544_241115_PRC
+
+### vendor_boot.img  (Z16) vs vendor_boot.img (Z17)
+  [BOTH] QCOM-BATT
+  [BOTH] TB331FC
+  [BOTH] TB331FC_PRC
+  [ONLY-Z16] ZUI_16.0.544_241115_PRC
+
+### xbl.elf  (Z16) vs xbl.img (Z17)
+  [BOTH] IMAGE_VARIANT_STRING=DivarPkgLAA
+  [BOTH] IMAGE_VARIANT_STRING=FATAANAAA
+  [BOTH] OEM_IMAGE_VERSION_STRING=CRM
+  [BOTH] QC_IMAGE_VERSION_STRING=BOOT.XF.4.1-00374-KAMORTALAZ-1
+  [BOTH] QC_IMAGE_VERSION_STRING=TZ.XF.5.1-01117-1
+  [ONLY-Z16] OEM_IMAGE_VERSION_STRING=lqsl004
+  [ONLY-Z17] OEM_IMAGE_VERSION_STRING=lqsl002
+
+### abl.elf  (Z16) vs abl.img (Z17)
+
+### tz.mbn  (Z16) vs tz.img (Z17)
+  [BOTH] IMAGE_VARIANT_STRING=FATAANAAA
+  [BOTH] OEM_IMAGE_VERSION_STRING=CRM
+  [BOTH] QC_IMAGE_VERSION_STRING=TZ.XF.5.1.6-54971-3
+
+### keymint.mbn  (Z16) vs keymaster.img (Z17)
+
+### hyp.mbn  (Z16) vs hyp.img (Z17)
+  [BOTH] IMAGE_VARIANT_STRING=FATAANAAA
+  [BOTH] OEM_IMAGE_VERSION_STRING=CRM
+  [BOTH] QC_IMAGE_VERSION_STRING=TZ.XF.5.1.6-54971-3
+
+### NON-HLOS.bin  (Z16) vs modem.img (Z17)
+  [BOTH] IMAGE_VARIANT_STRING=QCAHNALADIVARQ
+  [BOTH] IMAGE_VARIANT_STRING=divar.adsp.prodQ
+  [BOTH] IMAGE_VARIANT_STRING=divar.cdsp.prodQ
+  [BOTH] IMAGE_VARIANT_STRING=divar.gps.prodQ
+  [BOTH] MPSS.HA.1.1
+  [BOTH] MPSS.HA.1.1-00356-KD_ALL_PACK-1
+  [BOTH] MPSS.HA.1.1-00356-KD_ALL_PACK-1_20230216_1624
+  [BOTH] MPSS.HA.1.1.c1-00019-KD_ALL_PACK-2
+  [BOTH] OEM_IMAGE_VERSION_STRING=ip-10-195-204-119
+  [BOTH] QC_IMAGE_VERSION_STRING=ADSP.VT.5.4.3.c1-00042-DIVAR-1.43007.7
+  [BOTH] QC_IMAGE_VERSION_STRING=CDSP.VT.2.4.1-00268-KAMORTA-1
+  [BOTH] QC_IMAGE_VERSION_STRING=MPSS.HA.1.1-00356-KD_ALL_PACK-1
+  [BOTH] QC_IMAGE_VERSION_STRING=WLAN.HL.3.2.4-01138-QCAHLSWMTPLZ-1.54098.3
+  [ONLY-Z16] OEM_IMAGE_VERSION_STRING=lqsl004
+  [ONLY-Z17] OEM_IMAGE_VERSION_STRING=lqsl002
+
+### dspso.bin  (Z16) vs dsp.img (Z17)
+
+### xbl_config.elf  (Z16) vs xbl_config.img (Z17)

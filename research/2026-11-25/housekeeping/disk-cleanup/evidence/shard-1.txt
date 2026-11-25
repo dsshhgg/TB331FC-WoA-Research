@@ -1,0 +1,15 @@
+    0.018 GiB         12 f      0.0s  .hmcl
+    0.006 GiB          1 f      0.0s  adb
+    0.092 GiB          3 f      0.0s  b1img
+    0.000 GiB          1 f      0.0s  BNZ.6af72e7f2bb3531
+    0.000 GiB          0 f      0.0s  chongci-android
+    0.086 GiB       4299 f     51.5s  dna_build
+    4.105 GiB       1017 f      3.5s  driver-backup-20261108
+    0.375 GiB        587 f     15.2s  Earth3 ver0.21fix
+    0.000 GiB          0 f      0.0s  luyouqu
+    0.138 GiB       1030 f     30.1s  MiBandStudio
+    0.084 GiB         30 f      0.0s  Modelbench
+    0.001 GiB          6 f      0.0s  NBTExplorer CPE
+    0.000 GiB          1 f      0.0s  Programs
+    0.001 GiB          1 f      0.0s  rb_aapt.zip
+    7.977 GiB         33 f      0.0s  tbfw

@@ -1,0 +1,15 @@
+    0.049 GiB         15 f      0.0s  _patch
+    1.096 GiB          1 f      0.0s  archive-2026-11-22T170135+0800.zip
+    0.001 GiB        184 f      0.0s  blockbench-mcp-project-main
+    0.603 GiB         23 f      0.0s  build_kami
+    0.646 GiB       4042 f    189.1s  D_backup
+    0.126 GiB        285 f      0.8s  dnaout
+    0.000 GiB          1 f      0.0s  DumpStack.log.tmp
+    5.444 GiB         51 f      0.0s  lavender_images_V12.5.7.0.QFGCNXM_20211109.0000.00_10.0_cn
+    0.001 GiB        218 f      6.1s  mcef-forge-master-1.19.2
+    0.228 GiB       3338 f     64.5s  minecraft-numen-1.21.1
+    0.061 GiB          1 f      0.0s  Motrix-1.8.19-x64.exe
+    8.000 GiB          1 f      0.0s  pagefile.sys
+    0.168 GiB        165 f      1.9s  QQMusicCache
+    1.905 GiB      61716 f      0.7s  rbr
+    7.631 GiB      14901 f    213.8s  steam

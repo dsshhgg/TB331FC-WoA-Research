@@ -1,0 +1,240 @@
+{
+  "magic": "0xd7b7ab1e",
+  "total_size": 3500977,
+  "header_size": 32,
+  "entry_size": 32,
+  "entry_count": 45,
+  "entries_off": 32,
+  "page_size": 4096,
+  "version": 0,
+  "file_size": 25165824
+}
+
+=== entries ===
+ 0 id=0x0 rev=0x0 size=92048   nodes=307  syms=72  fix=85  frags=33 hits=53 
+     model=Qualcomm Technologies, Inc. Khaje ATP
+     compatible=qcom,khaje-atp | qcom,khaje | qcom,atp
+     msm-id=[518, 65536] board-id=[33, 0] pmic-id=[45, 46, 0, 0]
+     targets(1): phandle:0xffffffff
+ 1 id=0x0 rev=0x0 size=36749   nodes=222  syms=48  fix=73  frags=26 hits=5  
+     model=Qualcomm Technologies, Inc. Khaje ATP
+     compatible=qcom,khaje-atp | qcom,khaje | qcom,atp
+     msm-id=[586, 65536] board-id=[33, 0] pmic-id=[45, 46, 0, 0]
+     targets(1): phandle:0xffffffff
+ 2 id=0x0 rev=0x0 size=182701  nodes=315  syms=67  fix=115 frags=45 hits=75 
+     model=Qualcomm Technologies, Inc. KHAJE IDP nopmi
+     compatible=qcom,khaje-idp | qcom,khaje | qcom,idp
+     msm-id=[518, 65536] board-id=[65570, 0] pmic-id=[45, 0, 0, 0]
+     targets(1): phandle:0xffffffff
+ 3 id=0x0 rev=0x0 size=47819   nodes=208  syms=43  fix=102 frags=35 hits=13 
+     model=Qualcomm Technologies, Inc. KHAJE IDP nopmi
+     compatible=qcom,khaje-idp | qcom,khaje | qcom,idp
+     msm-id=[586, 65536] board-id=[65570, 0] pmic-id=[45, 0, 0, 0]
+     targets(1): phandle:0xffffffff
+ 4 id=0x0 rev=0x0 size=216018  nodes=455  syms=85  fix=117 frags=39 hits=70 
+     model=Qualcomm Technologies, Inc. Khaje IDP
+     compatible=qcom,khaje-idp | qcom,khaje | qcom,idp
+     msm-id=[586, 65536, 518, 65536] board-id=[65570, 0] pmic-id=[45, 46, 0, 0]
+     targets(1): phandle:0xffffffff
+ 5 id=0x0 rev=0x0 size=28219   nodes=145  syms=25  fix=85  frags=31 hits=4  
+     model=Qualcomm Technologies, Inc. Khaje IDP with PM8010
+     compatible=qcom,khaje-idp | qcom,khaje | qcom,idp
+     msm-id=[586, 65536, 518, 65536] board-id=[66082, 0] pmic-id=[45, 46, 0, 0]
+     targets(1): phandle:0xffffffff
+ 6 id=0x0 rev=0x0 size=79856   nodes=352  syms=61  fix=98  frags=30 hits=11 
+     model=Qualcomm Technologies, Inc. KHAJE IDP USBC Audio
+     compatible=qcom,khaje-idp | qcom,khaje | qcom,idp
+     msm-id=[518, 65536] board-id=[16842786, 0] pmic-id=[45, 46, 0, 0]
+     targets(1): phandle:0xffffffff
+ 7 id=0x0 rev=0x0 size=71197   nodes=329  syms=54  fix=83  frags=28 hits=7  
+     model=Qualcomm Technologies, Inc. KHAJE IDP USBC Audio
+     compatible=qcom,khaje-idp | qcom,khaje | qcom,idp
+     msm-id=[586, 65536] board-id=[16842786, 0] pmic-id=[45, 46, 0, 0]
+     targets(1): phandle:0xffffffff
+ 8 id=0x0 rev=0x0 size=222488  nodes=481  syms=85  fix=111 frags=43 hits=75 
+     model=Qualcomm Technologies, Inc. KHAJE IDPS + 90Hz
+     compatible=qcom,khaje-idp | qcom,khaje | qcom,idp
+     msm-id=[518, 65536] board-id=[65826, 0] pmic-id=[45, 46, 0, 0]
+     targets(1): phandle:0xffffffff
+ 9 id=0x0 rev=0x0 size=214976  nodes=458  syms=85  fix=111 frags=41 hits=71 
+     model=Qualcomm Technologies, Inc. KHAJE IDPS + 90Hz
+     compatible=qcom,khaje-idp | qcom,khaje | qcom,idp
+     msm-id=[586, 65536] board-id=[65826, 0] pmic-id=[45, 46, 0, 0]
+     targets(1): phandle:0xffffffff
+10 id=0x0 rev=0x0 size=146648  nodes=509  syms=104 fix=129 frags=38 hits=63 
+     model=Qualcomm Technologies, Inc. Khaje QRD HVDCP3P5
+     compatible=qcom,khaje-qrd | qcom,khaje | qcom,qrd
+     msm-id=[586, 65536, 518, 65536] board-id=[65803, 0] pmic-id=[45, 46, 0, 0]
+     targets(1): phandle:0xffffffff
+11 id=0x0 rev=0x0 size=102264  nodes=294  syms=76  fix=124 frags=33 hits=67 
+     model=Qualcomm Technologies, Inc. KHAJE QRD nopmi overlay
+     compatible=qcom,khaje-qrd | qcom,khaje | qcom,qrd
+     msm-id=[518, 65536] board-id=[65547, 0] pmic-id=[45, 0, 0, 0]
+     targets(1): phandle:0xffffffff
+12 id=0x0 rev=0x0 size=47174   nodes=203  syms=52  fix=112 frags=25 hits=14 
+     model=Qualcomm Technologies, Inc. KHAJE QRD nopmi overlay
+     compatible=qcom,khaje-qrd | qcom,khaje | qcom,qrd
+     msm-id=[586, 65536] board-id=[65547, 0] pmic-id=[45, 0, 0, 0]
+     targets(1): phandle:0xffffffff
+13 id=0x0 rev=0x0 size=146917  nodes=509  syms=104 fix=129 frags=38 hits=63 
+     model=Qualcomm Technologies, Inc. Khaje QRD NOWCD9375
+     compatible=qcom,khaje-qrd | qcom,khaje | qcom,qrd
+     msm-id=[518, 65536] board-id=[131339, 0] pmic-id=[45, 46, 0, 0]
+     targets(1): phandle:0xffffffff
+14 id=0x0 rev=0x0 size=75909   nodes=393  syms=70  fix=88  frags=29 hits=6  
+     model=Qualcomm Technologies, Inc. Khaje QRD NOWCD9375
+     compatible=qcom,khaje-qrd | qcom,khaje | qcom,qrd
+     msm-id=[586, 65536] board-id=[131339, 0] pmic-id=[45, 46, 0, 0]
+     targets(1): phandle:0xffffffff
+15 id=0x0 rev=0x0 size=146330  nodes=508  syms=103 fix=129 frags=38 hits=63 
+     model=Qualcomm Technologies, Inc. Khaje QRD
+     compatible=qcom,khaje-qrd | qcom,khaje | qcom,qrd
+     msm-id=[586, 65536, 518, 65536] board-id=[65547, 0] pmic-id=[45, 46, 0, 0]
+     targets(1): phandle:0xffffffff
+16 id=0x0 rev=0x0 size=22061   nodes=172  syms=27  fix=41  frags=20 hits=5  
+     model=Qualcomm Technologies, Inc. Khajeg ATP
+     compatible=qcom,khajeg-atp | qcom,khajeg | qcom,atp
+     msm-id=[585, 65536] board-id=[33, 0] pmic-id=[45, 46, 0, 0]
+     targets(1): phandle:0xffffffff
+17 id=0x0 rev=0x0 size=12603   nodes=81   syms=4   fix=46  frags=17 hits=6  
+     model=Qualcomm Technologies, Inc. Khajeg IDP nopmi
+     compatible=qcom,khajeg-idp | qcom,khajeg | qcom,idp
+     msm-id=[585, 65536] board-id=[65570, 0] pmic-id=[45, 0, 0, 0]
+     targets(1): phandle:0xffffffff
+18 id=0x0 rev=0x0 size=209636  nodes=471  syms=96  fix=96  frags=38 hits=66 
+     model=Qualcomm Technologies, Inc. Khajeg IDP
+     compatible=qcom,khajeg-idp | qcom,khajeg | qcom,idp
+     msm-id=[585, 65536] board-id=[65570, 0] pmic-id=[45, 46, 0, 0]
+     targets(1): phandle:0xffffffff
+19 id=0x0 rev=0x0 size=13546   nodes=97   syms=4   fix=54  frags=26 hits=4  
+     model=Qualcomm Technologies, Inc. Khajeg IDP with PM8010
+     compatible=qcom,khajeg-idp | qcom,khajeg | qcom,idp
+     msm-id=[585, 65536] board-id=[66082, 0] pmic-id=[45, 46, 0, 0]
+     targets(1): phandle:0xffffffff
+20 id=0x0 rev=0x0 size=56539   nodes=279  syms=33  fix=52  frags=22 hits=7  
+     model=Qualcomm Technologies, Inc. Khajeg IDP USBC Audio
+     compatible=qcom,khajeg-idp | qcom,khajeg | qcom,idp
+     msm-id=[585, 65536] board-id=[16842786, 0] pmic-id=[45, 46, 0, 0]
+     targets(1): phandle:0xffffffff
+21 id=0x0 rev=0x0 size=206332  nodes=435  syms=78  fix=96  frags=39 hits=67 
+     model=Qualcomm Technologies, Inc. Khajeg IDPS + 90Hz
+     compatible=qcom,khajeg-idp | qcom,khajeg | qcom,idp
+     msm-id=[585, 65536] board-id=[65826, 0] pmic-id=[45, 46, 0, 0]
+     targets(1): phandle:0xffffffff
+22 id=0x0 rev=0x0 size=133071  nodes=520  syms=112 fix=94  frags=38 hits=55 
+     model=Qualcomm Technologies, Inc. Khajeg QRD HVDCP3P5
+     compatible=qcom,khajeg-qrd | qcom,khajeg | qcom,qrd
+     msm-id=[585, 65536] board-id=[65803, 0] pmic-id=[45, 46, 0, 0]
+     targets(1): phandle:0xffffffff
+23 id=0x0 rev=0x0 size=29986   nodes=171  syms=42  fix=77  frags=21 hits=6  
+     model=Qualcomm Technologies, Inc. Khajeg QRD nopmi overlay
+     compatible=qcom,khajeg-qrd | qcom,khajeg | qcom,qrd
+     msm-id=[585, 65536] board-id=[65547, 0] pmic-id=[45, 0, 0, 0]
+     targets(1): phandle:0xffffffff
+24 id=0x0 rev=0x0 size=59897   nodes=342  syms=49  fix=51  frags=23 hits=6  
+     model=Qualcomm Technologies, Inc. Khajeg QRD NOWCD9375
+     compatible=qcom,khajeg-qrd | qcom,khajeg | qcom,qrd
+     msm-id=[585, 65536] board-id=[131339, 0] pmic-id=[45, 46, 0, 0]
+     targets(1): phandle:0xffffffff
+25 id=0x0 rev=0x0 size=132796  nodes=519  syms=111 fix=94  frags=38 hits=55 
+     model=Qualcomm Technologies, Inc. Khajeg QRD
+     compatible=qcom,khajeg-qrd | qcom,khajeg | qcom,qrd
+     msm-id=[585, 65536] board-id=[65547, 0] pmic-id=[45, 46, 0, 0]
+     targets(1): phandle:0xffffffff
+26 id=0x0 rev=0x0 size=22061   nodes=172  syms=27  fix=41  frags=20 hits=5  
+     model=Qualcomm Technologies, Inc. Khajep ATP
+     compatible=qcom,khajep-atp | qcom,khajep | qcom,atp
+     msm-id=[561, 65536] board-id=[33, 0] pmic-id=[45, 46, 0, 0]
+     targets(1): phandle:0xffffffff
+27 id=0x0 rev=0x0 size=12603   nodes=81   syms=4   fix=46  frags=17 hits=6  
+     model=Qualcomm Technologies, Inc. KHAJEP IDP nopmi
+     compatible=qcom,khajep-idp | qcom,khajep | qcom,idp
+     msm-id=[561, 65536] board-id=[65570, 0] pmic-id=[45, 0, 0, 0]
+     targets(1): phandle:0xffffffff
+28 id=0x0 rev=0x0 size=56523   nodes=279  syms=33  fix=52  frags=22 hits=7  
+     model=Qualcomm Technologies, Inc. Khaje IDP
+     compatible=qcom,khaje-idp | qcom,khaje | qcom,idp
+     msm-id=[561, 65536] board-id=[65570, 0] pmic-id=[45, 46, 0, 0]
+     targets(1): phandle:0xffffffff
+29 id=0x0 rev=0x0 size=13546   nodes=97   syms=4   fix=54  frags=26 hits=4  
+     model=Qualcomm Technologies, Inc. Khajep IDP with PM8010
+     compatible=qcom,khajep-idp | qcom,khajep | qcom,idp
+     msm-id=[561, 65536] board-id=[66082, 0] pmic-id=[45, 46, 0, 0]
+     targets(1): phandle:0xffffffff
+30 id=0x0 rev=0x0 size=56539   nodes=279  syms=33  fix=52  frags=22 hits=7  
+     model=Qualcomm Technologies, Inc. KHAJEP IDP USBC Audio
+     compatible=qcom,khajep-idp | qcom,khajep | qcom,idp
+     msm-id=[561, 65536] board-id=[16842786, 0] pmic-id=[45, 46, 0, 0]
+     targets(1): phandle:0xffffffff
+31 id=0x0 rev=0x0 size=56611   nodes=281  syms=33  fix=52  frags=23 hits=7  
+     model=Qualcomm Technologies, Inc. KHAJEP IDPS + 90Hz
+     compatible=qcom,khajep-idp | qcom,khajep | qcom,idp
+     msm-id=[561, 65536] board-id=[65826, 0] pmic-id=[45, 46, 0, 0]
+     targets(1): phandle:0xffffffff
+32 id=0x0 rev=0x0 size=59893   nodes=342  syms=49  fix=51  frags=23 hits=6  
+     model=Qualcomm Technologies, Inc. Khajep QRD HVDCP3P5
+     compatible=qcom,khajep-qrd | qcom,khajep | qcom,qrd
+     msm-id=[561, 65536] board-id=[65803, 0] pmic-id=[45, 46, 0, 0]
+     targets(1): phandle:0xffffffff
+33 id=0x0 rev=0x0 size=15402   nodes=121  syms=21  fix=46  frags=15 hits=6  
+     model=Qualcomm Technologies, Inc. KHAJEP QRD nopmi overlay
+     compatible=qcom,khajep-qrd | qcom,khajep | qcom,qrd
+     msm-id=[561, 65536] board-id=[65547, 0] pmic-id=[45, 0, 0, 0]
+     targets(1): phandle:0xffffffff
+34 id=0x0 rev=0x0 size=59897   nodes=342  syms=49  fix=51  frags=23 hits=6  
+     model=Qualcomm Technologies, Inc. Khajep QRD NOWCD9375
+     compatible=qcom,khajep-qrd | qcom,khajep | qcom,qrd
+     msm-id=[561, 65536] board-id=[131339, 0] pmic-id=[45, 46, 0, 0]
+     targets(1): phandle:0xffffffff
+35 id=0x0 rev=0x0 size=22061   nodes=172  syms=27  fix=41  frags=20 hits=5  
+     model=Qualcomm Technologies, Inc. Khajeq ATP
+     compatible=qcom,khajeq-atp | qcom,khajeq | qcom,atp
+     msm-id=[562, 65536] board-id=[33, 0] pmic-id=[45, 46, 0, 0]
+     targets(1): phandle:0xffffffff
+36 id=0x0 rev=0x0 size=12603   nodes=81   syms=4   fix=46  frags=17 hits=6  
+     model=Qualcomm Technologies, Inc. KHAJEQ IDP nopmi
+     compatible=qcom,khajeq-idp | qcom,khajeq | qcom,idp
+     msm-id=[562, 65536] board-id=[65570, 0] pmic-id=[45, 0, 0, 0]
+     targets(1): phandle:0xffffffff
+37 id=0x0 rev=0x0 size=56523   nodes=279  syms=33  fix=52  frags=22 hits=7  
+     model=Qualcomm Technologies, Inc. Khaje IDP
+     compatible=qcom,khaje-idp | qcom,khaje | qcom,idp
+     msm-id=[562, 65536] board-id=[65570, 0] pmic-id=[45, 46, 0, 0]
+     targets(1): phandle:0xffffffff
+38 id=0x0 rev=0x0 size=13546   nodes=97   syms=4   fix=54  frags=26 hits=4  
+     model=Qualcomm Technologies, Inc. Khajeq IDP with PM8010
+     compatible=qcom,khajeq-idp | qcom,khajeq | qcom,idp
+     msm-id=[562, 65536] board-id=[66082, 0] pmic-id=[45, 46, 0, 0]
+     targets(1): phandle:0xffffffff
+39 id=0x0 rev=0x0 size=56539   nodes=279  syms=33  fix=52  frags=22 hits=7  
+     model=Qualcomm Technologies, Inc. KHAJEQ IDP USBC Audio
+     compatible=qcom,khajeq-idp | qcom,khajeq | qcom,idp
+     msm-id=[562, 65536] board-id=[16842786, 0] pmic-id=[45, 46, 0, 0]
+     targets(1): phandle:0xffffffff
+40 id=0x0 rev=0x0 size=56611   nodes=281  syms=33  fix=52  frags=23 hits=7  
+     model=Qualcomm Technologies, Inc. KHAJEQ IDPS + 90Hz
+     compatible=qcom,khajeq-idp | qcom,khajeq | qcom,idp
+     msm-id=[562, 65536] board-id=[65826, 0] pmic-id=[45, 46, 0, 0]
+     targets(1): phandle:0xffffffff
+41 id=0x0 rev=0x0 size=59893   nodes=342  syms=49  fix=51  frags=23 hits=6  
+     model=Qualcomm Technologies, Inc. Khajeq QRD HVDCP3P5
+     compatible=qcom,khajeq-qrd | qcom,khajeq | qcom,qrd
+     msm-id=[562, 65536] board-id=[65803, 0] pmic-id=[45, 46, 0, 0]
+     targets(1): phandle:0xffffffff
+42 id=0x0 rev=0x0 size=15402   nodes=121  syms=21  fix=46  frags=15 hits=6  
+     model=Qualcomm Technologies, Inc. KHAJEQ QRD nopmi overlay
+     compatible=qcom,khajeq-qrd | qcom,khajeq | qcom,qrd
+     msm-id=[562, 65536] board-id=[65547, 0] pmic-id=[45, 0, 0, 0]
+     targets(1): phandle:0xffffffff
+43 id=0x0 rev=0x0 size=59897   nodes=342  syms=49  fix=51  frags=23 hits=6  
+     model=Qualcomm Technologies, Inc. Khajeq QRD NOWCD9375
+     compatible=qcom,khajeq-qrd | qcom,khajeq | qcom,qrd
+     msm-id=[562, 65536] board-id=[131339, 0] pmic-id=[45, 46, 0, 0]
+     targets(1): phandle:0xffffffff
+44 id=0x0 rev=0x0 size=59575   nodes=341  syms=48  fix=51  frags=23 hits=6  
+     model=Qualcomm Technologies, Inc. Khajeq QRD
+     compatible=qcom,khajeq-qrd | qcom,khajeq | qcom,qrd
+     msm-id=[562, 65536] board-id=[65547, 0] pmic-id=[45, 46, 0, 0]
+     targets(1): phandle:0xffffffff
+
+TOTAL symbols across all dtbs: 2244

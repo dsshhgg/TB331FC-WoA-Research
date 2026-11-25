@@ -1,0 +1,98 @@
+=== dtbo 头 ===
+  Z16 {'magic': '0xd7b7ab1e', 'total_size': 3500977, 'header_size': 32, 'entry_size': 32, 'count': 45, 'entries_off': 32, 'page_size': 4096, 'version': 0}
+  Z17 {'magic': '0xd7b7ab1e', 'total_size': 3537507, 'header_size': 32, 'entry_size': 32, 'count': 45, 'entries_off': 32, 'page_size': 4096, 'version': 0}
+
+=== dtbo 表项对比（count=45 vs 45）===
+  idx  Z16(id,rev,size)                 Z17(id,rev,size)                 变化
+    0  id=0x0 rev=0x0 size=92048        id=0x0 rev=0x0 size=36749        size -55299
+    1  id=0x0 rev=0x0 size=36749        id=0x0 rev=0x0 size=94752        size +58003
+    2  id=0x0 rev=0x0 size=182701       id=0x0 rev=0x0 size=47819        size -134882
+    3  id=0x0 rev=0x0 size=47819        id=0x0 rev=0x0 size=185630       size +137811
+    4  id=0x0 rev=0x0 size=216018       id=0x0 rev=0x0 size=218954       size +2936
+    5  id=0x0 rev=0x0 size=28219        id=0x0 rev=0x0 size=28219        尺寸同
+    6  id=0x0 rev=0x0 size=79856        id=0x0 rev=0x0 size=79856        尺寸同
+    7  id=0x0 rev=0x0 size=71197        id=0x0 rev=0x0 size=71197        尺寸同
+    8  id=0x0 rev=0x0 size=222488       id=0x0 rev=0x0 size=225424       size +2936
+    9  id=0x0 rev=0x0 size=214976       id=0x0 rev=0x0 size=217912       size +2936
+   10  id=0x0 rev=0x0 size=146648       id=0x0 rev=0x0 size=149352       size +2704
+   11  id=0x0 rev=0x0 size=102264       id=0x0 rev=0x0 size=47174        size -55090
+   12  id=0x0 rev=0x0 size=47174        id=0x0 rev=0x0 size=104961       size +57787
+   13  id=0x0 rev=0x0 size=146917       id=0x0 rev=0x0 size=75909        size -71008
+   14  id=0x0 rev=0x0 size=75909        id=0x0 rev=0x0 size=149621       size +73712
+   15  id=0x0 rev=0x0 size=146330       id=0x0 rev=0x0 size=149034       size +2704
+   16  id=0x0 rev=0x0 size=22061        id=0x0 rev=0x0 size=22061        尺寸同
+   17  id=0x0 rev=0x0 size=12603        id=0x0 rev=0x0 size=12603        尺寸同
+   18  id=0x0 rev=0x0 size=209636       id=0x0 rev=0x0 size=212572       size +2936
+   19  id=0x0 rev=0x0 size=13546        id=0x0 rev=0x0 size=13546        尺寸同
+   20  id=0x0 rev=0x0 size=56539        id=0x0 rev=0x0 size=56539        尺寸同
+   21  id=0x0 rev=0x0 size=206332       id=0x0 rev=0x0 size=209268       size +2936
+   22  id=0x0 rev=0x0 size=133071       id=0x0 rev=0x0 size=135775       size +2704
+   23  id=0x0 rev=0x0 size=29986        id=0x0 rev=0x0 size=29986        尺寸同
+   24  id=0x0 rev=0x0 size=59897        id=0x0 rev=0x0 size=59897        尺寸同
+   25  id=0x0 rev=0x0 size=132796       id=0x0 rev=0x0 size=135500       size +2704
+   26  id=0x0 rev=0x0 size=22061        id=0x0 rev=0x0 size=22061        尺寸同
+   27  id=0x0 rev=0x0 size=12603        id=0x0 rev=0x0 size=12603        尺寸同
+   28  id=0x0 rev=0x0 size=56523        id=0x0 rev=0x0 size=56523        尺寸同
+   29  id=0x0 rev=0x0 size=13546        id=0x0 rev=0x0 size=13546        尺寸同
+   30  id=0x0 rev=0x0 size=56539        id=0x0 rev=0x0 size=56539        尺寸同
+   31  id=0x0 rev=0x0 size=56611        id=0x0 rev=0x0 size=56611        尺寸同
+   32  id=0x0 rev=0x0 size=59893        id=0x0 rev=0x0 size=59893        尺寸同
+   33  id=0x0 rev=0x0 size=15402        id=0x0 rev=0x0 size=15402        尺寸同
+   34  id=0x0 rev=0x0 size=59897        id=0x0 rev=0x0 size=59897        尺寸同
+   35  id=0x0 rev=0x0 size=22061        id=0x0 rev=0x0 size=22061        尺寸同
+   36  id=0x0 rev=0x0 size=12603        id=0x0 rev=0x0 size=12603        尺寸同
+   37  id=0x0 rev=0x0 size=56523        id=0x0 rev=0x0 size=56523        尺寸同
+   38  id=0x0 rev=0x0 size=13546        id=0x0 rev=0x0 size=13546        尺寸同
+   39  id=0x0 rev=0x0 size=56539        id=0x0 rev=0x0 size=56539        尺寸同
+   40  id=0x0 rev=0x0 size=56611        id=0x0 rev=0x0 size=56611        尺寸同
+   41  id=0x0 rev=0x0 size=59893        id=0x0 rev=0x0 size=59893        尺寸同
+   42  id=0x0 rev=0x0 size=15402        id=0x0 rev=0x0 size=15402        尺寸同
+   43  id=0x0 rev=0x0 size=59897        id=0x0 rev=0x0 size=59897        尺寸同
+   44  id=0x0 rev=0x0 size=59575        id=0x0 rev=0x0 size=59575        尺寸同
+
+=== 逐 entry 内容 sha256 ===
+  entry  0  DIFF
+  entry  1  DIFF
+  entry  2  DIFF
+  entry  3  DIFF
+  entry  4  DIFF
+  entry  5  SAME
+  entry  6  SAME
+  entry  7  SAME
+  entry  8  DIFF
+  entry  9  DIFF
+  entry 10  DIFF
+  entry 11  DIFF
+  entry 12  DIFF
+  entry 13  DIFF
+  entry 14  DIFF
+  entry 15  DIFF
+  entry 16  SAME
+  entry 17  SAME
+  entry 18  DIFF
+  entry 19  SAME
+  entry 20  SAME
+  entry 21  DIFF
+  entry 22  DIFF
+  entry 23  SAME
+  entry 24  SAME
+  entry 25  DIFF
+  entry 26  SAME
+  entry 27  SAME
+  entry 28  SAME
+  entry 29  SAME
+  entry 30  SAME
+  entry 31  SAME
+  entry 32  SAME
+  entry 33  SAME
+  entry 34  SAME
+  entry 35  SAME
+  entry 36  SAME
+  entry 37  SAME
+  entry 38  SAME
+  entry 39  SAME
+  entry 40  SAME
+  entry 41  SAME
+  entry 42  SAME
+  entry 43  SAME
+  entry 44  SAME

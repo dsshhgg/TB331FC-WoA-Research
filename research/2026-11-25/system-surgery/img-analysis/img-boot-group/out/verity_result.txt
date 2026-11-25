@@ -1,0 +1,19 @@
+dm-verity 根哈希复算结果（流式算法，tools\verity_fast.py；block 4096 / sha256 / salt 前缀）
+目标：E:\rom\work\a17dump\{system_ext_a,system_a,product_a}.img
+对照：E:\rom\work\a17dump\vbmeta_system_a.img 的三条 hashtree 描述符（salt = 00…01，fec_roots=0）
+
+system_ext_a.img  data_size=1,503,494,144  root=fef554f21f196edb8e16585f6c8faa507e6292220d1179153aca1a19802512ae
+  声明 root=     fef554f21f196edb8e16585f6c8faa507e6292220d1179153aca1a19802512ae   MATCH
+
+system_a.img      data_size=1,697,497,088  root=971e7bb18f7f2a5c3c409e6e633282abfecc8ef4aa25ede805bc2718240ba024
+  声明 root=     971e7bb18f7f2a5c3c409e6e633282abfecc8ef4aa25ede805bc2718240ba024   MATCH
+
+product_a.img     data_size=2,909,995,008  root=02c25fcfbb407688dc1ff0ea5b7357eb9db23a5673717b544519601af62cbce7
+  声明 root=     02c25fcfbb407688dc1ff0ea5b7357eb9db23a5673717b544519601af62cbce7   MATCH
+
+结论：2026-11-23 dump 的这套 system/product/system_ext 与当前 vbmeta_system_a **完全自洽**（三条 hashtree 全部 MATCH）。
+对比 2026-11-13 的根因（product 重算 0bcedeb0… vs 声明 832596f2…，不自洽），说明那轮的 product_FIX + vbmeta_system 重签已经生效，
+当前 super 三件不再是 900E 的变量。
+
+仍未复算（手里没有分区 dump）：vbmeta_a 的 4 条 hashtree —— odm / system_dlkm / vendor / vendor_dlkm，
+以及 vbmeta_system 之外的一切。若要闭合「eio 到底由谁引起」，需要 dump 这 4 个分区后同法复算。

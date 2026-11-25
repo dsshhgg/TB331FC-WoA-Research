@@ -1,0 +1,14 @@
+﻿[2026-11-25 19:06:51] BASELINE  Total free bytes : 29,966,393,344 ( 27.9 GB)
+[19:07:13] DEL E:\rom\work\kit-baked\out_repro                            6,400,786,432 B    5.961 GiB  delta 5957.783 GiB  gone=True
+[19:07:14] DEL E:\rom\work\kit-baked\work\product.img                     2,999,996,416 B    2.794 GiB  delta 2793.964 GiB  gone=True
+[19:07:16] DEL E:\rom\work\kit-baked\work\system.img                      1,749,999,616 B    1.630 GiB  delta 1629.814 GiB  gone=True
+[19:07:17] DEL E:\rom\work\kit-baked\work\system_ext.img                  1,549,996,032 B    1.444 GiB  delta 1443.546 GiB  gone=True
+[19:07:18] DEL E:\rom\work\kit-baked\work\system_repro.img                1,749,999,616 B    1.630 GiB  delta 1629.814 GiB  gone=True
+[19:07:18] DEL E:\rom\work\_prod_data.img                                 2,999,996,416 B    2.794 GiB  delta 2793.964 GiB  gone=True
+[19:07:18] free now = 44,157.196 GiB
+[19:07:37] NOTE: 上面几行的 delta 值是我脚本解析 fsutil 数字失败（把 '( 28.5 GB)' 也当成数字了），无效。以本条及之后的读数为准。
+[19:07:37] AFTER-BATCH1 free=47412891648 B = 44.157 GiB
+[19:07:50] DEL E:\rom\release\TB331FC_HyperOS4_A17_FullKit_v3.zip         3,111,615,993 B    2.898 GiB  delta   2.898 GiB  gone=True
+[19:07:52] DEL E:\rom\release\TB331FC_HyperOS4_A17_FullKit_v3             6,547,633,424 B    6.098 GiB  delta   6.098 GiB  gone=True
+[19:07:52] AFTER-BATCH2 free=57072259072 = 53.153 GiB
+[19:09:38] DEL DiagOutputDir/*.etl  删除 167 个 / 2,393,374,720 B (   2.23 GiB)  失败 0 个  delta    2.22 GiB
